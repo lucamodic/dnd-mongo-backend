@@ -5,6 +5,7 @@ import { dndGet } from "../../utils/dndApi";
 import { HttpError } from "../../utils/response";
 import { ABILITY_ES, DAMAGE_TYPE_ES, SCHOOL_ES } from "../../utils/dndTranslate";
 import { RECOMMENDED_SPELLS } from "../../data/recommendedSpells";
+import { SPELL_NAME_ES } from "../../data/spellNamesES";
 
 export class SpellService {
   static list() {
@@ -45,7 +46,7 @@ export class SpellService {
 
         const data = {
           index: sp.index,
-          name: sp.name,
+          name: SPELL_NAME_ES[sp.index] || sp.name,
           level: sp.level ?? 0,
           school: (schoolKey && SCHOOL_ES[schoolKey]) || sp.school?.name || "",
           castingTime: sp.casting_time || "",

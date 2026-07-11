@@ -16,7 +16,7 @@ export const RACE_IMAGES: Record<string, string> = {
   owlin: "https://upload.wikimedia.org/wikipedia/commons/5/56/Bubo_bubo_sibiricus_-_01.JPG",
   // Eladrin es una subraza de elfo → reutilizamos el arte de elfo.
   eladrin: "https://upload.wikimedia.org/wikipedia/commons/2/27/DnD_Elven.png",
-  // half-elf y half-orc: sin foto confiable → card con gradiente (fallback en la app).
-  "half-elf": "",
-  "half-orc": "",
+  // Semielfo y semiorco: reutilizamos el arte de su raza "pariente" (elfo / orco).
+  "half-elf": "https://upload.wikimedia.org/wikipedia/commons/2/27/DnD_Elven.png",
+  "half-orc": "https://upload.wikimedia.org/wikipedia/commons/d/d0/DnD_Orc.png",
 };

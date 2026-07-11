@@ -4,6 +4,7 @@ import { RACE_META } from "../../utils/raceMeta";
 import { RACE_TRAIT_ES, RACE_LANGUAGES_ES } from "../../data/raceTraits";
 import { CUSTOM_RACES } from "../../data/customRaces";
 import { RACE_IMAGES } from "../../data/images";
+import { RACE_NAME_ES } from "../../data/raceNamesES";
 import { HttpError } from "../../utils/response";
 
 export class RaceService {
@@ -38,7 +39,7 @@ export class RaceService {
 
         const data = {
           index: full.index,
-          name: full.name,
+          name: RACE_NAME_ES[full.index] || full.name,
           description: meta.description || full.size_description || "",
           image: RACE_IMAGES[full.index] ?? meta.image ?? "",
           size: full.size || "Medium",

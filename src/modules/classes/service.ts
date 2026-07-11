@@ -4,6 +4,7 @@ import { CLASS_META } from "../../utils/classMeta";
 import { resolveFeatureES } from "../../data/classFeatures";
 import { CLASS_RESOURCE_META } from "../../data/classResources";
 import { CLASS_ABILITY_PRIORITY, DEFAULT_ABILITY_PRIORITY } from "../../data/classAbilityPriority";
+import { CLASS_NAME_ES } from "../../data/classNamesES";
 import { HttpError } from "../../utils/response";
 
 /** Extrae de proficiency_choices la elección de competencias (skills) de la clase. */
@@ -86,7 +87,7 @@ export class ClassService {
 
         const data = {
           index: cls.index,
-          name: cls.name,
+          name: CLASS_NAME_ES[cls.index] || cls.name,
           color: meta.color,
           image: "",
           hitDie: cls.hit_die || 8,
