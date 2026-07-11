@@ -6,6 +6,7 @@ export interface IParticipant {
   type: "player" | "monster";
   initiative: number;
   hp: number;
+  tempHp: number;
   maxHp: number;
   ac: number;
   characterId?: Types.ObjectId; // si es un PJ
@@ -29,6 +30,7 @@ const participantSchema = new Schema<IParticipant>({
   type: { type: String, enum: ["player", "monster"], required: true },
   initiative: { type: Number, default: 0 },
   hp: { type: Number, default: 1 },
+  tempHp: { type: Number, default: 0 },
   maxHp: { type: Number, default: 1 },
   ac: { type: Number, default: 10 },
   characterId: { type: Schema.Types.ObjectId, ref: "Character" },

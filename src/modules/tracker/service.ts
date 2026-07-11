@@ -34,6 +34,10 @@ export class TrackerService {
     const already = tracker.participants.find((p) => String(p.characterId) === String(character._id));
     if (already) {
       already.initiative = initiative;
+      already.hp = character.currentHp;
+      already.tempHp = character.tempHp || 0;
+      already.maxHp = character.maxHp;
+      already.ac = character.ac;
       return touch(tracker);
     }
 
@@ -42,6 +46,7 @@ export class TrackerService {
       type: "player",
       initiative,
       hp: character.currentHp,
+      tempHp: character.tempHp || 0,
       maxHp: character.maxHp,
       ac: character.ac,
       characterId: character._id as Types.ObjectId,
@@ -70,6 +75,7 @@ export class TrackerService {
         type: "monster",
         initiative: body.initiative ?? 0,
         hp: monster.hp,
+        tempHp: 0,
         maxHp: monster.hp,
         ac: monster.ac,
         color: "#722548",
@@ -82,6 +88,7 @@ export class TrackerService {
         type: "monster",
         initiative: body.initiative ?? 0,
         hp,
+        tempHp: 0,
         maxHp: hp,
         ac: Number(body.ac) || 10,
         color: "#722548",
@@ -109,14 +116,27 @@ export class TrackerService {
   static async patchParticipant(
     user: TokenPayload,
     pid: string,
-    patch: { hp?: number; initiative?: number }
+    patch: { hp?: number; tempHp?: number; initiative?: number }
   ) {
     const tracker = await getOrCreate();
     const participant = this.findParticipant(tracker, pid);
     this.assertCanEdit(user, participant);
 
     if (patch.hp !== undefined) participant.hp = Math.max(0, Math.min(participant.maxHp, patch.hp));
+    if (patch.tempHp !== undefined) participant.tempHp = Math.max(0, patch.tempHp);
     if (patch.initiative !== undefined) participant.initiative = patch.initiative;
+
+    if (participant.characterId && (patch.hp !== undefined || patch.tempHp !== undefined)) {
+      await Character.updateOne(
+        { _id: participant.characterId, userId: participant.ownerUserId },
+        {
+          $set: {
+            currentHp: participant.hp,
+            tempHp: participant.tempHp || 0,
+          },
+        }
+      );
+    }
     return touch(tracker);
   }
 

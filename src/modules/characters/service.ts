@@ -4,6 +4,7 @@ import { Race } from "../../db/models/Race";
 import { Class, IClass } from "../../db/models/Class";
 import { ClassSpell } from "../../db/models/ClassSpell";
 import { ISpell } from "../../db/models/Spell";
+import { Tracker } from "../../db/models/Tracker";
 import { HttpError } from "../../utils/response";
 import { abilityMod, proficiencyBonus, rollDie, rollAbilityScores, computeAc } from "../../utils/dndRules";
 import { CLASS_ABILITY_PRIORITY, DEFAULT_ABILITY_PRIORITY } from "../../data/classAbilityPriority";
@@ -38,6 +39,21 @@ const recommendedSpellIds = async (cls: IClass, scores: IAbilityScores, level: n
     .slice(0, spellsKnownLimit(cls, scores, level));
 
   return [...cantrips, ...spells].map((l) => l.spellId._id as Types.ObjectId);
+};
+
+const syncTrackerParticipant = async (character: any) => {
+  await Tracker.updateOne(
+    { "participants.characterId": character._id },
+    {
+      $set: {
+        "participants.$.hp": character.currentHp,
+        "participants.$.tempHp": character.tempHp || 0,
+        "participants.$.maxHp": character.maxHp,
+        "participants.$.ac": character.ac,
+        updatedAt: new Date(),
+      },
+    }
+  );
 };
 
 export interface CreateCharacterInput {
@@ -152,6 +168,7 @@ export class CharacterService {
     if (!character) throw new HttpError(404, "Personaje no encontrado");
     character.currentHp = Math.max(0, Math.min(character.maxHp, currentHp));
     await character.save();
+    await syncTrackerParticipant(character);
     return character;
   }
 
@@ -189,6 +206,9 @@ export class CharacterService {
     }
 
     await character.save();
+    if (["currentHp", "tempHp", "maxHp", "armor", "shield", "acBonus", "abilityScores", "ac"].some((k) => patch[k] !== undefined)) {
+      await syncTrackerParticipant(character);
+    }
     return this.show(userId, id);
   }
 
