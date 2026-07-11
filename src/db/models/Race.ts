@@ -16,6 +16,7 @@ export interface IRace extends Document {
   name: string;
   description: string;
   image: string;
+  imageBase64: string;
   size: string;
   speed: number;
   abilityBonuses: IAbilityBonus[];
@@ -28,6 +29,7 @@ const raceSchema = new Schema<IRace>({
   name: { type: String, required: true },
   description: { type: String, default: "" },
   image: { type: String, default: "" },
+  imageBase64: { type: String, default: "" },
   size: { type: String, default: "Medium" },
   speed: { type: Number, default: 30 },
   abilityBonuses: [{ ability: String, bonus: Number }],
