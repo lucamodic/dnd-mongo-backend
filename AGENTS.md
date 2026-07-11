@@ -56,15 +56,23 @@ src/server.ts         -> entrypoint (local: listen; Vercel: export default app)
 - **Class**: incluye `progression[]` (por nivel: features en español, `spellSlots`, `resources` como
   furias/ki/puntos de hechicería, cantrips/spells known) + `skillOptions`/`skillChoiceCount` +
   `savingThrows` (índices) + `spellcastingAbility`.
-- **Race**: `traits[]` como `{name, description}` (en español) + `languages`.
+- **Race**: `traits[]` como `{name, description, active}` (en español) + `languages`. `active` = es un
+  poder que se usa (acción/recurso limitado, ej. Aliento del dragonborn); si no, es pasivo/de fondo.
+- **Class**: `progression[].features[]` también tiene `active` (misma lógica, ej. Furia=true, Defensa
+  sin Armadura=false). La app separa "activos" (sección principal) de pasivos ("Información avanzada").
 - **Character**: PJ de un usuario (nivel, HP, stats, AC, `currency`, `skillProficiencies`, `spellSlotsUsed`,
-  `resourcesUsed`, `knownSpells`, `armor`/`shield`/`acBonus`, `initiativeBonus`). HP nivel 1 = `hitDie + mod(CON)`.
+  `resourcesUsed`, `knownSpells`, `armor`/`shield`/`acBonus`, `initiativeBonus`, `weapon`). HP nivel 1 = `hitDie + mod(CON)`.
   Al crear sin `abilityScores` se generan solas (`rollAbilityScores`: 4d6-drop-lowest repartido por
   `class.abilityPriority`, las 2 principales ≥14). `knownSpells` arranca con los recomendados de la clase.
   Se edita con `PATCH /characters/:id` (whitelist); al tocar armadura/stats se recalcula `ac` con `computeAc`.
 - **ClassSpell** además tiene `recommended` (hechizos top por clase, marcados con `apply:recommended`).
-- Datos curados nuevos en `src/data/`: `armors.ts`, `customRaces.ts` (Owlin/Eladrin), `recommendedSpells.ts`,
-  `classAbilityPriority.ts`, `images.ts` (RACE_IMAGES verificadas). `dndRules.ts` tiene `rollAbilityScores`/`computeAc`.
+- Datos curados nuevos en `src/data/`: `armors.ts`, `weapons.ts` (37 armas SRD), `customRaces.ts` (Owlin/Eladrin),
+  `recommendedSpells.ts`, `classAbilityPriority.ts`, `classNamesES.ts`/`raceNamesES.ts`/`spellNamesES.ts`
+  (nombres traducidos, cobertura validada), `images.ts` (RACE_IMAGES, usa miniaturas livianas de Wikimedia
+  para evitar fallos de carga por archivos pesados). `dndRules.ts` tiene `rollAbilityScores`/`computeAc`.
+- Límites de hechizos conocidos (trucos y hechizos "de verdad") por nivel/clase se calculan en la app
+  (`src/lib/sheet.ts`: `cantripLimit`, `spellsKnownLimit` — distingue clases "de conocidos" vs "de
+  preparados" según si `progression[level].spellsKnown` es 0).
 - Endpoints nuevos: `POST /characters/roll-stats`, `POST /spells/apply-recommended` (admin). Script `npm run apply:recommended`.
 - **Tracker**: documento **único global** con `participants[]`, `round`, `activeIndex`.
 

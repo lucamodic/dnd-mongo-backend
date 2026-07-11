@@ -8,6 +8,7 @@ export interface IAbilityBonus {
 export interface IRaceTrait {
   name: string;
   description: string; // simple, en español
+  active: boolean; // true = poder que usás (limitado o con acción); false = pasivo/fondo
 }
 
 export interface IRace extends Document {
@@ -30,7 +31,7 @@ const raceSchema = new Schema<IRace>({
   size: { type: String, default: "Medium" },
   speed: { type: Number, default: 30 },
   abilityBonuses: [{ ability: String, bonus: Number }],
-  traits: [{ name: String, description: String }],
+  traits: [{ name: String, description: String, active: { type: Boolean, default: false } }],
   languages: { type: String, default: "" },
 });
 

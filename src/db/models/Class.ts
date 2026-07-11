@@ -3,6 +3,7 @@ import { Schema, model, models, Model, Document } from "mongoose";
 export interface IClassFeature {
   name: string;
   description: string; // simple, en español (fallback: "" si no está curada)
+  active: boolean; // true = poder que usás (recurso o acción); false = pasivo/fondo
 }
 
 /** Recurso rastreable o informativo de una clase en un nivel (ej. Furias, Puntos de Ki). */
@@ -41,7 +42,10 @@ export interface IClass extends Document {
   progression: IClassLevel[];
 }
 
-const featureSchema = new Schema<IClassFeature>({ name: String, description: String }, { _id: false });
+const featureSchema = new Schema<IClassFeature>(
+  { name: String, description: String, active: { type: Boolean, default: false } },
+  { _id: false }
+);
 const resourceSchema = new Schema<IClassResource>(
   { key: String, label: String, value: Number, trackable: Boolean, description: String },
   { _id: false }

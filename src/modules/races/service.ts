@@ -30,7 +30,7 @@ export class RaceService {
 
         const traits = (full.traits || []).map((t: any) => {
           const es = RACE_TRAIT_ES[t.index];
-          return { name: es?.name || t.name, description: es?.description || "" };
+          return { name: es?.name || t.name, description: es?.description || "", active: es?.active || false };
         });
 
         const languages = (full.languages || [])

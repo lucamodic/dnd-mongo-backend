@@ -92,6 +92,7 @@ export class CharacterService {
       shield: false,
       acBonus: 0,
       initiativeBonus: 0,
+      weapon: "unarmed",
       proficiencyBonus: proficiencyBonus(1),
       speed: race.speed || 30,
       abilityScores: scores,
@@ -135,7 +136,7 @@ export class CharacterService {
   static async update(userId: string, id: string, patch: Record<string, unknown>) {
     const ALLOWED = [
       "name", "notes", "ac", "tempHp", "maxHp", "abilityScores", "currency", "skillProficiencies",
-      "spellSlotsUsed", "resourcesUsed", "knownSpells", "armor", "shield", "acBonus", "initiativeBonus",
+      "spellSlotsUsed", "resourcesUsed", "knownSpells", "armor", "shield", "acBonus", "initiativeBonus", "weapon",
     ];
     const character = await Character.findOne({ _id: id, userId });
     if (!character) throw new HttpError(404, "Personaje no encontrado");

@@ -43,6 +43,7 @@ export interface ICharacter extends Document {
   shield: boolean; // lleva escudo (+2 CA)
   acBonus: number; // bonus extra de CA (hechizos, objetos, manual)
   initiativeBonus: number; // bonus de iniciativa además del mod de Destreza
+  weapon: string; // clave del arma equipada (índice de WEAPONS)
   notes: string;
   createdAt: Date;
 }
@@ -87,6 +88,7 @@ const characterSchema = new Schema<ICharacter>({
   shield: { type: Boolean, default: false },
   acBonus: { type: Number, default: 0 },
   initiativeBonus: { type: Number, default: 0 },
+  weapon: { type: String, default: "unarmed" },
   notes: { type: String, default: "" },
   createdAt: { type: Date, default: Date.now },
 });

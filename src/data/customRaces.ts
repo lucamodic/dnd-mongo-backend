@@ -10,7 +10,7 @@ export interface CustomRace {
   size: string;
   speed: number;
   abilityBonuses: { ability: string; bonus: number }[];
-  traits: { name: string; description: string }[];
+  traits: { name: string; description: string; active: boolean }[];
   languages: string;
 }
 
@@ -31,15 +31,18 @@ export const CUSTOM_RACES: CustomRace[] = [
         name: "Vuelo",
         description:
           "Gracias a tus alas tenés una velocidad de vuelo de 30 pies. No podés volar si llevás armadura mediana o pesada.",
+        active: false,
       },
       {
         name: "Visión en la Oscuridad (30 m)",
         description:
           "Ves en la penumbra hasta 30 m como si fuera luz, y en la oscuridad total como penumbra (en blanco y negro). Ves mucho mejor de noche que la mayoría.",
+        active: false,
       },
       {
         name: "Plumas Silenciosas",
         description: "Tu vuelo es silencioso: sos competente en la habilidad de Sigilo.",
+        active: false,
       },
     ],
     languages: "Común y un idioma extra a elección",
@@ -60,24 +63,29 @@ export const CUSTOM_RACES: CustomRace[] = [
         name: "Visión en la Oscuridad",
         description:
           "Ves en la penumbra hasta 18 m como si fuera luz, y en la oscuridad como penumbra (en blanco y negro).",
+        active: false,
       },
       {
         name: "Linaje Feérico",
         description: "Tirás con ventaja para resistir que te encanten, y la magia no puede dormirte.",
+        active: false,
       },
       {
         name: "Paso Feérico",
         description:
           "Como acción adicional te teletransportás hasta 9 m a un lugar que veas. Lo usás un número de veces igual a tu bono de competencia por descanso largo. Según tu estación agrega un efecto extra (miedo, encanto, daño de fuego o teletransportar a un aliado).",
+        active: true,
       },
       {
         name: "Trance",
         description:
           "No dormís: meditás 4 horas y descansás igual que otros en 8. Al terminar podés cambiar tu estación.",
+        active: false,
       },
       {
         name: "Sentidos Agudos",
         description: "Sos competente en la habilidad de Percepción.",
+        active: false,
       },
     ],
     languages: "Común y Élfico",
