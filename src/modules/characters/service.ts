@@ -3,6 +3,7 @@ import { Character, IAbilityScores } from "../../db/models/Character";
 import { Race } from "../../db/models/Race";
 import { Class, IClass } from "../../db/models/Class";
 import { ClassSpell } from "../../db/models/ClassSpell";
+import { ISpell } from "../../db/models/Spell";
 import { HttpError } from "../../utils/response";
 import { abilityMod, proficiencyBonus, rollDie, rollAbilityScores, computeAc } from "../../utils/dndRules";
 import { CLASS_ABILITY_PRIORITY, DEFAULT_ABILITY_PRIORITY } from "../../data/classAbilityPriority";
@@ -11,10 +12,32 @@ const priorityFor = (cls: IClass): string[] =>
   (cls.abilityPriority && cls.abilityPriority.length ? cls.abilityPriority : CLASS_ABILITY_PRIORITY[cls.index]) ||
   DEFAULT_ABILITY_PRIORITY;
 
-/** IDs de los hechizos recomendados de una clase (default conocidos al crear). */
-const recommendedSpellIds = async (classId: Types.ObjectId): Promise<Types.ObjectId[]> => {
-  const links = await ClassSpell.find({ classId, recommended: true }).select("spellId");
-  return links.map((l) => l.spellId);
+const progressionAt = (cls: IClass, level: number) => cls.progression?.find((p) => p.level === level);
+
+const cantripLimit = (cls: IClass, level: number) => progressionAt(cls, level)?.cantripsKnown || 0;
+
+const spellsKnownLimit = (cls: IClass, scores: IAbilityScores, level: number): number => {
+  const known = progressionAt(cls, level)?.spellsKnown || 0;
+  if (known > 0) return known;
+  if (!cls.spellcastingAbility) return 0;
+  const ability = cls.spellcastingAbility as keyof IAbilityScores;
+  const effectiveLevel = cls.index === "paladin" ? Math.floor(level / 2) : level;
+  return Math.max(1, abilityMod(scores[ability]) + effectiveLevel);
+};
+
+/** IDs recomendados respetando los límites iniciales de la clase. */
+const recommendedSpellIds = async (cls: IClass, scores: IAbilityScores, level: number): Promise<Types.ObjectId[]> => {
+  const links = await ClassSpell.find({ classId: cls._id, recommended: true })
+    .populate<{ spellId: ISpell }>("spellId")
+    .select("spellId");
+
+  const cantrips = links.filter((l) => l.spellId?.level === 0).slice(0, cantripLimit(cls, level));
+  const spells = links
+    .filter((l) => l.spellId?.level > 0)
+    .sort((a, b) => a.spellId.level - b.spellId.level || a.spellId.name.localeCompare(b.spellId.name))
+    .slice(0, spellsKnownLimit(cls, scores, level));
+
+  return [...cantrips, ...spells].map((l) => l.spellId._id as Types.ObjectId);
 };
 
 export interface CreateCharacterInput {
@@ -76,7 +99,7 @@ export class CharacterService {
     const conMod = abilityMod(scores.con);
     const maxHp = cls.hitDie + conMod; // nivel 1: dado de vida al máximo
     const ac = computeAc({ armor: "none", shield: false, acBonus: 0, abilityScores: scores });
-    const knownSpells = cls.spellcasting ? await recommendedSpellIds(cls._id as Types.ObjectId) : [];
+    const knownSpells = cls.spellcasting ? await recommendedSpellIds(cls, scores, 1) : [];
 
     const character = await Character.create({
       userId: new Types.ObjectId(userId),
