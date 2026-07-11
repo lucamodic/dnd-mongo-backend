@@ -158,7 +158,7 @@ export class CharacterService {
   /** Actualiza campos editables del personaje (whitelist: nunca toca nivel, dueño, etc.). */
   static async update(userId: string, id: string, patch: Record<string, unknown>) {
     const ALLOWED = [
-      "name", "notes", "ac", "tempHp", "maxHp", "abilityScores", "currency", "skillProficiencies",
+      "name", "notes", "ac", "currentHp", "tempHp", "maxHp", "abilityScores", "currency", "skillProficiencies",
       "spellSlotsUsed", "resourcesUsed", "knownSpells", "armor", "shield", "acBonus", "initiativeBonus", "weapon",
     ];
     const character = await Character.findOne({ _id: id, userId });
@@ -173,8 +173,9 @@ export class CharacterService {
     }
     if (!touched) throw new HttpError(400, "Nada para actualizar");
 
-    // La vida actual nunca puede superar la máxima.
-    if (character.currentHp > character.maxHp) character.currentHp = character.maxHp;
+    // La vida actual queda siempre dentro de 0..maxHp, y la temporal nunca baja de 0.
+    character.currentHp = Math.max(0, Math.min(character.maxHp, character.currentHp));
+    character.tempHp = Math.max(0, character.tempHp || 0);
 
     // Si cambió algo que afecta la CA, la recalculamos (salvo que hayan mandado un `ac` explícito).
     const acAffecting = ["armor", "shield", "acBonus", "abilityScores"].some((k) => patch[k] !== undefined);
