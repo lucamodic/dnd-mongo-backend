@@ -9,6 +9,7 @@ router.get("/", requireAuth, asyncHandler(SpellController.list)); // ?classId= o
 router.get("/export-summary", requireAuth, requireAdmin, asyncHandler(SpellController.exportForSummary));
 router.get("/:id", requireAuth, asyncHandler(SpellController.show));
 router.post("/import-all", requireAuth, requireAdmin, asyncHandler(SpellController.importAll));
+router.post("/apply-recommended", requireAuth, requireAdmin, asyncHandler(SpellController.applyRecommended));
 router.post("/import-summaries", requireAuth, requireAdmin, asyncHandler(SpellController.importSummaries));
 
 export default router;

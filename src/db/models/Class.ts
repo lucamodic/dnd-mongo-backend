@@ -37,6 +37,7 @@ export interface IClass extends Document {
   description: string;
   skillChoiceCount: number;
   skillOptions: string[]; // índices de skills elegibles
+  abilityPriority: string[]; // orden de características para repartir stats al crear
   progression: IClassLevel[];
 }
 
@@ -70,6 +71,7 @@ const classSchema = new Schema<IClass>({
   description: { type: String, default: "" },
   skillChoiceCount: { type: Number, default: 2 },
   skillOptions: [{ type: String }],
+  abilityPriority: [{ type: String }],
   progression: [levelSchema],
 });
 

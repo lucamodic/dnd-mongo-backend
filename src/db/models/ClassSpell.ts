@@ -4,11 +4,13 @@ import { Schema, model, models, Model, Document, Types } from "mongoose";
 export interface IClassSpell extends Document {
   classId: Types.ObjectId;
   spellId: Types.ObjectId;
+  recommended: boolean; // hechizo "top" para principiantes (default conocido)
 }
 
 const classSpellSchema = new Schema<IClassSpell>({
   classId: { type: Schema.Types.ObjectId, ref: "Class", required: true },
   spellId: { type: Schema.Types.ObjectId, ref: "Spell", required: true },
+  recommended: { type: Boolean, default: false },
 });
 
 classSpellSchema.index({ classId: 1, spellId: 1 }, { unique: true });

@@ -38,6 +38,11 @@ export interface ICharacter extends Document {
   currency: ICurrency;
   spellSlotsUsed: number[]; // usados por nivel de conjuro [nivel1..nivel9]
   resourcesUsed: IResourceState[]; // gastados por recurso (furias, ki...)
+  knownSpells: Types.ObjectId[]; // hechizos que el personaje "tiene"
+  armor: string; // clave de armadura equipada ("none", "leather", "mage-armor"...)
+  shield: boolean; // lleva escudo (+2 CA)
+  acBonus: number; // bonus extra de CA (hechizos, objetos, manual)
+  initiativeBonus: number; // bonus de iniciativa además del mod de Destreza
   notes: string;
   createdAt: Date;
 }
@@ -77,6 +82,11 @@ const characterSchema = new Schema<ICharacter>({
   currency: { type: currencySchema, default: () => ({}) },
   spellSlotsUsed: { type: [Number], default: () => [] },
   resourcesUsed: { type: [{ key: String, used: Number }], default: () => [] },
+  knownSpells: [{ type: Schema.Types.ObjectId, ref: "Spell" }],
+  armor: { type: String, default: "none" },
+  shield: { type: Boolean, default: false },
+  acBonus: { type: Number, default: 0 },
+  initiativeBonus: { type: Number, default: 0 },
   notes: { type: String, default: "" },
   createdAt: { type: Date, default: Date.now },
 });

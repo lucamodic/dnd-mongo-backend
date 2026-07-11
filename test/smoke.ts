@@ -73,8 +73,9 @@ async function main() {
   const noAuth = await call("GET", "/characters");
   assert(noAuth.status === 401, "GET /characters sin token -> 401");
 
-  // 3. Create character lvl1
-  const created = await call("POST", "/characters", { name: "Aragorn", raceId: String(race._id), classId: String(cls._id) }, veroToken);
+  // 3. Create character lvl1 (pasamos stats explícitas para que la vida sea determinística)
+  const flatScores = { str: 10, dex: 10, con: 10, int: 10, wis: 10, cha: 10 };
+  const created = await call("POST", "/characters", { name: "Aragorn", raceId: String(race._id), classId: String(cls._id), abilityScores: flatScores }, veroToken);
   assert(created.status === 201, "crear personaje -> 201");
   const char = created.json.data;
   // human con +1 con => con 11, mod 0; hitDie 10 => maxHp 10

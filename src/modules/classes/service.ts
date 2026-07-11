@@ -3,6 +3,7 @@ import { dndGet } from "../../utils/dndApi";
 import { CLASS_META } from "../../utils/classMeta";
 import { resolveFeatureES } from "../../data/classFeatures";
 import { CLASS_RESOURCE_META } from "../../data/classResources";
+import { CLASS_ABILITY_PRIORITY, DEFAULT_ABILITY_PRIORITY } from "../../data/classAbilityPriority";
 import { HttpError } from "../../utils/response";
 
 /** Extrae de proficiency_choices la elección de competencias (skills) de la clase. */
@@ -96,6 +97,7 @@ export class ClassService {
           description: meta.description,
           skillChoiceCount: skills.count,
           skillOptions: skills.options,
+          abilityPriority: CLASS_ABILITY_PRIORITY[cls.index] || DEFAULT_ABILITY_PRIORITY,
           progression,
         };
 

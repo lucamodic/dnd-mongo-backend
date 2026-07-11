@@ -10,6 +10,7 @@ export const SpellController = {
   },
   show: async (req: Request, res: Response) => ok(res, await SpellService.show(req.params.id)),
   importAll: async (_req: Request, res: Response) => ok(res, await SpellService.importAll()),
+  applyRecommended: async (_req: Request, res: Response) => ok(res, await SpellService.applyRecommended()),
   exportForSummary: async (_req: Request, res: Response) => ok(res, await SpellService.exportForSummary()),
   importSummaries: async (req: Request, res: Response) =>
     ok(res, await SpellService.importSummaries(req.body)),

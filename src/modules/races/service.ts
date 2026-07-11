@@ -2,6 +2,8 @@ import { Race } from "../../db/models/Race";
 import { dndGet } from "../../utils/dndApi";
 import { RACE_META } from "../../utils/raceMeta";
 import { RACE_TRAIT_ES, RACE_LANGUAGES_ES } from "../../data/raceTraits";
+import { CUSTOM_RACES } from "../../data/customRaces";
+import { RACE_IMAGES } from "../../data/images";
 import { HttpError } from "../../utils/response";
 
 export class RaceService {
@@ -38,7 +40,7 @@ export class RaceService {
           index: full.index,
           name: full.name,
           description: meta.description || full.size_description || "",
-          image: meta.image || "",
+          image: RACE_IMAGES[full.index] ?? meta.image ?? "",
           size: full.size || "Medium",
           speed: full.speed || 30,
           abilityBonuses: (full.ability_bonuses || []).map((b: any) => ({
@@ -53,6 +55,20 @@ export class RaceService {
         imported++;
       } catch (e) {
         console.log("Error importando raza:", r.index);
+      }
+    }
+
+    // Razas fuera del SRD (Owlin, Eladrin), cargadas a mano.
+    for (const custom of CUSTOM_RACES) {
+      try {
+        await Race.updateOne(
+          { index: custom.index },
+          { $set: { ...custom, image: RACE_IMAGES[custom.index] ?? "" } },
+          { upsert: true }
+        );
+        imported++;
+      } catch (e) {
+        console.log("Error importando raza custom:", custom.index);
       }
     }
 

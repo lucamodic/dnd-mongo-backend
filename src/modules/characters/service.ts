@@ -1,11 +1,21 @@
 import { Types } from "mongoose";
 import { Character, IAbilityScores } from "../../db/models/Character";
 import { Race } from "../../db/models/Race";
-import { Class } from "../../db/models/Class";
+import { Class, IClass } from "../../db/models/Class";
+import { ClassSpell } from "../../db/models/ClassSpell";
 import { HttpError } from "../../utils/response";
-import { abilityMod, proficiencyBonus, rollDie } from "../../utils/dndRules";
+import { abilityMod, proficiencyBonus, rollDie, rollAbilityScores, computeAc } from "../../utils/dndRules";
+import { CLASS_ABILITY_PRIORITY, DEFAULT_ABILITY_PRIORITY } from "../../data/classAbilityPriority";
 
-const DEFAULT_SCORES: IAbilityScores = { str: 10, dex: 10, con: 10, int: 10, wis: 10, cha: 10 };
+const priorityFor = (cls: IClass): string[] =>
+  (cls.abilityPriority && cls.abilityPriority.length ? cls.abilityPriority : CLASS_ABILITY_PRIORITY[cls.index]) ||
+  DEFAULT_ABILITY_PRIORITY;
+
+/** IDs de los hechizos recomendados de una clase (default conocidos al crear). */
+const recommendedSpellIds = async (classId: Types.ObjectId): Promise<Types.ObjectId[]> => {
+  const links = await ClassSpell.find({ classId, recommended: true }).select("spellId");
+  return links.map((l) => l.spellId);
+};
 
 export interface CreateCharacterInput {
   name: string;
@@ -26,9 +36,20 @@ export class CharacterService {
   static async show(userId: string, id: string) {
     const character = await Character.findOne({ _id: id, userId })
       .populate("raceId")
-      .populate("classId");
+      .populate("classId")
+      .populate("knownSpells");
     if (!character) throw new HttpError(404, "Personaje no encontrado");
     return character;
+  }
+
+  /**
+   * Tira características para una clase (6× 4d6 drop lowest, repartidas por prioridad de clase,
+   * las 2 principales mínimo 14). Sin bonos de raza (se aplican al crear). Para el botón "volver a tirar".
+   */
+  static async rollStats(classId: string): Promise<IAbilityScores> {
+    const cls = await Class.findById(classId);
+    if (!cls) throw new HttpError(400, "Clase inválida");
+    return rollAbilityScores(priorityFor(cls));
   }
 
   /** Crea un personaje de nivel 1: HP = dado de vida (máximo) + mod de CON. */
@@ -40,17 +61,22 @@ export class CharacterService {
     const cls = await Class.findById(input.classId);
     if (!cls) throw new HttpError(400, "Clase inválida");
 
-    // Aplicamos los bonos de raza sobre las características base.
-    const scores: IAbilityScores = { ...DEFAULT_SCORES, ...(input.abilityScores || {}) };
+    // Si no vienen características, las generamos según la clase (4d6 drop lowest + reparto).
+    const base = input.abilityScores
+      ? ({ str: 10, dex: 10, con: 10, int: 10, wis: 10, cha: 10, ...input.abilityScores } as IAbilityScores)
+      : rollAbilityScores(priorityFor(cls));
+
+    // Aplicamos los bonos de raza encima.
+    const scores: IAbilityScores = { ...base };
     for (const bonus of race.abilityBonuses || []) {
       const key = bonus.ability as keyof IAbilityScores;
       if (key in scores) scores[key] += bonus.bonus;
     }
 
     const conMod = abilityMod(scores.con);
-    const dexMod = abilityMod(scores.dex);
     const maxHp = cls.hitDie + conMod; // nivel 1: dado de vida al máximo
-    const ac = 10 + dexMod; // sin armadura por defecto
+    const ac = computeAc({ armor: "none", shield: false, acBonus: 0, abilityScores: scores });
+    const knownSpells = cls.spellcasting ? await recommendedSpellIds(cls._id as Types.ObjectId) : [];
 
     const character = await Character.create({
       userId: new Types.ObjectId(userId),
@@ -62,9 +88,14 @@ export class CharacterService {
       maxHp,
       currentHp: maxHp,
       ac,
+      armor: "none",
+      shield: false,
+      acBonus: 0,
+      initiativeBonus: 0,
       proficiencyBonus: proficiencyBonus(1),
       speed: race.speed || 30,
       abilityScores: scores,
+      knownSpells,
     });
 
     return this.show(userId, String(character._id));
@@ -100,17 +131,39 @@ export class CharacterService {
     return character;
   }
 
-  /** Actualiza campos editables del personaje (whitelist: nunca toca HP máximo, nivel, dueño, etc.). */
+  /** Actualiza campos editables del personaje (whitelist: nunca toca nivel, dueño, etc.). */
   static async update(userId: string, id: string, patch: Record<string, unknown>) {
-    const ALLOWED = ["name", "notes", "ac", "tempHp", "currency", "skillProficiencies", "spellSlotsUsed", "resourcesUsed"];
-    const set: Record<string, unknown> = {};
-    for (const key of ALLOWED) {
-      if (patch[key] !== undefined) set[key] = patch[key];
-    }
-    if (Object.keys(set).length === 0) throw new HttpError(400, "Nada para actualizar");
-
-    const character = await Character.findOneAndUpdate({ _id: id, userId }, { $set: set }, { new: true });
+    const ALLOWED = [
+      "name", "notes", "ac", "tempHp", "maxHp", "abilityScores", "currency", "skillProficiencies",
+      "spellSlotsUsed", "resourcesUsed", "knownSpells", "armor", "shield", "acBonus", "initiativeBonus",
+    ];
+    const character = await Character.findOne({ _id: id, userId });
     if (!character) throw new HttpError(404, "Personaje no encontrado");
+
+    let touched = false;
+    for (const key of ALLOWED) {
+      if (patch[key] !== undefined) {
+        (character as any)[key] = patch[key];
+        touched = true;
+      }
+    }
+    if (!touched) throw new HttpError(400, "Nada para actualizar");
+
+    // La vida actual nunca puede superar la máxima.
+    if (character.currentHp > character.maxHp) character.currentHp = character.maxHp;
+
+    // Si cambió algo que afecta la CA, la recalculamos (salvo que hayan mandado un `ac` explícito).
+    const acAffecting = ["armor", "shield", "acBonus", "abilityScores"].some((k) => patch[k] !== undefined);
+    if (acAffecting && patch.ac === undefined) {
+      character.ac = computeAc({
+        armor: character.armor,
+        shield: character.shield,
+        acBonus: character.acBonus,
+        abilityScores: character.abilityScores,
+      });
+    }
+
+    await character.save();
     return this.show(userId, id);
   }
 

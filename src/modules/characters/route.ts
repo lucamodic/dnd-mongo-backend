@@ -9,6 +9,7 @@ router.use(requireAuth); // todo lo de personajes requiere estar logueado
 
 router.get("/", asyncHandler(CharacterController.list));
 router.post("/", asyncHandler(CharacterController.create));
+router.post("/roll-stats", asyncHandler(CharacterController.rollStats));
 router.get("/:id", asyncHandler(CharacterController.show));
 router.patch("/:id", asyncHandler(CharacterController.update));
 router.delete("/:id", asyncHandler(CharacterController.remove));

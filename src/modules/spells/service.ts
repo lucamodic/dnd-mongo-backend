@@ -4,6 +4,7 @@ import { ClassSpell } from "../../db/models/ClassSpell";
 import { dndGet } from "../../utils/dndApi";
 import { HttpError } from "../../utils/response";
 import { ABILITY_ES, DAMAGE_TYPE_ES, SCHOOL_ES } from "../../utils/dndTranslate";
+import { RECOMMENDED_SPELLS } from "../../data/recommendedSpells";
 
 export class SpellService {
   static list() {
@@ -16,11 +17,13 @@ export class SpellService {
     return spell;
   }
 
-  /** Hechizos de una clase (via la tabla de unión spells_classes). */
+  /** Hechizos de una clase (via la tabla de unión spells_classes), con el flag `recommended`. */
   static async byClass(classId: string) {
-    const links = await ClassSpell.find({ classId }).select("spellId");
+    const links = await ClassSpell.find({ classId }).select("spellId recommended");
+    const recommendedIds = new Set(links.filter((l) => l.recommended).map((l) => String(l.spellId)));
     const spellIds = links.map((l) => l.spellId);
-    return Spell.find({ _id: { $in: spellIds } }).sort({ level: 1, name: 1 });
+    const spells = await Spell.find({ _id: { $in: spellIds } }).sort({ level: 1, name: 1 }).lean();
+    return spells.map((s) => ({ ...s, recommended: recommendedIds.has(String(s._id)) }));
   }
 
   /**
@@ -95,6 +98,30 @@ export class SpellService {
       level: s.level,
       text: (s.description || []).join("\n"),
     }));
+  }
+
+  /**
+   * Marca en spells_classes los hechizos "recomendados" (los mejores para principiantes) de cada clase,
+   * según src/data/recommendedSpells.ts. Primero limpia los flags y después setea los nuevos.
+   * Solo afecta links que ya existan (si un índice no es hechizo de esa clase, se ignora).
+   */
+  static async applyRecommended() {
+    await ClassSpell.updateMany({}, { $set: { recommended: false } });
+    let marked = 0;
+
+    for (const [classIndex, spellIndexes] of Object.entries(RECOMMENDED_SPELLS)) {
+      const cls = await Class.findOne({ index: classIndex });
+      if (!cls) continue;
+      const spells = await Spell.find({ index: { $in: spellIndexes } }).select("_id");
+      const spellIds = spells.map((s) => s._id);
+      const r = await ClassSpell.updateMany(
+        { classId: cls._id, spellId: { $in: spellIds } },
+        { $set: { recommended: true } }
+      );
+      marked += r.modifiedCount;
+    }
+
+    return { marked };
   }
 
   /**

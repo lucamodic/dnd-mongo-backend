@@ -8,6 +8,8 @@ export const CharacterController = {
     ok(res, await CharacterService.show(req.user!.id, req.params.id)),
   create: async (req: Request, res: Response) =>
     ok(res, await CharacterService.create(req.user!.id, req.body), 201),
+  rollStats: async (req: Request, res: Response) =>
+    ok(res, await CharacterService.rollStats(req.body?.classId)),
   levelUp: async (req: Request, res: Response) =>
     ok(res, await CharacterService.levelUp(req.user!.id, req.params.id, Number(req.body?.rolled))),
   setHp: async (req: Request, res: Response) =>

@@ -57,9 +57,15 @@ src/server.ts         -> entrypoint (local: listen; Vercel: export default app)
   furias/ki/puntos de hechicería, cantrips/spells known) + `skillOptions`/`skillChoiceCount` +
   `savingThrows` (índices) + `spellcastingAbility`.
 - **Race**: `traits[]` como `{name, description}` (en español) + `languages`.
-- **Character**: PJ de un usuario (nivel, HP, stats, AC, `currency {gp,sp,cp}`, `skillProficiencies`,
-  `spellSlotsUsed`, `resourcesUsed`). HP nivel 1 = `hitDie + mod(CON)`. Se edita con `PATCH /characters/:id`
-  (whitelist de campos).
+- **Character**: PJ de un usuario (nivel, HP, stats, AC, `currency`, `skillProficiencies`, `spellSlotsUsed`,
+  `resourcesUsed`, `knownSpells`, `armor`/`shield`/`acBonus`, `initiativeBonus`). HP nivel 1 = `hitDie + mod(CON)`.
+  Al crear sin `abilityScores` se generan solas (`rollAbilityScores`: 4d6-drop-lowest repartido por
+  `class.abilityPriority`, las 2 principales ≥14). `knownSpells` arranca con los recomendados de la clase.
+  Se edita con `PATCH /characters/:id` (whitelist); al tocar armadura/stats se recalcula `ac` con `computeAc`.
+- **ClassSpell** además tiene `recommended` (hechizos top por clase, marcados con `apply:recommended`).
+- Datos curados nuevos en `src/data/`: `armors.ts`, `customRaces.ts` (Owlin/Eladrin), `recommendedSpells.ts`,
+  `classAbilityPriority.ts`, `images.ts` (RACE_IMAGES verificadas). `dndRules.ts` tiene `rollAbilityScores`/`computeAc`.
+- Endpoints nuevos: `POST /characters/roll-stats`, `POST /spells/apply-recommended` (admin). Script `npm run apply:recommended`.
 - **Tracker**: documento **único global** con `participants[]`, `round`, `activeIndex`.
 
 ## Auth y permisos
