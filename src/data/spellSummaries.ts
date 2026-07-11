@@ -79,7 +79,7 @@ export const SPELL_SUMMARIES: Record<string, SpellSummary> = {
   "jump": { simpleDescription: "Tocás a alguien y su salto se triplica por un rato.", dice: null },
   "longstrider": { simpleDescription: "Tocás a alguien y su velocidad al caminar aumenta.", dice: null },
   "mage-armor": { simpleDescription: "Rodeás a alguien sin armadura con un campo mágico que mejora su defensa.", dice: null },
-  "magic-missile": { simpleDescription: "Disparás tres dardos de fuerza mágica que nunca fallan el golpe.", dice: "3d4+3" },
+  "magic-missile": { simpleDescription: "Disparás tres dardos de fuerza mágica que nunca fallan. Cada dardo hace 1d4+1.", dice: "1d4+1" },
   "protection-from-evil-and-good": { simpleDescription: "Protegés a alguien contra criaturas malignas, feéricas, celestiales, no-muertas o elementales.", dice: null },
   "purify-food-and-drink": { simpleDescription: "Purificás comida y bebida en una zona, sacándole el veneno o lo podrido.", dice: null },
   "sanctuary": { simpleDescription: "Protegés a alguien: los enemigos deben resistir una tirada para poder atacarlo directamente.", dice: null },
