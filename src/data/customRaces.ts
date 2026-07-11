@@ -1,5 +1,5 @@
 /**
- * Razas que NO están en el SRD API (Owlin, Eladrin), cargadas a mano en español.
+ * Razas que NO están en el SRD API (Aarakocra, Owlin, Eladrin, Goblin, Orc), cargadas a mano en español.
  * Misma forma que produce el importer de razas. El importer les hace upsert y les pone
  * la imagen desde RACE_IMAGES si existe.
  */
@@ -15,6 +15,121 @@ export interface CustomRace {
 }
 
 export const CUSTOM_RACES: CustomRace[] = [
+  {
+    index: "aarakocra",
+    name: "Aarakocra",
+    description:
+      "Humanoides alados del Plano Elemental del Aire. Parecen grandes aves cuando vuelan y son ideales para personajes móviles, exploradores o lanzadores que quieran controlar el campo desde arriba.",
+    size: "Medium",
+    speed: 30,
+    abilityBonuses: [
+      { ability: "dex", bonus: 2 },
+      { ability: "wis", bonus: 1 },
+    ],
+    traits: [
+      {
+        name: "Vuelo",
+        description:
+          "Tenés una velocidad de vuelo igual a tu velocidad caminando. No podés usarla si llevás armadura mediana o pesada.",
+        active: false,
+      },
+      {
+        name: "Garras",
+        description:
+          "Tus garras sirven para ataques sin armas. Al impactar hacen 1d6 + tu modificador de Fuerza de daño cortante.",
+        active: false,
+      },
+      {
+        name: "Llamador del Viento",
+        description:
+          "Desde nivel 3 podés lanzar Ráfaga de Viento sin componente material una vez por descanso largo. También podés lanzarlo usando espacios de conjuro de nivel 2 o más si tenés.",
+        active: true,
+      },
+    ],
+    languages: "Común y un idioma extra a elección",
+  },
+  {
+    index: "goblin",
+    name: "Goblin",
+    description:
+      "Humanoides pequeños, ágiles y escurridizos, con un antiguo toque feérico. Son buenos para personajes veloces, pícaros, exploradores o cualquiera que quiera pelear sucio y escapar rápido.",
+    size: "Small",
+    speed: 30,
+    abilityBonuses: [
+      { ability: "dex", bonus: 2 },
+      { ability: "con", bonus: 1 },
+    ],
+    traits: [
+      {
+        name: "Tipo Goblinoide",
+        description:
+          "Sos humanoide y también contás como goblinoide para requisitos o efectos que mencionen goblinoides.",
+        active: false,
+      },
+      {
+        name: "Visión en la Oscuridad",
+        description:
+          "Ves en la penumbra hasta 18 m como si fuera luz, y en la oscuridad como penumbra (en blanco y negro).",
+        active: false,
+      },
+      {
+        name: "Linaje Feérico",
+        description: "Tirás con ventaja para evitar o terminar la condición de encantado sobre vos.",
+        active: false,
+      },
+      {
+        name: "Furia del Pequeño",
+        description:
+          "Cuando dañás con un ataque o hechizo a una criatura más grande que vos, podés sumar daño extra igual a tu bono de competencia. Podés usarlo una cantidad de veces igual a tu bono de competencia por descanso largo, como máximo una vez por turno.",
+        active: true,
+      },
+      {
+        name: "Escape Ágil",
+        description: "Podés usar Destrabarse o Esconderse como acción adicional en cada uno de tus turnos.",
+        active: true,
+      },
+    ],
+    languages: "Común y un idioma extra a elección",
+  },
+  {
+    index: "orc",
+    name: "Orco",
+    description:
+      "Humanoides fuertes y resistentes, marcados por la tenacidad de Gruumsh. Funcionan muy bien como guerreros, bárbaros, paladines o cualquier personaje que quiera aguantar y avanzar.",
+    size: "Medium",
+    speed: 30,
+    abilityBonuses: [
+      { ability: "str", bonus: 2 },
+      { ability: "con", bonus: 1 },
+    ],
+    traits: [
+      {
+        name: "Subida de Adrenalina",
+        description:
+          "Podés usar Correr como acción adicional. Lo usás una cantidad de veces igual a tu bono de competencia por descanso largo. Cada vez que lo usás ganás puntos de golpe temporales iguales a tu bono de competencia.",
+        active: true,
+      },
+      {
+        name: "Visión en la Oscuridad",
+        description:
+          "Ves en la penumbra hasta 18 m como si fuera luz, y en la oscuridad como penumbra (en blanco y negro).",
+        active: false,
+      },
+      {
+        name: "Complexión Poderosa",
+        description:
+          "Contás como una talla más grande para calcular cuánto podés cargar, empujar, arrastrar o levantar.",
+        active: false,
+      },
+      {
+        name: "Resistencia Implacable",
+        description:
+          "Cuando caés a 0 puntos de golpe pero no morís de inmediato, podés quedar en 1 punto de golpe. Una vez usado, se recupera con un descanso largo.",
+        active: true,
+      },
+    ],
+    languages: "Común y un idioma extra a elección",
+  },
   {
     index: "owlin",
     name: "Owlin",
