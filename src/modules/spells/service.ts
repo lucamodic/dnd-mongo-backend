@@ -6,6 +6,7 @@ import { HttpError } from "../../utils/response";
 import { ABILITY_ES, DAMAGE_TYPE_ES, SCHOOL_ES } from "../../utils/dndTranslate";
 import { RECOMMENDED_SPELLS } from "../../data/recommendedSpells";
 import { SPELL_NAME_ES } from "../../data/spellNamesES";
+import { CUSTOM_SPELLS } from "../../data/customSpells";
 
 export class SpellService {
   static list() {
@@ -80,6 +81,32 @@ export class SpellService {
         }
       } catch (e) {
         console.log("Error importando hechizo:", s.index);
+      }
+    }
+
+    // Hechizos fuera del SRD (Xanathar's), cargados a mano.
+    for (const custom of CUSTOM_SPELLS) {
+      try {
+        const { classes, ...data } = custom;
+        const spell = await Spell.findOneAndUpdate(
+          { index: data.index },
+          { $set: data },
+          { upsert: true, new: true }
+        );
+        imported++;
+
+        for (const classIndex of classes) {
+          const classRecord = await Class.findOne({ index: classIndex });
+          if (!classRecord) continue;
+          const link = await ClassSpell.updateOne(
+            { classId: classRecord._id, spellId: spell!._id },
+            { $setOnInsert: { classId: classRecord._id, spellId: spell!._id } },
+            { upsert: true }
+          );
+          if (link.upsertedCount) links++;
+        }
+      } catch (e) {
+        console.log("Error importando hechizo custom:", custom.index);
       }
     }
 
