@@ -3,7 +3,7 @@ import jwt from "jsonwebtoken";
 export interface TokenPayload {
   id: string;
   username: string;
-  role: "admin" | "user";
+  role: "dm" | "player" | "admin" | "user";
 }
 
 export const signToken = (payload: TokenPayload): string => {

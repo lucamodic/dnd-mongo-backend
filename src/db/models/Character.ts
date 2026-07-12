@@ -20,9 +20,23 @@ export interface IResourceState {
   used: number;
 }
 
+export interface IInventoryItem {
+  text: string;
+  createdAt: Date;
+}
+
+export interface ICharacterNotes {
+  general: string;
+  campaign: string;
+  npcs: string;
+  places: string;
+  other: string;
+}
+
 export interface ICharacter extends Document {
   userId: Types.ObjectId;
   name: string;
+  imageBase64: string;
   raceId: Types.ObjectId;
   classId: Types.ObjectId;
   level: number;
@@ -44,7 +58,9 @@ export interface ICharacter extends Document {
   acBonus: number; // bonus extra de CA (hechizos, objetos, manual)
   initiativeBonus: number; // bonus de iniciativa además del mod de Destreza
   weapon: string; // clave del arma equipada (índice de WEAPONS)
+  inventoryItems: IInventoryItem[];
   notes: string;
+  noteSections: ICharacterNotes;
   createdAt: Date;
 }
 
@@ -65,9 +81,29 @@ const currencySchema = new Schema<ICurrency>(
   { _id: false }
 );
 
+const inventoryItemSchema = new Schema<IInventoryItem>(
+  {
+    text: { type: String, required: true },
+    createdAt: { type: Date, default: Date.now },
+  },
+  { _id: true }
+);
+
+const notesSchema = new Schema<ICharacterNotes>(
+  {
+    general: { type: String, default: "" },
+    campaign: { type: String, default: "" },
+    npcs: { type: String, default: "" },
+    places: { type: String, default: "" },
+    other: { type: String, default: "" },
+  },
+  { _id: false }
+);
+
 const characterSchema = new Schema<ICharacter>({
   userId: { type: Schema.Types.ObjectId, ref: "User", required: true },
   name: { type: String, required: true },
+  imageBase64: { type: String, default: "" },
   raceId: { type: Schema.Types.ObjectId, ref: "Race", required: true },
   classId: { type: Schema.Types.ObjectId, ref: "Class", required: true },
   level: { type: Number, default: 1 },
@@ -89,7 +125,9 @@ const characterSchema = new Schema<ICharacter>({
   acBonus: { type: Number, default: 0 },
   initiativeBonus: { type: Number, default: 0 },
   weapon: { type: String, default: "unarmed" },
+  inventoryItems: { type: [inventoryItemSchema], default: () => [] },
   notes: { type: String, default: "" },
+  noteSections: { type: notesSchema, default: () => ({}) },
   createdAt: { type: Date, default: Date.now },
 });
 

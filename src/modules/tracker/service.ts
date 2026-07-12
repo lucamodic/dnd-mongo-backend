@@ -5,6 +5,8 @@ import { Monster } from "../../db/models/Monster";
 import { HttpError } from "../../utils/response";
 import { TokenPayload } from "../../utils/jwt";
 
+const isDM = (user: Pick<TokenPayload, "role">) => user.role === "dm" || user.role === "admin";
+
 /** Devuelve el único tracker global, creándolo si no existe. */
 async function getOrCreate(): Promise<ITracker> {
   let tracker = await Tracker.findOne();
@@ -19,8 +21,19 @@ const touch = async (tracker: ITracker) => {
 };
 
 export class TrackerService {
-  static get() {
-    return getOrCreate();
+  static async get(user: TokenPayload) {
+    const tracker = await getOrCreate();
+    if (isDM(user)) return tracker;
+    const plain = tracker.toObject();
+    plain.participants = plain.participants.map((p: any) => {
+      const owns = p.ownerUserId && String(p.ownerUserId) === user.id;
+      if (p.type === "monster" || !owns) {
+        const { hp, maxHp, tempHp, ...rest } = p;
+        return rest;
+      }
+      return p;
+    });
+    return plain;
   }
 
   /** Un jugador suma su personaje al tracker (idempotente por characterId). */
@@ -107,7 +120,7 @@ export class TrackerService {
 
   private static assertCanEdit(user: TokenPayload, participant: IParticipant) {
     const isOwner = participant.ownerUserId && String(participant.ownerUserId) === user.id;
-    if (user.role !== "admin" && !isOwner) {
+    if (!isDM(user) && !isOwner) {
       throw new HttpError(403, "No podés modificar este participante");
     }
   }
@@ -123,7 +136,9 @@ export class TrackerService {
     this.assertCanEdit(user, participant);
 
     if (patch.hp !== undefined) participant.hp = Math.max(0, Math.min(participant.maxHp, patch.hp));
-    if (patch.tempHp !== undefined) participant.tempHp = Math.max(0, patch.tempHp);
+    if (patch.tempHp !== undefined && patch.hp !== undefined && patch.tempHp <= (participant.tempHp || 0)) {
+      participant.tempHp = Math.max(0, patch.tempHp);
+    }
     if (patch.initiative !== undefined) participant.initiative = patch.initiative;
 
     if (participant.characterId && (patch.hp !== undefined || patch.tempHp !== undefined)) {

@@ -8,6 +8,9 @@ import { Tracker } from "../../db/models/Tracker";
 import { HttpError } from "../../utils/response";
 import { abilityMod, proficiencyBonus, rollDie, rollAbilityScores, computeAc } from "../../utils/dndRules";
 import { CLASS_ABILITY_PRIORITY, DEFAULT_ABILITY_PRIORITY } from "../../data/classAbilityPriority";
+import { TokenPayload } from "../../utils/jwt";
+
+const isDM = (user: Pick<TokenPayload, "role">) => user.role === "dm" || user.role === "admin";
 
 const priorityFor = (cls: IClass): string[] =>
   (cls.abilityPriority && cls.abilityPriority.length ? cls.abilityPriority : CLASS_ABILITY_PRIORITY[cls.index]) ||
@@ -65,15 +68,17 @@ export interface CreateCharacterInput {
 
 export class CharacterService {
   /** Personajes del usuario, con raza y clase populadas. */
-  static list(userId: string) {
-    return Character.find({ userId })
-      .populate("raceId", "name index image color")
+  static list(user: TokenPayload) {
+    return Character.find(isDM(user) ? {} : { userId: user.id })
+      .populate("userId", "username displayName role")
+      .populate("raceId", "name index image imageBase64 color")
       .populate("classId", "name index color hitDie spellcasting")
       .sort({ createdAt: -1 });
   }
 
-  static async show(userId: string, id: string) {
-    const character = await Character.findOne({ _id: id, userId })
+  static async show(user: TokenPayload, id: string) {
+    const character = await Character.findOne(isDM(user) ? { _id: id } : { _id: id, userId: user.id })
+      .populate("userId", "username displayName role")
       .populate("raceId")
       .populate("classId")
       .populate("knownSpells");
@@ -138,7 +143,7 @@ export class CharacterService {
       knownSpells,
     });
 
-    return this.show(userId, String(character._id));
+    return this.show({ id: userId, username: "", role: "player" }, String(character._id));
   }
 
   /**
@@ -159,7 +164,7 @@ export class CharacterService {
     character.proficiencyBonus = proficiencyBonus(character.level);
     await character.save();
 
-    return { character: await this.show(userId, id), roll, conMod, gained };
+    return { character: await this.show({ id: userId, username: "", role: "player" }, id), roll, conMod, gained };
   }
 
   /** Ajusta la vida actual (curar/recibir daño) sin pasar de 0..maxHp. */
@@ -173,12 +178,12 @@ export class CharacterService {
   }
 
   /** Actualiza campos editables del personaje (whitelist: nunca toca nivel, dueño, etc.). */
-  static async update(userId: string, id: string, patch: Record<string, unknown>) {
+  static async update(user: TokenPayload, id: string, patch: Record<string, unknown>) {
     const ALLOWED = [
-      "name", "notes", "ac", "currentHp", "tempHp", "maxHp", "abilityScores", "currency", "skillProficiencies",
+      "name", "imageBase64", "notes", "noteSections", "inventoryItems", "ac", "currentHp", "tempHp", "maxHp", "abilityScores", "currency", "skillProficiencies",
       "spellSlotsUsed", "resourcesUsed", "knownSpells", "armor", "shield", "acBonus", "initiativeBonus", "weapon",
     ];
-    const character = await Character.findOne({ _id: id, userId });
+    const character = await Character.findOne(isDM(user) ? { _id: id } : { _id: id, userId: user.id });
     if (!character) throw new HttpError(404, "Personaje no encontrado");
 
     let touched = false;
@@ -209,11 +214,11 @@ export class CharacterService {
     if (["currentHp", "tempHp", "maxHp", "armor", "shield", "acBonus", "abilityScores", "ac"].some((k) => patch[k] !== undefined)) {
       await syncTrackerParticipant(character);
     }
-    return this.show(userId, id);
+    return this.show(user, id);
   }
 
-  static async remove(userId: string, id: string) {
-    const r = await Character.deleteOne({ _id: id, userId });
+  static async remove(user: TokenPayload, id: string) {
+    const r = await Character.deleteOne(isDM(user) ? { _id: id } : { _id: id, userId: user.id });
     if (!r.deletedCount) throw new HttpError(404, "Personaje no encontrado");
     return { deleted: true };
   }

@@ -48,7 +48,10 @@ src/server.ts         -> entrypoint (local: listen; Vercel: export default app)
 - IDs de Mongo como strings hacia afuera.
 
 ## Modelos
-- **User**: username, password (hash), role (`admin`|`user`). `insomnya` = admin.
+- **User**: username, password (hash), role. Históricamente usa `admin`|`user`, pero a nivel producto debe
+  pensarse como **DM**|**Player**: `insomnya` es el DM; el resto son Players. Backlog: agregar `createdBy`
+  para que los usuarios creados por el DM apunten al `_id` de `insomnya`, y permitir que el DM cree usuarios
+  eligiendo `username` y `password`.
 - **Race / Class / Spell / Monster**: catálogo importado del SRD + metadata en español
   (`utils/raceMeta.ts`, `utils/classMeta.ts`, `utils/dndTranslate.ts`). Spell incluye además
   `damageType` y `savingThrow` (traducidos del SRD) y `simpleDescription`/`dice` (curados a mano).
@@ -60,7 +63,7 @@ src/server.ts         -> entrypoint (local: listen; Vercel: export default app)
   poder que se usa (acción/recurso limitado, ej. Aliento del dragonborn); si no, es pasivo/de fondo.
 - **Class**: `progression[].features[]` también tiene `active` (misma lógica, ej. Furia=true, Defensa
   sin Armadura=false). La app separa "activos" (sección principal) de pasivos ("Información avanzada").
-- **Character**: PJ de un usuario (nivel, HP, stats, AC, `currency`, `skillProficiencies`, `spellSlotsUsed`,
+- **Character**: PJ de un usuario (nivel, HP, `tempHp`, stats, AC, `currency`, `skillProficiencies`, `spellSlotsUsed`,
   `resourcesUsed`, `knownSpells`, `armor`/`shield`/`acBonus`, `initiativeBonus`, `weapon`). HP nivel 1 = `hitDie + mod(CON)`.
   Al crear sin `abilityScores` se generan solas (`rollAbilityScores`: 4d6-drop-lowest repartido por
   `class.abilityPriority`, las 2 principales ≥14). `knownSpells` arranca con los recomendados de la clase.
@@ -74,12 +77,17 @@ src/server.ts         -> entrypoint (local: listen; Vercel: export default app)
   (`src/lib/sheet.ts`: `cantripLimit`, `spellsKnownLimit` — distingue clases "de conocidos" vs "de
   preparados" según si `progression[level].spellsKnown` es 0).
 - Endpoints nuevos: `POST /characters/roll-stats`, `POST /spells/apply-recommended` (admin). Script `npm run apply:recommended`.
-- **Tracker**: documento **único global** con `participants[]`, `round`, `activeIndex`.
+- **Tracker**: documento **único global** con `participants[]`, `round`, `activeIndex`. Los participantes guardan
+  `hp`, `tempHp`, `maxHp`, `ac`, `characterId`, `ownerUserId`, `color`. La vida y vida temporal se sincronizan
+  en ambos sentidos entre `Character` y el participante del tracker.
 
 ## Auth y permisos
 - `POST /auth/login` con `{ username, password }` → `{ token, user }`. Token dura 30 días.
 - `requireAuth`: exige `Authorization: Bearer <token>`.
-- `requireAdmin`: exige `role === "admin"` (solo insomnya). Gatea imports y mutaciones del tracker.
+- `requireAdmin`: exige `role === "admin"` (producto: **DM**, solo `insomnya`). Gatea imports y mutaciones del tracker.
+- Cada vez que un pedido o texto diga "insomnya puede hacer X", interpretarlo como "el **DM** puede hacer X".
+- Backlog de permisos: Players no deben ver HP de monstruos; solo HP de personajes propios. Players sí ven
+  iniciativa y turno activo. El DM ve todos los héroes y el dueño de cada héroe.
 
 ## Endpoints principales
 - Auth: `POST /auth/login`, `GET /auth/me`
@@ -113,6 +121,26 @@ npm run apply:summaries   # valida cobertura 1:1 contra la base y actualiza cada
 Si en el futuro se agregan hechizos homebrew o se quiere regenerar los resúmenes con ChatGPT,
 el flujo `export:summary` → pegar en ChatGPT → `POST /spells/import-summaries` sigue disponible
 (ver **SUMMARIZE_PROMPT.md**), pero para el catálogo SRD estándar ya no hace falta.
+
+Correcciones recientes de dados:
+- `magic-missile`: `1d4+1` por dardo, no `3d4+3`.
+- `ice-storm`: `2d8+4d6`.
+- `regenerate`: `4d8+15`.
+- `meteor-swarm`: `20d6+20d6`.
+
+## Backlog backend solicitado
+- Renombrar/normalizar roles de producto a `dm` y `player` o mapear claramente `admin`→DM, `user`→Player.
+- Agregar `createdBy` a User y script/migración para asignar a `insomnya` como creador de los usuarios existentes.
+- Endpoint DM-only para crear usuarios con username/password elegidos por el DM.
+- Endpoints/listados para que el DM vea todos los personajes y el owner de cada uno.
+- Sanitizar `GET /tracker` según rol:
+  - DM ve todo.
+  - Player no ve HP de monstruos.
+  - Player solo ve HP/tempHp de sus propios personajes.
+  - Player sí ve iniciativa, orden y turno activo.
+- El PATCH del tracker debe permitir curar/dañar HP con cantidad indicada, pero no editar/sumar `tempHp` desde pantalla de combate.
+- Agregar foto custom de personaje en base64 al modelo Character; debe tener prioridad sobre foto de raza en listados y ficha.
+- Agregar mochila/equipamiento con ítems de texto y notas categorizadas (campaña, NPCs, lugares, otros).
 
 ## Deploy (Vercel)
 - `vercel.json` buildea `src/server.ts` con `@vercel/node`.

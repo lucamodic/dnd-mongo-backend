@@ -13,4 +13,9 @@ export const AuthController = {
     const result = await AuthService.me(req.user!.id);
     ok(res, result);
   },
+
+  createUser: async (req: Request, res: Response) => {
+    const result = await AuthService.createPlayer(req.user!.id, req.body || {});
+    ok(res, result, 201);
+  },
 };

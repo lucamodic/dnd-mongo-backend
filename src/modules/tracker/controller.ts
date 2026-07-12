@@ -3,7 +3,7 @@ import { TrackerService } from "./service";
 import { ok } from "../../utils/response";
 
 export const TrackerController = {
-  get: async (_req: Request, res: Response) => ok(res, await TrackerService.get()),
+  get: async (req: Request, res: Response) => ok(res, await TrackerService.get(req.user!)),
   join: async (req: Request, res: Response) =>
     ok(res, await TrackerService.join(req.user!, req.body?.characterId, Number(req.body?.initiative) || 0)),
   addParticipant: async (req: Request, res: Response) =>

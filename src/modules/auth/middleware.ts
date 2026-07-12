@@ -22,10 +22,12 @@ export const requireAuth = (req: Request, res: Response, next: NextFunction) => 
   }
 };
 
-/** Exige que el usuario autenticado sea admin (insomnya). */
+export const isDMRole = (role?: string) => role === "dm" || role === "admin";
+
+/** Exige que el usuario autenticado sea DM (insomnya). */
 export const requireAdmin = (req: Request, res: Response, next: NextFunction) => {
-  if (req.user?.role !== "admin") {
-    return res.status(403).json({ error: "Solo el admin puede hacer esto" });
+  if (!isDMRole(req.user?.role)) {
+    return res.status(403).json({ error: "Solo el DM puede hacer esto" });
   }
   next();
 };
