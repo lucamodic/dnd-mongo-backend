@@ -22,6 +22,7 @@ export interface IResourceState {
 
 export interface IInventoryItem {
   text: string;
+  description: string;
   createdAt: Date;
 }
 
@@ -58,6 +59,7 @@ export interface ICharacter extends Document {
   acBonus: number; // bonus extra de CA (hechizos, objetos, manual)
   initiativeBonus: number; // bonus de iniciativa además del mod de Destreza
   weapon: string; // clave del arma equipada (índice de WEAPONS)
+  weapons: string[]; // armas que tiene disponibles; `weapon` es la equipada
   inventoryItems: IInventoryItem[];
   notes: string;
   noteSections: ICharacterNotes;
@@ -84,6 +86,7 @@ const currencySchema = new Schema<ICurrency>(
 const inventoryItemSchema = new Schema<IInventoryItem>(
   {
     text: { type: String, required: true },
+    description: { type: String, default: "" },
     createdAt: { type: Date, default: Date.now },
   },
   { _id: true }
@@ -125,6 +128,7 @@ const characterSchema = new Schema<ICharacter>({
   acBonus: { type: Number, default: 0 },
   initiativeBonus: { type: Number, default: 0 },
   weapon: { type: String, default: "unarmed" },
+  weapons: { type: [String], default: () => [] },
   inventoryItems: { type: [inventoryItemSchema], default: () => [] },
   notes: { type: String, default: "" },
   noteSections: { type: notesSchema, default: () => ({}) },

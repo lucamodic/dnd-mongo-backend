@@ -10,7 +10,7 @@ const isDM = (user: Pick<TokenPayload, "role">) => user.role === "dm" || user.ro
 /** Devuelve el único tracker global, creándolo si no existe. */
 async function getOrCreate(): Promise<ITracker> {
   let tracker = await Tracker.findOne();
-  if (!tracker) tracker = await Tracker.create({ round: 1, activeIndex: 0, participants: [] });
+  if (!tracker) tracker = await Tracker.create({ round: 1, activeIndex: 0, levelUpEnabled: false, participants: [] });
   return tracker;
 }
 
@@ -28,7 +28,7 @@ export class TrackerService {
     plain.participants = plain.participants.map((p: any) => {
       const owns = p.ownerUserId && String(p.ownerUserId) === user.id;
       if (p.type === "monster" || !owns) {
-        const { hp, maxHp, tempHp, ...rest } = p;
+        const { hp, maxHp, tempHp, ac, ...rest } = p;
         return rest;
       }
       return p;
@@ -163,6 +163,12 @@ export class TrackerService {
 
     tracker.participants = tracker.participants.filter((p) => String(p._id) !== String(pid));
     if (tracker.activeIndex >= tracker.participants.length) tracker.activeIndex = 0;
+    return touch(tracker);
+  }
+
+  static async patchSettings(patch: { levelUpEnabled?: boolean }) {
+    const tracker = await getOrCreate();
+    if (patch.levelUpEnabled !== undefined) tracker.levelUpEnabled = !!patch.levelUpEnabled;
     return touch(tracker);
   }
 

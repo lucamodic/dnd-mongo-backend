@@ -14,6 +14,7 @@ router.delete("/participants/:pid", asyncHandler(TrackerController.removePartici
 
 // Solo admin:
 router.post("/participants", requireAdmin, asyncHandler(TrackerController.addParticipant));
+router.patch("/", requireAdmin, asyncHandler(TrackerController.patchSettings));
 router.post("/next", requireAdmin, asyncHandler(TrackerController.next));
 router.post("/sort", requireAdmin, asyncHandler(TrackerController.sort));
 router.post("/reset", requireAdmin, asyncHandler(TrackerController.reset));

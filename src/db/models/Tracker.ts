@@ -21,6 +21,7 @@ export interface IParticipant {
 export interface ITracker extends Document {
   round: number;
   activeIndex: number;
+  levelUpEnabled: boolean;
   participants: IParticipant[];
   updatedAt: Date;
 }
@@ -41,6 +42,7 @@ const participantSchema = new Schema<IParticipant>({
 const trackerSchema = new Schema<ITracker>({
   round: { type: Number, default: 1 },
   activeIndex: { type: Number, default: 0 },
+  levelUpEnabled: { type: Boolean, default: false },
   participants: [participantSchema],
   updatedAt: { type: Date, default: Date.now },
 });

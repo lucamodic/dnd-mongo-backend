@@ -1,10 +1,13 @@
 import { Monster } from "../../db/models/Monster";
 import { dndGet, DND_API_BASE } from "../../utils/dndApi";
 import { HttpError } from "../../utils/response";
+import { monsterNameES } from "../../data/monsterNamesES";
 
 export class MonsterService {
   static list(search?: string) {
-    const filter = search ? { name: { $regex: search, $options: "i" } } : {};
+    const filter = search
+      ? { $or: [{ name: { $regex: search, $options: "i" } }, { index: { $regex: search, $options: "i" } }] }
+      : {};
     return Monster.find(filter).sort({ challengeRating: 1, name: 1 }).limit(300);
   }
 
@@ -24,7 +27,7 @@ export class MonsterService {
         const mon = await dndGet<any>(m.url);
         const data = {
           index: mon.index,
-          name: mon.name,
+          name: monsterNameES(mon.index, mon.name),
           size: mon.size || "",
           type: mon.type || "",
           hp: mon.hit_points || 1,

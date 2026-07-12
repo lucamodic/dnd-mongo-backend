@@ -10,6 +10,8 @@ export const TrackerController = {
     ok(res, await TrackerService.addParticipant(req.body || {})),
   patchParticipant: async (req: Request, res: Response) =>
     ok(res, await TrackerService.patchParticipant(req.user!, req.params.pid, req.body || {})),
+  patchSettings: async (req: Request, res: Response) =>
+    ok(res, await TrackerService.patchSettings(req.body || {})),
   removeParticipant: async (req: Request, res: Response) =>
     ok(res, await TrackerService.removeParticipant(req.user!, req.params.pid)),
   next: async (_req: Request, res: Response) => ok(res, await TrackerService.next()),

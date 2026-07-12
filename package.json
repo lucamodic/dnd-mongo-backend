@@ -15,6 +15,7 @@
     "import:all": "ts-node-dev --transpile-only src/scripts/importAll.ts all",
     "export:summary": "ts-node-dev --transpile-only src/scripts/exportSpellsForSummary.ts",
     "apply:summaries": "ts-node-dev --transpile-only src/scripts/applySpellSummaries.ts",
+    "apply:monster-names": "ts-node-dev --transpile-only src/scripts/applyMonsterNames.ts",
     "apply:recommended": "ts-node-dev --transpile-only src/scripts/applyRecommendedSpells.ts",
     "smoke": "ts-node-dev --transpile-only test/smoke.ts"
   },

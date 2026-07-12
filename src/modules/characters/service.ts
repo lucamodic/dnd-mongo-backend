@@ -159,8 +159,13 @@ export class CharacterService {
    * Sube de nivel. El jugador tira el dado de vida en la vida real y manda `rolled`.
    * Si no lo manda, lo tiramos en el server. maxHp += rolled + mod(CON) (mínimo 1).
    */
-  static async levelUp(userId: string, id: string, rolled?: number) {
-    const character = await Character.findOne({ _id: id, userId });
+  static async levelUp(user: TokenPayload, id: string, rolled?: number) {
+    if (!isDM(user)) {
+      const tracker = await Tracker.findOne();
+      if (!tracker?.levelUpEnabled) throw new HttpError(403, "El DM todavía no habilitó la subida de nivel");
+    }
+
+    const character = await Character.findOne(isDM(user) ? { _id: id } : { _id: id, userId: user.id });
     if (!character) throw new HttpError(404, "Personaje no encontrado");
 
     const roll = rolled && rolled > 0 ? rolled : rollDie(character.hitDie);
@@ -173,7 +178,7 @@ export class CharacterService {
     character.proficiencyBonus = proficiencyBonus(character.level);
     await character.save();
 
-    return { character: await this.show({ id: userId, username: "", role: "player" }, id), roll, conMod, gained };
+    return { character: await this.show(user, id), roll, conMod, gained };
   }
 
   /** Ajusta la vida actual (curar/recibir daño) sin pasar de 0..maxHp. */
@@ -190,7 +195,7 @@ export class CharacterService {
   static async update(user: TokenPayload, id: string, patch: Record<string, unknown>) {
     const ALLOWED = [
       "name", "imageBase64", "notes", "noteSections", "inventoryItems", "ac", "currentHp", "tempHp", "maxHp", "abilityScores", "currency", "skillProficiencies",
-      "spellSlotsUsed", "resourcesUsed", "knownSpells", "armor", "shield", "acBonus", "initiativeBonus", "weapon",
+      "spellSlotsUsed", "resourcesUsed", "knownSpells", "armor", "shield", "acBonus", "initiativeBonus", "weapon", "weapons",
     ];
     const character = await Character.findOne(isDM(user) ? { _id: id } : { _id: id, userId: user.id });
     if (!character) throw new HttpError(404, "Personaje no encontrado");
