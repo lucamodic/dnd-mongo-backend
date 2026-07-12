@@ -59,6 +59,15 @@ const syncTrackerParticipant = async (character: any) => {
   );
 };
 
+const removeTrackerParticipant = async (characterId: Types.ObjectId) => {
+  const tracker = await Tracker.findOne({ "participants.characterId": characterId });
+  if (!tracker) return;
+  tracker.participants = tracker.participants.filter((p) => String(p.characterId) !== String(characterId));
+  if (tracker.activeIndex >= tracker.participants.length) tracker.activeIndex = 0;
+  tracker.updatedAt = new Date();
+  await tracker.save();
+};
+
 export interface CreateCharacterInput {
   name: string;
   raceId: string;
@@ -218,8 +227,9 @@ export class CharacterService {
   }
 
   static async remove(user: TokenPayload, id: string) {
-    const r = await Character.deleteOne(isDM(user) ? { _id: id } : { _id: id, userId: user.id });
-    if (!r.deletedCount) throw new HttpError(404, "Personaje no encontrado");
+    const character = await Character.findOneAndDelete(isDM(user) ? { _id: id } : { _id: id, userId: user.id });
+    if (!character) throw new HttpError(404, "Personaje no encontrado");
+    await removeTrackerParticipant(character._id as Types.ObjectId);
     return { deleted: true };
   }
 }
