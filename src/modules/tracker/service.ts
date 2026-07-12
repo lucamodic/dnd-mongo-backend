@@ -6,6 +6,30 @@ import { HttpError } from "../../utils/response";
 import { TokenPayload } from "../../utils/jwt";
 
 const isDM = (user: Pick<TokenPayload, "role">) => user.role === "dm" || user.role === "admin";
+const VALID_CONDITIONS = new Set([
+  "blinded",
+  "charmed",
+  "deafened",
+  "frightened",
+  "grappled",
+  "incapacitated",
+  "invisible",
+  "paralyzed",
+  "petrified",
+  "poisoned",
+  "prone",
+  "restrained",
+  "stunned",
+  "unconscious",
+  "exhaustion",
+]);
+
+const normalizeConditions = (conditions: unknown): string[] => {
+  if (!Array.isArray(conditions)) throw new HttpError(400, "Estados inválidos");
+  const normalized = Array.from(new Set(conditions.map((c) => String(c).trim()).filter(Boolean)));
+  if (normalized.some((c) => !VALID_CONDITIONS.has(c))) throw new HttpError(400, "Estado inválido");
+  return normalized;
+};
 
 /** Devuelve el único tracker global, creándolo si no existe. */
 async function getOrCreate(): Promise<ITracker> {
@@ -51,6 +75,7 @@ export class TrackerService {
       already.tempHp = character.tempHp || 0;
       already.maxHp = character.maxHp;
       already.ac = character.ac;
+      already.conditions ||= [];
       return touch(tracker);
     }
 
@@ -62,6 +87,7 @@ export class TrackerService {
       tempHp: character.tempHp || 0,
       maxHp: character.maxHp,
       ac: character.ac,
+      conditions: [],
       characterId: character._id as Types.ObjectId,
       ownerUserId: new Types.ObjectId(user.id),
       color: (character.classId as any)?.color || "",
@@ -91,6 +117,7 @@ export class TrackerService {
         tempHp: 0,
         maxHp: monster.hp,
         ac: monster.ac,
+        conditions: [],
         color: "#722548",
       };
     } else {
@@ -104,6 +131,7 @@ export class TrackerService {
         tempHp: 0,
         maxHp: hp,
         ac: Number(body.ac) || 10,
+        conditions: [],
         color: "#722548",
       };
     }
@@ -129,7 +157,7 @@ export class TrackerService {
   static async patchParticipant(
     user: TokenPayload,
     pid: string,
-    patch: { hp?: number; tempHp?: number; initiative?: number }
+    patch: { hp?: number; tempHp?: number; initiative?: number; conditions?: string[] }
   ) {
     const tracker = await getOrCreate();
     const participant = this.findParticipant(tracker, pid);
@@ -140,6 +168,7 @@ export class TrackerService {
       participant.tempHp = Math.max(0, patch.tempHp);
     }
     if (patch.initiative !== undefined) participant.initiative = patch.initiative;
+    if (patch.conditions !== undefined) participant.conditions = normalizeConditions(patch.conditions);
 
     if (participant.characterId && (patch.hp !== undefined || patch.tempHp !== undefined)) {
       await Character.updateOne(

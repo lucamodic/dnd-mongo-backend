@@ -9,6 +9,7 @@ export interface IParticipant {
   tempHp: number;
   maxHp: number;
   ac: number;
+  conditions: string[];
   characterId?: Types.ObjectId; // si es un PJ
   ownerUserId?: Types.ObjectId; // dueño (para permisos)
   color?: string;
@@ -34,6 +35,7 @@ const participantSchema = new Schema<IParticipant>({
   tempHp: { type: Number, default: 0 },
   maxHp: { type: Number, default: 1 },
   ac: { type: Number, default: 10 },
+  conditions: { type: [String], default: [] },
   characterId: { type: Schema.Types.ObjectId, ref: "Character" },
   ownerUserId: { type: Schema.Types.ObjectId, ref: "User" },
   color: { type: String, default: "" },

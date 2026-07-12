@@ -20,6 +20,7 @@ export interface IRace extends Document {
   size: string;
   speed: number;
   abilityBonuses: IAbilityBonus[];
+  flexibleAbilityBonuses: boolean;
   traits: IRaceTrait[];
   languages: string;
 }
@@ -33,6 +34,7 @@ const raceSchema = new Schema<IRace>({
   size: { type: String, default: "Medium" },
   speed: { type: Number, default: 30 },
   abilityBonuses: [{ ability: String, bonus: Number }],
+  flexibleAbilityBonuses: { type: Boolean, default: false },
   traits: [{ name: String, description: String, active: { type: Boolean, default: false } }],
   languages: { type: String, default: "" },
 });

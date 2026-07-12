@@ -16,6 +16,22 @@ const priorityFor = (cls: IClass): string[] =>
   (cls.abilityPriority && cls.abilityPriority.length ? cls.abilityPriority : CLASS_ABILITY_PRIORITY[cls.index]) ||
   DEFAULT_ABILITY_PRIORITY;
 
+const applyRaceBonuses = (scores: IAbilityScores, race: any, cls: IClass) => {
+  const add = (ability: string, bonus: number) => {
+    const key = ability as keyof IAbilityScores;
+    if (key in scores) scores[key] = Math.min(20, scores[key] + bonus);
+  };
+
+  if (race.flexibleAbilityBonuses) {
+    const priority = priorityFor(cls).filter((ability, index, list) => list.indexOf(ability) === index);
+    add(priority[0] || "str", 2);
+    add(priority[1] || "con", 1);
+    return;
+  }
+
+  for (const bonus of race.abilityBonuses || []) add(bonus.ability, bonus.bonus);
+};
+
 const progressionAt = (cls: IClass, level: number) => cls.progression?.find((p) => p.level === level);
 
 const cantripLimit = (cls: IClass, level: number) => progressionAt(cls, level)?.cantripsKnown || 0;
@@ -119,12 +135,9 @@ export class CharacterService {
       ? ({ str: 10, dex: 10, con: 10, int: 10, wis: 10, cha: 10, ...input.abilityScores } as IAbilityScores)
       : rollAbilityScores(priorityFor(cls));
 
-    // Aplicamos los bonos de raza encima.
+    // Aplicamos los bonos de raza encima. Las razas MPMM usan +2/+1 flexible según la prioridad de clase.
     const scores: IAbilityScores = { ...base };
-    for (const bonus of race.abilityBonuses || []) {
-      const key = bonus.ability as keyof IAbilityScores;
-      if (key in scores) scores[key] += bonus.bonus;
-    }
+    applyRaceBonuses(scores, race, cls);
 
     const conMod = abilityMod(scores.con);
     const maxHp = cls.hitDie + conMod; // nivel 1: dado de vida al máximo
