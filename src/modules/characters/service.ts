@@ -3,12 +3,14 @@ import { Character, IAbilityScores } from "../../db/models/Character";
 import { Race } from "../../db/models/Race";
 import { Class, IClass } from "../../db/models/Class";
 import { ClassSpell } from "../../db/models/ClassSpell";
-import { ISpell } from "../../db/models/Spell";
+import { ISpell, Spell } from "../../db/models/Spell";
+import { Subclass } from "../../db/models/Subclass";
 import { Tracker } from "../../db/models/Tracker";
 import { HttpError } from "../../utils/response";
 import { abilityMod, proficiencyBonus, rollDie, rollAbilityScores, computeAc } from "../../utils/dndRules";
 import { CLASS_ABILITY_PRIORITY, DEFAULT_ABILITY_PRIORITY } from "../../data/classAbilityPriority";
 import { TokenPayload } from "../../utils/jwt";
+import { mergeSubclassIntoClass } from "../../utils/subclassMerge";
 
 const isDM = (user: Pick<TokenPayload, "role">) => user.role === "dm" || user.role === "admin";
 
@@ -88,6 +90,7 @@ export interface CreateCharacterInput {
   name: string;
   raceId: string;
   classId: string;
+  subclassIndex?: string;
   abilityScores?: Partial<IAbilityScores>;
 }
 
@@ -97,7 +100,7 @@ export class CharacterService {
     return Character.find(isDM(user) ? {} : { userId: user.id })
       .populate("userId", "username displayName role")
       .populate("raceId", "name index image imageBase64 color")
-      .populate("classId", "name index color hitDie spellcasting")
+      .populate("classId", "name index color hitDie spellcasting subclassLevel")
       .sort({ createdAt: -1 });
   }
 
@@ -108,7 +111,28 @@ export class CharacterService {
       .populate("classId")
       .populate("knownSpells");
     if (!character) throw new HttpError(404, "Personaje no encontrado");
-    return character;
+
+    const obj: any = character.toObject();
+    obj.subclassBonusSpells = [];
+    if (!character.subclassIndex) return obj;
+
+    const cls = character.classId as any;
+    const subclass = await Subclass.findOne({ index: character.subclassIndex, classIndex: cls.index });
+    let spellListClassId: string | undefined;
+    if (subclass?.spellcasting && subclass.spellListClassIndex) {
+      const sourceClass = await Class.findOne({ index: subclass.spellListClassIndex }).select("_id");
+      spellListClassId = sourceClass ? String(sourceClass._id) : undefined;
+    }
+
+    obj.classId = mergeSubclassIntoClass(obj.classId, subclass, character.level, spellListClassId);
+    obj.subclassName = subclass?.name || "";
+
+    const bonusIndexes = (subclass?.bonusSpells || [])
+      .filter((group) => group.level <= character.level)
+      .flatMap((group) => group.spellIndexes);
+    obj.subclassBonusSpells = bonusIndexes.length ? await Spell.find({ index: { $in: bonusIndexes } }).lean() : [];
+
+    return obj;
   }
 
   /**
@@ -143,12 +167,20 @@ export class CharacterService {
     const maxHp = cls.hitDie + conMod; // nivel 1: dado de vida al máximo
     const ac = computeAc({ armor: "none", shield: false, acBonus: 0, abilityScores: scores });
     const knownSpells = cls.spellcasting ? await recommendedSpellIds(cls, scores, 1) : [];
+    let subclassIndex = "";
+    if (input.subclassIndex) {
+      const subclass = await Subclass.findOne({ index: input.subclassIndex, classIndex: cls.index });
+      if (!subclass) throw new HttpError(400, "Esa especialidad no es de tu clase");
+      if (subclass.subclassLevel > 1) throw new HttpError(400, "Todavía no llegás al nivel para elegir especialidad");
+      subclassIndex = subclass.index;
+    }
 
     const character = await Character.create({
       userId: new Types.ObjectId(userId),
       name: input.name.trim(),
       raceId: race._id,
       classId: cls._id,
+      subclassIndex,
       level: 1,
       hitDie: cls.hitDie,
       maxHp,
@@ -194,6 +226,25 @@ export class CharacterService {
     return { character: await this.show(user, id), roll, conMod, gained };
   }
 
+  static async chooseSubclass(user: TokenPayload, id: string, subclassIndex: string) {
+    if (!subclassIndex?.trim()) throw new HttpError(400, "Elegí una especialidad");
+
+    const character = await Character.findOne(isDM(user) ? { _id: id } : { _id: id, userId: user.id }).populate("classId");
+    if (!character) throw new HttpError(404, "Personaje no encontrado");
+    if (character.subclassIndex && !isDM(user)) throw new HttpError(400, "Ya elegiste tu especialidad");
+
+    const cls = character.classId as any;
+    const subclass = await Subclass.findOne({ index: subclassIndex, classIndex: cls.index });
+    if (!subclass) throw new HttpError(400, "Esa especialidad no es de tu clase");
+    if (character.level < subclass.subclassLevel) {
+      throw new HttpError(400, "Todavía no llegás al nivel para elegir especialidad");
+    }
+
+    character.subclassIndex = subclass.index;
+    await character.save();
+    return this.show(user, id);
+  }
+
   /** Ajusta la vida actual (curar/recibir daño) sin pasar de 0..maxHp. */
   static async setHp(userId: string, id: string, currentHp: number) {
     const character = await Character.findOne({ _id: id, userId });
@@ -209,9 +260,20 @@ export class CharacterService {
     const ALLOWED = [
       "name", "imageBase64", "notes", "noteSections", "inventoryItems", "ac", "currentHp", "tempHp", "maxHp", "abilityScores", "currency", "skillProficiencies",
       "spellSlotsUsed", "resourcesUsed", "knownSpells", "armor", "shield", "acBonus", "initiativeBonus", "weapon", "weapons",
+      "subclassIndex",
     ];
     const character = await Character.findOne(isDM(user) ? { _id: id } : { _id: id, userId: user.id });
     if (!character) throw new HttpError(404, "Personaje no encontrado");
+
+    if (patch.subclassIndex !== undefined) {
+      if (!isDM(user)) throw new HttpError(403, "Usá la elección de especialidad");
+      const nextSubclassIndex = String(patch.subclassIndex || "");
+      if (nextSubclassIndex) {
+        const cls = await Class.findById(character.classId);
+        const subclass = cls ? await Subclass.findOne({ index: nextSubclassIndex, classIndex: cls.index }) : null;
+        if (!subclass) throw new HttpError(400, "Esa especialidad no es de tu clase");
+      }
+    }
 
     let touched = false;
     for (const key of ALLOWED) {

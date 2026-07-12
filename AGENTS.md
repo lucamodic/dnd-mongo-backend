@@ -55,12 +55,17 @@ src/server.ts         -> entrypoint (local: listen; Vercel: export default app)
 - **Race / Class / Spell / Monster**: catálogo importado del SRD + metadata en español
   (`utils/raceMeta.ts`, `utils/classMeta.ts`, `utils/dndTranslate.ts`). Spell incluye además
   `damageType` y `savingThrow` (traducidos del SRD) y `simpleDescription`/`dice` (curados a mano).
+- **Weapon**: catálogo de armas en Mongo. Se siembra desde `src/data/weapons.ts` y se expone por `/weapons`.
+  Incluye armas SRD, `natural-talons` y `dragonborn-breath`. El DM puede crear armas custom y asignarlas a PJs.
 - **ClassSpell**: tabla de unión N:M `spells_classes` (clase ↔ hechizo).
 - **Class**: incluye `progression[]` (por nivel: features en español, `spellSlots`, `resources` como
   furias/ki/puntos de hechicería, cantrips/spells known) + `skillOptions`/`skillChoiceCount` +
   `savingThrows` (índices) + `spellcastingAbility`.
 - **Race**: `traits[]` como `{name, description, active}` (en español) + `languages`. `active` = es un
   poder que se usa (acción/recurso limitado, ej. Aliento del dragonborn); si no, es pasivo/de fondo.
+  Razas MPMM/homebrew recientes usan `flexibleAbilityBonuses: true`; al crear PJ se aplica `+2/+1` según
+  `class.abilityPriority`. Razas custom agregadas/curadas: aarakocra, goblin, orc, owlin, eladrin, kenku,
+  kobold y shifter.
 - **Class**: `progression[].features[]` también tiene `active` (misma lógica, ej. Furia=true, Defensa
   sin Armadura=false). La app separa "activos" (sección principal) de pasivos ("Información avanzada").
 - **Character**: PJ de un usuario (nivel, HP, `tempHp`, stats, AC, `currency`, `skillProficiencies`, `spellSlotsUsed`,
@@ -69,7 +74,8 @@ src/server.ts         -> entrypoint (local: listen; Vercel: export default app)
   `class.abilityPriority`, las 2 principales ≥14). `knownSpells` arranca con los recomendados de la clase.
   Se edita con `PATCH /characters/:id` (whitelist); al tocar armadura/stats se recalcula `ac` con `computeAc`.
 - **ClassSpell** además tiene `recommended` (hechizos top por clase, marcados con `apply:recommended`).
-- Datos curados nuevos en `src/data/`: `armors.ts`, `weapons.ts` (37 armas SRD), `customRaces.ts` (Owlin/Eladrin),
+- Datos curados nuevos en `src/data/`: `armors.ts`, `weapons.ts` (armas SRD + naturales/raciales),
+  `customRaces.ts` (razas fuera del SRD),
   `recommendedSpells.ts`, `classAbilityPriority.ts`, `classNamesES.ts`/`raceNamesES.ts`/`spellNamesES.ts`
   (nombres traducidos, cobertura validada), `images.ts` (RACE_IMAGES, usa miniaturas livianas de Wikimedia
   para evitar fallos de carga por archivos pesados). `dndRules.ts` tiene `rollAbilityScores`/`computeAc`.
@@ -78,8 +84,10 @@ src/server.ts         -> entrypoint (local: listen; Vercel: export default app)
   preparados" según si `progression[level].spellsKnown` es 0).
 - Endpoints nuevos: `POST /characters/roll-stats`, `POST /spells/apply-recommended` (admin). Script `npm run apply:recommended`.
 - **Tracker**: documento **único global** con `participants[]`, `round`, `activeIndex`. Los participantes guardan
-  `hp`, `tempHp`, `maxHp`, `ac`, `characterId`, `ownerUserId`, `color`. La vida y vida temporal se sincronizan
-  en ambos sentidos entre `Character` y el participante del tracker.
+  `hp`, `tempHp`, `maxHp`, `ac`, `conditions`, `characterId`, `ownerUserId`, `color`. La vida y vida temporal se sincronizan
+  en ambos sentidos entre `Character` y el participante del tracker. `conditions` es un array de strings validado
+  contra condiciones D&D estándar (`blinded`, `charmed`, `deafened`, `frightened`, `grappled`, `incapacitated`,
+  `invisible`, `paralyzed`, `petrified`, `poisoned`, `prone`, `restrained`, `stunned`, `unconscious`, `exhaustion`).
   Al borrar un `Character`, también se debe eliminar su participante del tracker y corregir `activeIndex` si queda
   fuera de rango.
 
@@ -100,6 +108,8 @@ src/server.ts         -> entrypoint (local: listen; Vercel: export default app)
   `POST /characters/:id/level-up` (body `{ rolled }`), `POST /characters/:id/hp` (body `{ currentHp }`)
 - Tracker: `GET /tracker` (polling), `POST /tracker/join`, `PATCH|DELETE /tracker/participants/:pid`
   (admin o dueño), y admin-only: `POST /tracker/participants|next|sort|reset`
+- Armas: `GET /weapons`; admin-only: `POST /weapons`, `POST /weapons/import-base`,
+  `POST /weapons/assign/:characterId`
 - Imports (admin): `POST /races|classes|spells|monsters/import-all`
 - Hechizos simples: `GET /spells/export-summary`, `POST /spells/import-summaries`
 
@@ -131,6 +141,15 @@ Correcciones recientes de dados:
 - `ice-storm`: `2d8+4d6`.
 - `regenerate`: `4d8+15`.
 - `meteor-swarm`: `20d6+20d6`.
+
+## Armas en Mongo
+- `src/db/models/Weapon.ts` define el catálogo persistido.
+- `src/modules/weapons/` sigue el patrón route→controller→service.
+- `WeaponService.list()` autosiembra desde `src/data/weapons.ts` si la colección está vacía.
+- `WeaponService.create()` es DM-only y genera índices `custom-...`.
+- `WeaponService.assign()` es DM-only: agrega el arma a `character.weapons` y la deja equipada en `character.weapon`.
+- Si se cambia `src/data/weapons.ts`, correr/pegar el import base para actualizar Mongo. La colección actual debe
+  contener 40 armas base incluyendo `natural-talons` y `dragonborn-breath`.
 
 ## Backlog backend solicitado
 - Renombrar/normalizar roles de producto a `dm` y `player` o mapear claramente `admin`→DM, `user`→Player.

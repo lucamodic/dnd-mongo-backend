@@ -96,6 +96,7 @@ export class ClassService {
           spellcasting: !!cls.spellcasting,
           spellcastingAbility: cls.spellcasting?.spellcasting_ability?.index || "",
           description: meta.description,
+          subclassLevel: 3,
           skillChoiceCount: skills.count,
           skillOptions: skills.options,
           abilityPriority: CLASS_ABILITY_PRIORITY[cls.index] || DEFAULT_ABILITY_PRIORITY,

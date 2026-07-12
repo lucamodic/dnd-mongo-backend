@@ -12,6 +12,8 @@ export const CharacterController = {
     ok(res, await CharacterService.rollStats(req.body?.classId)),
   levelUp: async (req: Request, res: Response) =>
     ok(res, await CharacterService.levelUp(req.user!, req.params.id, Number(req.body?.rolled))),
+  chooseSubclass: async (req: Request, res: Response) =>
+    ok(res, await CharacterService.chooseSubclass(req.user!, req.params.id, req.body?.subclassIndex)),
   setHp: async (req: Request, res: Response) =>
     ok(res, await CharacterService.setHp(req.user!.id, req.params.id, Number(req.body?.currentHp))),
   update: async (req: Request, res: Response) =>

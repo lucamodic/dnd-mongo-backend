@@ -40,6 +40,7 @@ export interface ICharacter extends Document {
   imageBase64: string;
   raceId: Types.ObjectId;
   classId: Types.ObjectId;
+  subclassIndex: string;
   level: number;
   maxHp: number;
   currentHp: number;
@@ -109,6 +110,7 @@ const characterSchema = new Schema<ICharacter>({
   imageBase64: { type: String, default: "" },
   raceId: { type: Schema.Types.ObjectId, ref: "Race", required: true },
   classId: { type: Schema.Types.ObjectId, ref: "Class", required: true },
+  subclassIndex: { type: String, default: "" },
   level: { type: Number, default: 1 },
   maxHp: { type: Number, required: true },
   currentHp: { type: Number, required: true },

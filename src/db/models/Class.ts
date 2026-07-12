@@ -35,7 +35,9 @@ export interface IClass extends Document {
   savingThrows: string[]; // ["str","con"] (índices en inglés)
   spellcasting: boolean;
   spellcastingAbility: string; // "int" | "wis" | "cha" | ""
+  spellListClassId?: string; // se inyecta al servir subclases que usan otra lista
   description: string;
+  subclassLevel: number;
   skillChoiceCount: number;
   skillOptions: string[]; // índices de skills elegibles
   abilityPriority: string[]; // orden de características para repartir stats al crear
@@ -73,6 +75,7 @@ const classSchema = new Schema<IClass>({
   spellcasting: { type: Boolean, default: false },
   spellcastingAbility: { type: String, default: "" },
   description: { type: String, default: "" },
+  subclassLevel: { type: Number, default: 3 },
   skillChoiceCount: { type: Number, default: 2 },
   skillOptions: [{ type: String }],
   abilityPriority: [{ type: String }],
