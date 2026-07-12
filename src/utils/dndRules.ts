@@ -36,6 +36,27 @@ export const rollAbilityScores = (priority: string[]): IAbilityScores => {
 };
 
 /**
+ * Elige en qué características poner el bono racial flexible (+2/+1) de las razas MPMM,
+ * evitando desperdiciar puntos por el tope de 20: preferimos la primera característica de la
+ * prioridad de la clase que todavía tenga margen para aprovechar el bono entero (+2 solo si
+ * queda en 20 o menos sin recortarse, +1 igual). Comparte la misma lógica con la app
+ * (src/lib/format.ts) para poder mostrarla antes de crear el personaje.
+ */
+export const pickFlexibleRaceBonusTargets = (
+  priority: string[],
+  scores: IAbilityScores
+): { plusTwo: string; plusOne: string } => {
+  const list = priority.filter((a, i, arr) => arr.indexOf(a) === i);
+  const value = (a: string) => (scores as any)[a] ?? 10;
+
+  const plusTwo = list.find((a) => value(a) <= 18) || list[0] || "str";
+  const plusOne =
+    list.find((a) => a !== plusTwo && value(a) <= 19) || list.find((a) => a !== plusTwo) || "con";
+
+  return { plusTwo, plusOne };
+};
+
+/**
  * Calcula la Clase de Armadura según la armadura equipada, el escudo, el bonus manual y las
  * características. Comparte la misma lógica con la app (src/lib/sheet.ts).
  */

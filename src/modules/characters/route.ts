@@ -16,5 +16,7 @@ router.delete("/:id", asyncHandler(CharacterController.remove));
 router.post("/:id/subclass", asyncHandler(CharacterController.chooseSubclass));
 router.post("/:id/level-up", asyncHandler(CharacterController.levelUp));
 router.post("/:id/hp", asyncHandler(CharacterController.setHp));
+router.post("/:id/full-rest", asyncHandler(CharacterController.fullRest));
+router.post("/:id/short-rest", asyncHandler(CharacterController.shortRest));
 
 export default router;

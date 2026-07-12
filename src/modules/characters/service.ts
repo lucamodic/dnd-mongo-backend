@@ -7,7 +7,14 @@ import { ISpell, Spell } from "../../db/models/Spell";
 import { Subclass } from "../../db/models/Subclass";
 import { Tracker } from "../../db/models/Tracker";
 import { HttpError } from "../../utils/response";
-import { abilityMod, proficiencyBonus, rollDie, rollAbilityScores, computeAc } from "../../utils/dndRules";
+import {
+  abilityMod,
+  proficiencyBonus,
+  rollDie,
+  rollAbilityScores,
+  computeAc,
+  pickFlexibleRaceBonusTargets,
+} from "../../utils/dndRules";
 import { CLASS_ABILITY_PRIORITY, DEFAULT_ABILITY_PRIORITY } from "../../data/classAbilityPriority";
 import { TokenPayload } from "../../utils/jwt";
 import { mergeSubclassIntoClass } from "../../utils/subclassMerge";
@@ -25,9 +32,9 @@ const applyRaceBonuses = (scores: IAbilityScores, race: any, cls: IClass) => {
   };
 
   if (race.flexibleAbilityBonuses) {
-    const priority = priorityFor(cls).filter((ability, index, list) => list.indexOf(ability) === index);
-    add(priority[0] || "str", 2);
-    add(priority[1] || "con", 1);
+    const { plusTwo, plusOne } = pickFlexibleRaceBonusTargets(priorityFor(cls), scores);
+    add(plusTwo, 2);
+    add(plusOne, 1);
     return;
   }
 
@@ -243,6 +250,50 @@ export class CharacterService {
     character.subclassIndex = subclass.index;
     await character.save();
     return this.show(user, id);
+  }
+
+  /**
+   * Descanso largo: vida al máximo, todos los espacios de hechizo y recursos (furias, ki, etc.)
+   * se recuperan, y se recuperan todos los dados de golpe. Simplificado a propósito para
+   * principiantes (la regla oficial solo recupera la mitad de los dados de golpe).
+   */
+  static async fullRest(user: TokenPayload, id: string) {
+    const character = await Character.findOne(isDM(user) ? { _id: id } : { _id: id, userId: user.id });
+    if (!character) throw new HttpError(404, "Personaje no encontrado");
+
+    character.currentHp = character.maxHp;
+    character.spellSlotsUsed = [];
+    character.resourcesUsed = [];
+    character.hitDiceUsed = 0;
+    await character.save();
+    await syncTrackerParticipant(character);
+    return this.show(user, id);
+  }
+
+  /**
+   * Descanso corto: el jugador gasta dados de golpe (hasta los que le queden) y cura
+   * roll + mod(CON) por dado (mínimo 0 por dado). No repone espacios de hechizo ni recursos:
+   * eso queda para el descanso largo (simplificación para principiantes).
+   */
+  static async shortRest(user: TokenPayload, id: string, rolls: number[]) {
+    const character = await Character.findOne(isDM(user) ? { _id: id } : { _id: id, userId: user.id });
+    if (!character) throw new HttpError(404, "Personaje no encontrado");
+    if (!Array.isArray(rolls) || rolls.length === 0) throw new HttpError(400, "Elegí al menos un dado de golpe");
+
+    const remaining = character.level - (character.hitDiceUsed || 0);
+    if (rolls.length > remaining) throw new HttpError(400, "No te quedan tantos dados de golpe");
+    if (rolls.some((r) => !Number.isInteger(r) || r < 1 || r > character.hitDie)) {
+      throw new HttpError(400, `Cada dado tiene que ser un número entre 1 y ${character.hitDie}`);
+    }
+
+    const conMod = abilityMod(character.abilityScores.con);
+    const healed = rolls.reduce((sum, r) => sum + Math.max(0, r + conMod), 0);
+
+    character.currentHp = Math.min(character.maxHp, character.currentHp + healed);
+    character.hitDiceUsed = (character.hitDiceUsed || 0) + rolls.length;
+    await character.save();
+    await syncTrackerParticipant(character);
+    return { character: await this.show(user, id), healed };
   }
 
   /** Ajusta la vida actual (curar/recibir daño) sin pasar de 0..maxHp. */

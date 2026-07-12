@@ -16,6 +16,10 @@ export const CharacterController = {
     ok(res, await CharacterService.chooseSubclass(req.user!, req.params.id, req.body?.subclassIndex)),
   setHp: async (req: Request, res: Response) =>
     ok(res, await CharacterService.setHp(req.user!.id, req.params.id, Number(req.body?.currentHp))),
+  fullRest: async (req: Request, res: Response) =>
+    ok(res, await CharacterService.fullRest(req.user!, req.params.id)),
+  shortRest: async (req: Request, res: Response) =>
+    ok(res, await CharacterService.shortRest(req.user!, req.params.id, req.body?.rolls)),
   update: async (req: Request, res: Response) =>
     ok(res, await CharacterService.update(req.user!, req.params.id, req.body)),
   remove: async (req: Request, res: Response) =>

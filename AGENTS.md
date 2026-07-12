@@ -65,7 +65,7 @@ src/server.ts         -> entrypoint (local: listen; Vercel: export default app)
   poder que se usa (acción/recurso limitado, ej. Aliento del dragonborn); si no, es pasivo/de fondo.
   Razas MPMM/homebrew recientes usan `flexibleAbilityBonuses: true`; al crear PJ se aplica `+2/+1` según
   `class.abilityPriority`. Razas custom agregadas/curadas: aarakocra, goblin, orc, owlin, eladrin, kenku,
-  kobold y shifter.
+  kobold, shifter, satyr, tabaxi, firbolg, fairy, changeling, aasimar, githyanki, harengon, sea-elf y tortle.
 - **Class**: `progression[].features[]` también tiene `active` (misma lógica, ej. Furia=true, Defensa
   sin Armadura=false). La app separa "activos" (sección principal) de pasivos ("Información avanzada").
 - **Character**: PJ de un usuario (nivel, HP, `tempHp`, stats, AC, `currency`, `skillProficiencies`, `spellSlotsUsed`,
@@ -73,6 +73,12 @@ src/server.ts         -> entrypoint (local: listen; Vercel: export default app)
   Al crear sin `abilityScores` se generan solas (`rollAbilityScores`: 4d6-drop-lowest repartido por
   `class.abilityPriority`, las 2 principales ≥14). `knownSpells` arranca con los recomendados de la clase.
   Se edita con `PATCH /characters/:id` (whitelist); al tocar armadura/stats se recalcula `ac` con `computeAc`.
+  `hitDiceUsed` (total disponible = `level`) se gasta en descanso corto y se resetea en descanso largo
+  (ver `POST /characters/:id/full-rest` y `.../short-rest` más abajo).
+- Bono racial flexible (+2/+1 de razas MPMM): `pickFlexibleRaceBonusTargets` en `utils/dndRules.ts` decide
+  dónde ponerlo evitando desperdiciar puntos por el tope de 20 (si la primera prioridad de la clase ya está
+  en 19+, mueve el +2 a la siguiente). La app replica la misma lógica en `src/lib/format.ts`
+  (`raceAbilityBonusPreview`) para poder mostrarla en el wizard ANTES de crear el personaje.
 - **ClassSpell** además tiene `recommended` (hechizos top por clase, marcados con `apply:recommended`).
 - Datos curados nuevos en `src/data/`: `armors.ts`, `weapons.ts` (armas SRD + naturales/raciales),
   `customRaces.ts` (razas fuera del SRD),
@@ -105,7 +111,10 @@ src/server.ts         -> entrypoint (local: listen; Vercel: export default app)
 - Auth: `POST /auth/login`, `GET /auth/me`
 - Catálogo: `GET /races`, `GET /classes`, `GET /spells?classId=`, `GET /monsters?search=`
 - Personajes (scoped al usuario del token): `GET/POST /characters`, `GET/PATCH/DELETE /characters/:id`,
-  `POST /characters/:id/level-up` (body `{ rolled }`), `POST /characters/:id/hp` (body `{ currentHp }`)
+  `POST /characters/:id/level-up` (body `{ rolled }`), `POST /characters/:id/hp` (body `{ currentHp }`),
+  `POST /characters/:id/full-rest` (vida al máximo, resetea `spellSlotsUsed`/`resourcesUsed`/`hitDiceUsed`),
+  `POST /characters/:id/short-rest` (body `{ rolls: number[] }`, un valor 1..hitDie por dado gastado; cura
+  `roll + mod(CON)` por dado, mínimo 0; no repone hechizos ni recursos, simplificación a propósito)
 - Tracker: `GET /tracker` (polling), `POST /tracker/join`, `PATCH|DELETE /tracker/participants/:pid`
   (admin o dueño), y admin-only: `POST /tracker/participants|next|sort|reset`
 - Armas: `GET /weapons`; admin-only: `POST /weapons`, `POST /weapons/import-base`,

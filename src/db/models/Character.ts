@@ -61,6 +61,7 @@ export interface ICharacter extends Document {
   initiativeBonus: number; // bonus de iniciativa además del mod de Destreza
   weapon: string; // clave del arma equipada (índice de WEAPONS)
   weapons: string[]; // armas que tiene disponibles; `weapon` es la equipada
+  hitDiceUsed: number; // dados de golpe gastados desde el último descanso largo (el total = level)
   inventoryItems: IInventoryItem[];
   notes: string;
   noteSections: ICharacterNotes;
@@ -131,6 +132,7 @@ const characterSchema = new Schema<ICharacter>({
   initiativeBonus: { type: Number, default: 0 },
   weapon: { type: String, default: "unarmed" },
   weapons: { type: [String], default: () => [] },
+  hitDiceUsed: { type: Number, default: 0 },
   inventoryItems: { type: [inventoryItemSchema], default: () => [] },
   notes: { type: String, default: "" },
   noteSections: { type: notesSchema, default: () => ({}) },

@@ -295,4 +295,377 @@ export const CUSTOM_RACES: CustomRace[] = [
     ],
     languages: "Común y un idioma extra a elección",
   },
+  {
+    index: "satyr",
+    name: "Sátiro",
+    description:
+      "Feéricos con cuernos y patas de cabra, ligados al Feywild. Rápidos, saltarines y resistentes a la magia; buenos para bardos, pícaros o cualquiera que quiera moverse rápido por el mapa.",
+    size: "Medium",
+    speed: 35,
+    abilityBonuses: [],
+    flexibleAbilityBonuses: true,
+    traits: [
+      {
+        name: "Tipo Feérico",
+        description: "Sos un feérico (no humanoide) para requisitos o efectos que mencionen feéricos.",
+        active: false,
+      },
+      {
+        name: "Embestida",
+        description:
+          "Podés atacar sin armas con la cabeza. Al impactar hacés 1d6 + tu modificador de Fuerza de daño contundente.",
+        active: true,
+      },
+      {
+        name: "Resistencia Mágica",
+        description: "Tirás con ventaja las salvaciones contra hechizos y otros efectos mágicos.",
+        active: false,
+      },
+      {
+        name: "Saltos Alegres",
+        description: "Cuando saltás (largo o alto), sumás 1d8 extra a la distancia que cubrís.",
+        active: true,
+      },
+      {
+        name: "Juerguista",
+        description: "Sos competente en Actuación, Persuasión y en un instrumento musical a elección.",
+        active: false,
+      },
+    ],
+    languages: "Común y un idioma extra a elección",
+  },
+  {
+    index: "tabaxi",
+    name: "Tabaxi",
+    description:
+      "Humanoides felinos curiosos y ágiles, viajeros natos. Perfectos para pícaros, exploradores o cualquiera que quiera trepar y moverse con ventaja.",
+    size: "Medium",
+    speed: 30,
+    abilityBonuses: [],
+    flexibleAbilityBonuses: true,
+    traits: [
+      {
+        name: "Garras Felinas",
+        description:
+          "Tus garras sirven para golpes desarmados. Al impactar hacen 1d6 + tu modificador de Fuerza de daño cortante.",
+        active: true,
+      },
+      {
+        name: "Talento Felino",
+        description: "Sos competente en Percepción y Sigilo.",
+        active: false,
+      },
+      {
+        name: "Visión en la Oscuridad",
+        description:
+          "Ves en la penumbra hasta 18 m como si fuera luz, y en la oscuridad como penumbra (en blanco y negro).",
+        active: false,
+      },
+      {
+        name: "Agilidad Felina",
+        description:
+          "Como acción adicional, duplicás tu velocidad hasta el final del turno. No podés volver a usarla hasta moverte 0 pies en un turno.",
+        active: true,
+      },
+      {
+        name: "Trepador",
+        description: "Tenés velocidad de escalada igual a tu velocidad caminando.",
+        active: false,
+      },
+    ],
+    languages: "Común y un idioma extra a elección",
+  },
+  {
+    index: "firbolg",
+    name: "Firbolg",
+    description:
+      "Gigantes amables del bosque, protectores de la naturaleza. Sigilosos a pesar de su tamaño, ideales para druidas, exploradores o personajes pacíficos con un toque mágico.",
+    size: "Medium",
+    speed: 30,
+    abilityBonuses: [],
+    flexibleAbilityBonuses: true,
+    traits: [
+      {
+        name: "Magia Firbolg",
+        description:
+          "Podés lanzar Detectar Magia y Disfrazarse (podés parecer hasta un metro más alto o más bajo) sin gastar espacio de conjuro, usando Inteligencia, Sabiduría o Carisma. Una vez usados, no podés repetirlos hasta un descanso largo.",
+        active: true,
+      },
+      {
+        name: "Paso Oculto",
+        description:
+          "Como acción adicional, te volvés invisible hasta el inicio de tu próximo turno o hasta que ataques, dañes a alguien o fuerces una salvación. Lo usás una cantidad de veces igual a tu bono de competencia por descanso largo.",
+        active: true,
+      },
+      {
+        name: "Complexión Poderosa",
+        description:
+          "Contás como una talla más grande para calcular cuánto podés cargar, empujar, arrastrar o levantar.",
+        active: false,
+      },
+      {
+        name: "Habla de Bestias y Hojas",
+        description:
+          "Podés comunicarte de forma simple con bestias y plantas, y ellas te entienden. Tenés ventaja en pruebas de Carisma para influenciarlas.",
+        active: false,
+      },
+    ],
+    languages: "Común y un idioma extra a elección",
+  },
+  {
+    index: "fairy",
+    name: "Hada",
+    description:
+      "Feéricos diminutos con alas, nacidos del Feywild. Vuelan desde el nivel 1 y tienen trucos de ilusión y encantamiento; geniales para hechiceros, brujos o cualquiera que quiera volar por el campo de batalla.",
+    size: "Small",
+    speed: 30,
+    abilityBonuses: [],
+    flexibleAbilityBonuses: true,
+    traits: [
+      {
+        name: "Tipo Feérico",
+        description: "Sos un feérico (no humanoide) para requisitos o efectos que mencionen feéricos.",
+        active: false,
+      },
+      {
+        name: "Magia de Hada",
+        description:
+          "Conocés el truco Artesanía Druídica. Desde nivel 3 podés lanzar Fuego Feérico, y desde nivel 5 también Agrandar/Reducir, sin gastar espacio de conjuro (una vez por descanso largo cada uno). Usás Inteligencia, Sabiduría o Carisma.",
+        active: true,
+      },
+      {
+        name: "Vuelo",
+        description:
+          "Tenés una velocidad de vuelo igual a tu velocidad caminando. No podés usarla si llevás armadura mediana o pesada.",
+        active: false,
+      },
+    ],
+    languages: "Común y un idioma extra a elección",
+  },
+  {
+    index: "changeling",
+    name: "Changeling",
+    description:
+      "Cambiaformas natos capaces de alterar su apariencia a voluntad. Excelentes espías, actores o cualquier personaje que quiera jugar con identidades e influir en la gente.",
+    size: "Medium",
+    speed: 30,
+    abilityBonuses: [],
+    flexibleAbilityBonuses: true,
+    traits: [
+      {
+        name: "Instintos Cambiante",
+        description:
+          "Sos competente en dos de estas habilidades a elección: Engaño, Perspicacia, Intimidación, Actuación o Persuasión.",
+        active: false,
+      },
+      {
+        name: "Cambiaformas",
+        description:
+          "Como acción, cambiás tu apariencia y voz: color, largo de pelo, sexo, altura y peso, incluso tu talla entre Mediano y Pequeño. Mantenés la nueva forma hasta que la cambiés de nuevo o mueras.",
+        active: true,
+      },
+    ],
+    languages: "Común y un idioma extra a elección",
+  },
+  {
+    index: "aasimar",
+    name: "Aasimar",
+    description:
+      "Mortales con un alma tocada por lo celestial. Sanan a otros con un toque y, desde nivel 3, pueden transformarse temporalmente en un ser de luz; buenos para cualquier clase que quiera un extra de utilidad divina.",
+    size: "Medium",
+    speed: 30,
+    abilityBonuses: [],
+    flexibleAbilityBonuses: true,
+    traits: [
+      {
+        name: "Visión en la Oscuridad",
+        description:
+          "Ves en la penumbra hasta 18 m como si fuera luz, y en la oscuridad como penumbra (en blanco y negro).",
+        active: false,
+      },
+      {
+        name: "Resistencia Celestial",
+        description: "Recibís la mitad de daño necrótico y radiante.",
+        active: false,
+      },
+      {
+        name: "Manos Sanadoras",
+        description:
+          "Como acción, tocás a una criatura y la curás una cantidad de puntos de golpe igual a tu nivel de personaje. Lo usás una vez por descanso largo.",
+        active: true,
+      },
+      {
+        name: "Portador de Luz",
+        description: "Conocés el truco Luz. Carisma es tu característica para lanzarlo.",
+        active: false,
+      },
+      {
+        name: "Revelación Celestial",
+        description:
+          "Desde nivel 3, como acción adicional te transformás durante 1 minuto (una vez por descanso largo): te salen alas y ganás un efecto extra de luz u oscuridad radiante/necrótica, según la variante que elijas.",
+        active: true,
+      },
+    ],
+    languages: "Común y un idioma extra a elección",
+  },
+  {
+    index: "githyanki",
+    name: "Githyanki",
+    description:
+      "Guerreros psiónicos de otro plano, criados para la batalla. Entrenados desde chicos con espadas y magia mental; potentes para guerreros, magos o cualquier híbrido marcial-psiónico.",
+    size: "Medium",
+    speed: 30,
+    abilityBonuses: [],
+    flexibleAbilityBonuses: true,
+    traits: [
+      {
+        name: "Conocimiento Astral",
+        description:
+          "Al terminar un descanso largo, elegís una competencia de habilidad y una de arma o herramienta. Las tenés hasta tu próximo descanso largo.",
+        active: true,
+      },
+      {
+        name: "Psiónica Githyanki",
+        description:
+          "Conocés el truco Mano de Mago (la mano es invisible). Desde nivel 3 podés lanzar Salto, y desde nivel 5 Paso Brumoso, una vez cada uno por descanso largo, sin gastar espacio de conjuro. Usás Inteligencia, Sabiduría o Carisma.",
+        active: true,
+      },
+      {
+        name: "Resiliencia Psíquica",
+        description: "Recibís la mitad de daño psíquico.",
+        active: false,
+      },
+      {
+        name: "Prodigio Marcial",
+        description:
+          "Sos competente con armadura ligera y mediana, y con espadas cortas, largas y a dos manos.",
+        active: false,
+      },
+    ],
+    languages: "Común y Gith",
+  },
+  {
+    index: "harengon",
+    name: "Harengon",
+    description:
+      "Humanoides con orejas y patas de conejo, veloces y con suerte. Geniales para personajes rápidos que quieran ganar iniciativa y esquivar peligros.",
+    size: "Medium",
+    speed: 30,
+    abilityBonuses: [],
+    flexibleAbilityBonuses: true,
+    traits: [
+      {
+        name: "Gatillo de Liebre",
+        description: "Sumás tu bono de competencia a las tiradas de iniciativa.",
+        active: false,
+      },
+      {
+        name: "Sentidos de Liebre",
+        description: "Sos competente en Percepción.",
+        active: false,
+      },
+      {
+        name: "Pisada de Suerte",
+        description:
+          "Cuando fallás una salvación de Destreza, podés usar tu reacción para tirar 1d4 y sumarlo al resultado, posiblemente convirtiéndolo en éxito. No podés usarla si estás derribado o tu velocidad es 0.",
+        active: true,
+      },
+      {
+        name: "Salto de Conejo",
+        description:
+          "Como acción adicional, saltás una distancia igual a 5 veces tu bono de competencia sin provocar ataques de oportunidad. Lo usás una cantidad de veces igual a tu bono de competencia por descanso largo.",
+        active: true,
+      },
+    ],
+    languages: "Común y un idioma extra a elección",
+  },
+  {
+    index: "sea-elf",
+    name: "Elfo del Mar",
+    description:
+      "Elfos adaptados a la vida bajo el agua, con branquias y piel resistente al frío. Ideales para campañas acuáticas o cualquier personaje que quiera moverse igual de bien nadando que caminando.",
+    size: "Medium",
+    speed: 30,
+    abilityBonuses: [],
+    flexibleAbilityBonuses: true,
+    traits: [
+      {
+        name: "Hijo del Mar",
+        description:
+          "Podés respirar aire y agua, y tenés velocidad de nado igual a tu velocidad caminando. Además, recibís la mitad de daño de frío.",
+        active: false,
+      },
+      {
+        name: "Visión en la Oscuridad",
+        description:
+          "Ves en la penumbra hasta 18 m como si fuera luz, y en la oscuridad como penumbra (en blanco y negro).",
+        active: false,
+      },
+      {
+        name: "Linaje Feérico",
+        description: "Tirás con ventaja para resistir que te encanten.",
+        active: false,
+      },
+      {
+        name: "Amigo del Mar",
+        description: "Podés comunicar ideas simples a cualquier bestia que tenga velocidad de nado.",
+        active: false,
+      },
+      {
+        name: "Sentidos Agudos",
+        description: "Sos competente en Percepción.",
+        active: false,
+      },
+      {
+        name: "Trance",
+        description:
+          "No dormís: meditás 4 horas y descansás igual que otros en 8. Al terminar, ganás competencia en un arma o herramienta hasta tu próximo trance.",
+        active: false,
+      },
+    ],
+    languages: "Común y un idioma extra a elección",
+  },
+  {
+    index: "tortle",
+    name: "Tortle",
+    description:
+      "Humanoides con caparazón de tortuga, tranquilos y resistentes. Su armadura natural los hace muy difíciles de derribar; buenos para tanques o cualquiera que quiera aguantar golpes sin depender de armadura.",
+    size: "Medium",
+    speed: 30,
+    abilityBonuses: [
+      { ability: "str", bonus: 2 },
+      { ability: "wis", bonus: 1 },
+    ],
+    traits: [
+      {
+        name: "Garras",
+        description:
+          "Tus garras sirven para golpes desarmados. Al impactar hacen 1d4 + tu modificador de Fuerza de daño cortante.",
+        active: true,
+      },
+      {
+        name: "Aguantar la Respiración",
+        description: "Podés contener la respiración hasta una hora.",
+        active: false,
+      },
+      {
+        name: "Armadura Natural",
+        description:
+          "Tu caparazón te da una CA base de 17 (tu modificador de Destreza no se suma). No podés usar armadura, pero sí escudo.",
+        active: false,
+      },
+      {
+        name: "Defensa de Caparazón",
+        description:
+          "Como acción, te retraés en el caparazón: ganás +4 a la CA y ventaja en salvaciones de Fuerza y Constitución, pero quedás derribado, con velocidad 0, desventaja en salvaciones de Destreza y sin poder usar reacciones.",
+        active: true,
+      },
+      {
+        name: "Instinto de Supervivencia",
+        description: "Sos competente en Supervivencia.",
+        active: false,
+      },
+    ],
+    languages: "Común y Acuano",
+  },
 ];
