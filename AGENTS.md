@@ -80,14 +80,18 @@ src/server.ts         -> entrypoint (local: listen; Vercel: export default app)
 - **Tracker**: documento **único global** con `participants[]`, `round`, `activeIndex`. Los participantes guardan
   `hp`, `tempHp`, `maxHp`, `ac`, `characterId`, `ownerUserId`, `color`. La vida y vida temporal se sincronizan
   en ambos sentidos entre `Character` y el participante del tracker.
+  Al borrar un `Character`, también se debe eliminar su participante del tracker y corregir `activeIndex` si queda
+  fuera de rango.
 
 ## Auth y permisos
 - `POST /auth/login` con `{ username, password }` → `{ token, user }`. Token dura 30 días.
 - `requireAuth`: exige `Authorization: Bearer <token>`.
 - `requireAdmin`: exige `role === "admin"` (producto: **DM**, solo `insomnya`). Gatea imports y mutaciones del tracker.
 - Cada vez que un pedido o texto diga "insomnya puede hacer X", interpretarlo como "el **DM** puede hacer X".
-- Backlog de permisos: Players no deben ver HP de monstruos; solo HP de personajes propios. Players sí ven
-  iniciativa y turno activo. El DM ve todos los héroes y el dueño de cada héroe.
+- `GET /tracker` se sanitiza por rol: DM ve todo; Player no recibe `hp`, `maxHp` ni `tempHp` de monstruos ni
+  de personajes ajenos. Players sí reciben iniciativa, orden y turno activo. La app tampoco debe mostrar CA de
+  monstruos cuando esos HP vienen ocultos.
+- El DM ve todos los héroes y el dueño de cada héroe.
 
 ## Endpoints principales
 - Auth: `POST /auth/login`, `GET /auth/me`
@@ -133,11 +137,6 @@ Correcciones recientes de dados:
 - Agregar `createdBy` a User y script/migración para asignar a `insomnya` como creador de los usuarios existentes.
 - Endpoint DM-only para crear usuarios con username/password elegidos por el DM.
 - Endpoints/listados para que el DM vea todos los personajes y el owner de cada uno.
-- Sanitizar `GET /tracker` según rol:
-  - DM ve todo.
-  - Player no ve HP de monstruos.
-  - Player solo ve HP/tempHp de sus propios personajes.
-  - Player sí ve iniciativa, orden y turno activo.
 - El PATCH del tracker debe permitir curar/dañar HP con cantidad indicada, pero no editar/sumar `tempHp` desde pantalla de combate.
 - Agregar foto custom de personaje en base64 al modelo Character; debe tener prioridad sobre foto de raza en listados y ficha.
 - Agregar mochila/equipamiento con ítems de texto y notas categorizadas (campaña, NPCs, lugares, otros).
