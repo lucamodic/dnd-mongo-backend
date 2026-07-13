@@ -75,6 +75,7 @@ src/server.ts         -> entrypoint (local: listen; Vercel: export default app)
   Se edita con `PATCH /characters/:id` (whitelist); al tocar armadura/stats se recalcula `ac` con `computeAc`.
   `hitDiceUsed` (total disponible = `level`) se gasta en descanso corto y se resetea en descanso largo
   (ver `POST /characters/:id/full-rest` y `.../short-rest` más abajo).
+  `noteSections` guarda notas categorizadas e incluye `characterInfo` para información propia del personaje.
 - Bono racial flexible (+2/+1 de razas MPMM): `pickFlexibleRaceBonusTargets` en `utils/dndRules.ts` decide
   dónde ponerlo evitando desperdiciar puntos por el tope de 20 (si la primera prioridad de la clase ya está
   en 19+, mueve el +2 a la siguiente). La app replica la misma lógica en `src/lib/format.ts`

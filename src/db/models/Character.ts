@@ -27,6 +27,7 @@ export interface IInventoryItem {
 }
 
 export interface ICharacterNotes {
+  characterInfo: string;
   general: string;
   campaign: string;
   npcs: string;
@@ -96,6 +97,7 @@ const inventoryItemSchema = new Schema<IInventoryItem>(
 
 const notesSchema = new Schema<ICharacterNotes>(
   {
+    characterInfo: { type: String, default: "" },
     general: { type: String, default: "" },
     campaign: { type: String, default: "" },
     npcs: { type: String, default: "" },
