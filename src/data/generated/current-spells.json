@@ -1,0 +1,7212 @@
+[
+  {
+    "id": "6a51b915c777fe14b46d1e66",
+    "index": "acid-splash",
+    "name": "Salpicadura Ácida",
+    "level": 0,
+    "school": "Conjuración",
+    "castingTime": "1 action",
+    "range": "60 feet",
+    "duration": "Instantaneous",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b928c777fe14b46d1edc",
+    "index": "chill-touch",
+    "name": "Toque Gélido",
+    "level": 0,
+    "school": "Nigromancia",
+    "castingTime": "1 action",
+    "range": "120 feet",
+    "duration": "1 round",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b93ac777fe14b46d1f44",
+    "index": "dancing-lights",
+    "name": "Luces Danzantes",
+    "level": 0,
+    "school": "Evocación",
+    "castingTime": "1 action",
+    "range": "120 feet",
+    "duration": "Up to 1 minute",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b94ac777fe14b46d1fa2",
+    "index": "druidcraft",
+    "name": "Artesanía Druídica",
+    "level": 0,
+    "school": "Transmutación",
+    "castingTime": "1 action",
+    "range": "30 feet",
+    "duration": "Instantaneous",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "druid"
+    ]
+  },
+  {
+    "id": "6a51b94bc777fe14b46d1fa8",
+    "index": "eldritch-blast",
+    "name": "Ráfaga Sobrenatural",
+    "level": 0,
+    "school": "Evocación",
+    "castingTime": "1 action",
+    "range": "120 feet",
+    "duration": "Instantaneous",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "warlock"
+    ]
+  },
+  {
+    "id": "6a51b956c777fe14b46d1fee",
+    "index": "fire-bolt",
+    "name": "Rayo de Fuego",
+    "level": 0,
+    "school": "Evocación",
+    "castingTime": "1 action",
+    "range": "120 feet",
+    "duration": "Instantaneous",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b965c777fe14b46d2050",
+    "index": "guidance",
+    "name": "Guía",
+    "level": 0,
+    "school": "Adivinación",
+    "castingTime": "1 action",
+    "range": "Touch",
+    "duration": "Up to 1 minute",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "cleric",
+      "druid"
+    ]
+  },
+  {
+    "id": "6a53f844c777fe14b46d2cbf",
+    "index": "gust",
+    "name": "Ráfaga de Aire",
+    "level": 0,
+    "school": "Transmutación",
+    "castingTime": "1 acción",
+    "range": "30 pies",
+    "duration": "Instantáneo",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "druid",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b978c777fe14b46d20c6",
+    "index": "light",
+    "name": "Luz",
+    "level": 0,
+    "school": "Evocación",
+    "castingTime": "1 action",
+    "range": "Touch",
+    "duration": "1 hour",
+    "components": [
+      "V",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "cleric",
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b97dc777fe14b46d20e8",
+    "index": "mage-hand",
+    "name": "Mano de Mago",
+    "level": 0,
+    "school": "Conjuración",
+    "castingTime": "1 action",
+    "range": "30 feet",
+    "duration": "1 minute",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b984c777fe14b46d2116",
+    "index": "mending",
+    "name": "Reparar",
+    "level": 0,
+    "school": "Transmutación",
+    "castingTime": "1 minute",
+    "range": "Touch",
+    "duration": "Instantaneous",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "cleric",
+      "druid",
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b984c777fe14b46d211c",
+    "index": "message",
+    "name": "Mensaje",
+    "level": 0,
+    "school": "Transmutación",
+    "castingTime": "1 action",
+    "range": "120 feet",
+    "duration": "1 round",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b986c777fe14b46d2126",
+    "index": "minor-illusion",
+    "name": "Ilusión Menor",
+    "level": 0,
+    "school": "Ilusión",
+    "castingTime": "1 action",
+    "range": "30 feet",
+    "duration": "1 minute",
+    "components": [
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b98fc777fe14b46d2161",
+    "index": "poison-spray",
+    "name": "Rociada Venenosa",
+    "level": 0,
+    "school": "Conjuración",
+    "castingTime": "1 action",
+    "range": "10 feet",
+    "duration": "Instantaneous",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "druid",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b992c777fe14b46d2177",
+    "index": "prestidigitation",
+    "name": "Prestidigitación",
+    "level": 0,
+    "school": "Transmutación",
+    "castingTime": "1 action",
+    "range": "10 feet",
+    "duration": "1 hour",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b994c777fe14b46d2183",
+    "index": "produce-flame",
+    "name": "Producir Llama",
+    "level": 0,
+    "school": "Conjuración",
+    "castingTime": "1 action",
+    "range": "Self",
+    "duration": "10 minutes",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "druid"
+    ]
+  },
+  {
+    "id": "6a51b999c777fe14b46d21a6",
+    "index": "ray-of-frost",
+    "name": "Rayo de Escarcha",
+    "level": 0,
+    "school": "Evocación",
+    "castingTime": "1 action",
+    "range": "60 feet",
+    "duration": "Instantaneous",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b99cc777fe14b46d21b6",
+    "index": "resistance",
+    "name": "Resistencia",
+    "level": 0,
+    "school": "Abjuración",
+    "castingTime": "1 action",
+    "range": "Touch",
+    "duration": "Up to 1 minute",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "cleric",
+      "druid"
+    ]
+  },
+  {
+    "id": "6a51b99ec777fe14b46d21c5",
+    "index": "sacred-flame",
+    "name": "Llama Sagrada",
+    "level": 0,
+    "school": "Evocación",
+    "castingTime": "1 action",
+    "range": "60 feet",
+    "duration": "Instantaneous",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "cleric"
+    ]
+  },
+  {
+    "id": "6a51b9a4c777fe14b46d21f0",
+    "index": "shillelagh",
+    "name": "Cayado de Combate",
+    "level": 0,
+    "school": "Transmutación",
+    "castingTime": "1 bonus action",
+    "range": "Touch",
+    "duration": "1 minute",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "druid"
+    ]
+  },
+  {
+    "id": "6a51b9a5c777fe14b46d21f2",
+    "index": "shocking-grasp",
+    "name": "Toque Electrizante",
+    "level": 0,
+    "school": "Evocación",
+    "castingTime": "1 action",
+    "range": "Touch",
+    "duration": "Instantaneous",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b9a9c777fe14b46d220a",
+    "index": "spare-the-dying",
+    "name": "Preservar la Vida",
+    "level": 0,
+    "school": "Nigromancia",
+    "castingTime": "1 action",
+    "range": "Touch",
+    "duration": "Instantaneous",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "cleric"
+    ]
+  },
+  {
+    "id": "6a51b9b5c777fe14b46d224f",
+    "index": "thaumaturgy",
+    "name": "Taumaturgia",
+    "level": 0,
+    "school": "Transmutación",
+    "castingTime": "1 action",
+    "range": "30 feet",
+    "duration": "1 minute",
+    "components": [
+      "V"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "cleric"
+    ]
+  },
+  {
+    "id": "6a51b9bbc777fe14b46d2274",
+    "index": "true-strike",
+    "name": "Golpe Certero",
+    "level": 0,
+    "school": "Adivinación",
+    "castingTime": "1 action",
+    "range": "30 feet",
+    "duration": "Up to 1 round",
+    "components": [
+      "S"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b9bdc777fe14b46d2280",
+    "index": "vicious-mockery",
+    "name": "Mofa Cruel",
+    "level": 0,
+    "school": "Encantamiento",
+    "castingTime": "1 action",
+    "range": "60 feet",
+    "duration": "Instantaneous",
+    "components": [
+      "V"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "bard"
+    ]
+  },
+  {
+    "id": "6a51b916c777fe14b46d1e6c",
+    "index": "alarm",
+    "name": "Alarma",
+    "level": 1,
+    "school": "Abjuración",
+    "castingTime": "1 minute",
+    "range": "30 feet",
+    "duration": "8 hours",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": true,
+    "higherLevel": [],
+    "classes": [
+      "ranger",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b917c777fe14b46d1e72",
+    "index": "animal-friendship",
+    "name": "Amistad con los Animales",
+    "level": 1,
+    "school": "Encantamiento",
+    "castingTime": "1 action",
+    "range": "30 feet",
+    "duration": "24 hours",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "druid",
+      "ranger"
+    ]
+  },
+  {
+    "id": "6a51b91ec777fe14b46d1ea0",
+    "index": "bane",
+    "name": "Perdición",
+    "level": 1,
+    "school": "Encantamiento",
+    "castingTime": "1 action",
+    "range": "30 feet",
+    "duration": "Up to 1 minute",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st."
+    ],
+    "classes": [
+      "bard",
+      "cleric"
+    ]
+  },
+  {
+    "id": "6a51b922c777fe14b46d1eb6",
+    "index": "bless",
+    "name": "Bendición",
+    "level": 1,
+    "school": "Encantamiento",
+    "castingTime": "1 action",
+    "range": "30 feet",
+    "duration": "Up to 1 minute",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st."
+    ],
+    "classes": [
+      "cleric",
+      "paladin"
+    ]
+  },
+  {
+    "id": "6a51b925c777fe14b46d1ecb",
+    "index": "burning-hands",
+    "name": "Manos Ardientes",
+    "level": 1,
+    "school": "Evocación",
+    "castingTime": "1 action",
+    "range": "Self",
+    "duration": "Instantaneous",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d6 for each slot level above 1st."
+    ],
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b927c777fe14b46d1ed6",
+    "index": "charm-person",
+    "name": "Encantar Persona",
+    "level": 1,
+    "school": "Encantamiento",
+    "castingTime": "1 action",
+    "range": "30 feet",
+    "duration": "1 hour",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st. The creatures must be within 30 feet of each other when you target them."
+    ],
+    "classes": [
+      "bard",
+      "druid",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b92cc777fe14b46d1eee",
+    "index": "color-spray",
+    "name": "Ráfaga de Colores",
+    "level": 1,
+    "school": "Ilusión",
+    "castingTime": "1 action",
+    "range": "Self",
+    "duration": "1 round",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of 2nd level or higher, roll an additional 2d10 for each slot level above 1st."
+    ],
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b92cc777fe14b46d1ef1",
+    "index": "command",
+    "name": "Orden",
+    "level": 1,
+    "school": "Encantamiento",
+    "castingTime": "1 action",
+    "range": "60 feet",
+    "duration": "1 round",
+    "components": [
+      "V"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of 2nd level or higher, you can affect one additional creature for each slot level above 1st. The creatures must be within 30 feet of each other when you target them."
+    ],
+    "classes": [
+      "cleric",
+      "paladin"
+    ]
+  },
+  {
+    "id": "6a51b92ec777fe14b46d1ef9",
+    "index": "comprehend-languages",
+    "name": "Comprender Idiomas",
+    "level": 1,
+    "school": "Adivinación",
+    "castingTime": "1 action",
+    "range": "Self",
+    "duration": "1 hour",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": true,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b937c777fe14b46d1f34",
+    "index": "create-or-destroy-water",
+    "name": "Crear o Destruir Agua",
+    "level": 1,
+    "school": "Transmutación",
+    "castingTime": "1 action",
+    "range": "30 feet",
+    "duration": "Instantaneous",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of 2nd level or higher, you create or destroy 10 additional gallons of water, or the size of the cube increases by 5 feet, for each slot level above 1st."
+    ],
+    "classes": [
+      "cleric",
+      "druid"
+    ]
+  },
+  {
+    "id": "6a51b939c777fe14b46d1f3e",
+    "index": "cure-wounds",
+    "name": "Curar Heridas",
+    "level": 1,
+    "school": "Evocación",
+    "castingTime": "1 action",
+    "range": "Touch",
+    "duration": "Instantaneous",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of 2nd level or higher, the healing increases by 1d8 for each slot level above 1st."
+    ],
+    "classes": [
+      "bard",
+      "cleric",
+      "druid",
+      "paladin",
+      "ranger"
+    ]
+  },
+  {
+    "id": "6a51b940c777fe14b46d1f60",
+    "index": "detect-evil-and-good",
+    "name": "Detectar el Bien y el Mal",
+    "level": 1,
+    "school": "Adivinación",
+    "castingTime": "1 action",
+    "range": "Self",
+    "duration": "Up to 10 minutes",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "cleric",
+      "paladin"
+    ]
+  },
+  {
+    "id": "6a51b940c777fe14b46d1f64",
+    "index": "detect-magic",
+    "name": "Detectar Magia",
+    "level": 1,
+    "school": "Adivinación",
+    "castingTime": "1 action",
+    "range": "Self",
+    "duration": "Up to 10 minutes",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": true,
+    "ritual": true,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "cleric",
+      "druid",
+      "paladin",
+      "ranger",
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b941c777fe14b46d1f6c",
+    "index": "detect-poison-and-disease",
+    "name": "Detectar Veneno y Enfermedad",
+    "level": 1,
+    "school": "Adivinación",
+    "castingTime": "1 action",
+    "range": "Self",
+    "duration": "Up to 10 minutes",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": true,
+    "higherLevel": [],
+    "classes": [
+      "cleric",
+      "druid",
+      "paladin",
+      "ranger"
+    ]
+  },
+  {
+    "id": "6a51b943c777fe14b46d1f7a",
+    "index": "disguise-self",
+    "name": "Disfrazarse",
+    "level": 1,
+    "school": "Ilusión",
+    "castingTime": "1 action",
+    "range": "Self",
+    "duration": "1 hour",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b946c777fe14b46d1f8e",
+    "index": "divine-favor",
+    "name": "Favor Divino",
+    "level": 1,
+    "school": "Evocación",
+    "castingTime": "1 bonus action",
+    "range": "Self",
+    "duration": "Up to 1 minute",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "paladin"
+    ]
+  },
+  {
+    "id": "6a51b94cc777fe14b46d1fb2",
+    "index": "entangle",
+    "name": "Enredar",
+    "level": 1,
+    "school": "Conjuración",
+    "castingTime": "1 action",
+    "range": "90 feet",
+    "duration": "Up to 1 minute",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "druid"
+    ]
+  },
+  {
+    "id": "6a51b94fc777fe14b46d1fbd",
+    "index": "expeditious-retreat",
+    "name": "Retirada Rápida",
+    "level": 1,
+    "school": "Transmutación",
+    "castingTime": "1 bonus action",
+    "range": "Self",
+    "duration": "Up to 10 minutes",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b950c777fe14b46d1fc9",
+    "index": "faerie-fire",
+    "name": "Fuego Feérico",
+    "level": 1,
+    "school": "Evocación",
+    "castingTime": "1 action",
+    "range": "60 feet",
+    "duration": "Up to 1 minute",
+    "components": [
+      "V"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "druid"
+    ]
+  },
+  {
+    "id": "6a51b951c777fe14b46d1fcd",
+    "index": "false-life",
+    "name": "Vida Falsa",
+    "level": 1,
+    "school": "Nigromancia",
+    "castingTime": "1 action",
+    "range": "Self",
+    "duration": "1 hour",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of 2nd level or higher, you gain 5 additional temporary hit points for each slot level above 1st."
+    ],
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b952c777fe14b46d1fd5",
+    "index": "feather-fall",
+    "name": "Caída de Pluma",
+    "level": 1,
+    "school": "Transmutación",
+    "castingTime": "1 reaction",
+    "range": "60 feet",
+    "duration": "1 minute",
+    "components": [
+      "V",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b953c777fe14b46d1fde",
+    "index": "find-familiar",
+    "name": "Encontrar Familiar",
+    "level": 1,
+    "school": "Conjuración",
+    "castingTime": "1 hour",
+    "range": "10 feet",
+    "duration": "Instantaneous",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": true,
+    "higherLevel": [],
+    "classes": [
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b95ac777fe14b46d2004",
+    "index": "floating-disk",
+    "name": "Disco Flotante",
+    "level": 1,
+    "school": "Conjuración",
+    "castingTime": "1 action",
+    "range": "30 feet",
+    "duration": "1 hour",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": true,
+    "higherLevel": [],
+    "classes": [
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b95bc777fe14b46d200a",
+    "index": "fog-cloud",
+    "name": "Nube de Niebla",
+    "level": 1,
+    "school": "Conjuración",
+    "castingTime": "1 action",
+    "range": "120 feet",
+    "duration": "Up to 1 hour",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of 2nd level or higher, the radius of the fog increases by 20 feet for each slot level above 1st."
+    ],
+    "classes": [
+      "druid",
+      "ranger",
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b962c777fe14b46d203e",
+    "index": "goodberry",
+    "name": "Baya Nutritiva",
+    "level": 1,
+    "school": "Transmutación",
+    "castingTime": "1 action",
+    "range": "Touch",
+    "duration": "Instantaneous",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "druid",
+      "ranger"
+    ]
+  },
+  {
+    "id": "6a51b963c777fe14b46d2041",
+    "index": "grease",
+    "name": "Grasa",
+    "level": 1,
+    "school": "Conjuración",
+    "castingTime": "1 action",
+    "range": "60 feet",
+    "duration": "1 minute",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b965c777fe14b46d2053",
+    "index": "guiding-bolt",
+    "name": "Rayo Guía",
+    "level": 1,
+    "school": "Evocación",
+    "castingTime": "1 action",
+    "range": "120 feet",
+    "duration": "1 round",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d6 for each slot level above 1st."
+    ],
+    "classes": [
+      "cleric"
+    ]
+  },
+  {
+    "id": "6a51b96ac777fe14b46d2068",
+    "index": "healing-word",
+    "name": "Palabra Curativa",
+    "level": 1,
+    "school": "Evocación",
+    "castingTime": "1 bonus action",
+    "range": "60 feet",
+    "duration": "Instantaneous",
+    "components": [
+      "V"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of 2nd level or higher, the healing increases by 1d4 for each slot level above 1st."
+    ],
+    "classes": [
+      "bard",
+      "cleric",
+      "druid"
+    ]
+  },
+  {
+    "id": "6a51b96bc777fe14b46d206f",
+    "index": "hellish-rebuke",
+    "name": "Reprimenda Infernal",
+    "level": 1,
+    "school": "Evocación",
+    "castingTime": "1 reaction",
+    "range": "60 feet",
+    "duration": "Instantaneous",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d10 for each slot level above 1st."
+    ],
+    "classes": [
+      "warlock"
+    ]
+  },
+  {
+    "id": "6a51b96cc777fe14b46d2074",
+    "index": "heroism",
+    "name": "Heroísmo",
+    "level": 1,
+    "school": "Encantamiento",
+    "castingTime": "1 action",
+    "range": "Touch",
+    "duration": "Up to 1 minute",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "paladin"
+    ]
+  },
+  {
+    "id": "6a51b96cc777fe14b46d2077",
+    "index": "hideous-laughter",
+    "name": "Risa Espantosa",
+    "level": 1,
+    "school": "Encantamiento",
+    "castingTime": "1 action",
+    "range": "30 feet",
+    "duration": "Up to 1 minute",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b96fc777fe14b46d2088",
+    "index": "hunters-mark",
+    "name": "Marca del Cazador",
+    "level": 1,
+    "school": "Adivinación",
+    "castingTime": "1 bonus action",
+    "range": "90 feet",
+    "duration": "Up to 1 hour",
+    "components": [
+      "V"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of 3rd or 4th level, you can maintain your concentration on the spell for up to 8 hours. When you use a spell slot of 5th level or higher, you can maintain your concentration on the spell for up to 24 hours."
+    ],
+    "classes": [
+      "ranger"
+    ]
+  },
+  {
+    "id": "6a53f844c777fe14b46d2cc4",
+    "index": "ice-knife",
+    "name": "Cuchillo de Hielo",
+    "level": 1,
+    "school": "Conjuración",
+    "castingTime": "1 acción",
+    "range": "18 m",
+    "duration": "Instantáneo",
+    "components": [
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [
+      "El daño de frío de la explosión sube 1d6 por cada nivel de espacio de conjuro arriba del 1º."
+    ],
+    "classes": [
+      "druid",
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b970c777fe14b46d2093",
+    "index": "identify",
+    "name": "Identificar",
+    "level": 1,
+    "school": "Adivinación",
+    "castingTime": "1 minute",
+    "range": "Touch",
+    "duration": "Instantaneous",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": true,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b971c777fe14b46d2096",
+    "index": "illusory-script",
+    "name": "Escritura Ilusoria",
+    "level": 1,
+    "school": "Ilusión",
+    "castingTime": "1 minute",
+    "range": "Touch",
+    "duration": "10 days",
+    "components": [
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": true,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "warlock",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b972c777fe14b46d20a0",
+    "index": "inflict-wounds",
+    "name": "Infligir Heridas",
+    "level": 1,
+    "school": "Nigromancia",
+    "castingTime": "1 action",
+    "range": "Touch",
+    "duration": "Instantaneous",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d10 for each slot level above 1st."
+    ],
+    "classes": [
+      "cleric"
+    ]
+  },
+  {
+    "id": "6a51b975c777fe14b46d20b0",
+    "index": "jump",
+    "name": "Salto",
+    "level": 1,
+    "school": "Transmutación",
+    "castingTime": "1 action",
+    "range": "Touch",
+    "duration": "1 minute",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "druid",
+      "ranger",
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b97bc777fe14b46d20e0",
+    "index": "longstrider",
+    "name": "Zancada Larga",
+    "level": 1,
+    "school": "Transmutación",
+    "castingTime": "1 action",
+    "range": "Touch",
+    "duration": "1 hour",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each spell slot above 1st."
+    ],
+    "classes": [
+      "bard",
+      "druid",
+      "ranger",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b97cc777fe14b46d20e5",
+    "index": "mage-armor",
+    "name": "Armadura de Mago",
+    "level": 1,
+    "school": "Abjuración",
+    "castingTime": "1 action",
+    "range": "Touch",
+    "duration": "8 hours",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b97ec777fe14b46d20f4",
+    "index": "magic-missile",
+    "name": "Proyectil Mágico",
+    "level": 1,
+    "school": "Evocación",
+    "castingTime": "1 action",
+    "range": "120 feet",
+    "duration": "Instantaneous",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of 2nd level or higher, the spell creates one more dart for each slot level above 1st."
+    ],
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b996c777fe14b46d2191",
+    "index": "protection-from-evil-and-good",
+    "name": "Protección contra el Bien y el Mal",
+    "level": 1,
+    "school": "Abjuración",
+    "castingTime": "1 action",
+    "range": "Touch",
+    "duration": "Up to 10 minutes",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "cleric",
+      "paladin",
+      "warlock",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b997c777fe14b46d219b",
+    "index": "purify-food-and-drink",
+    "name": "Purificar Comida y Bebida",
+    "level": 1,
+    "school": "Transmutación",
+    "castingTime": "1 action",
+    "range": "10 feet",
+    "duration": "Instantaneous",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": false,
+    "ritual": true,
+    "higherLevel": [],
+    "classes": [
+      "cleric",
+      "druid",
+      "paladin"
+    ]
+  },
+  {
+    "id": "6a51b99ec777fe14b46d21c7",
+    "index": "sanctuary",
+    "name": "Santuario",
+    "level": 1,
+    "school": "Abjuración",
+    "castingTime": "1 bonus action",
+    "range": "30 feet",
+    "duration": "1 minute",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "cleric"
+    ]
+  },
+  {
+    "id": "6a51b9a3c777fe14b46d21ea",
+    "index": "shield",
+    "name": "Escudo",
+    "level": 1,
+    "school": "Abjuración",
+    "castingTime": "1 reaction",
+    "range": "Self",
+    "duration": "1 round",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b9a4c777fe14b46d21ed",
+    "index": "shield-of-faith",
+    "name": "Escudo de Fe",
+    "level": 1,
+    "school": "Abjuración",
+    "castingTime": "1 bonus action",
+    "range": "60 feet",
+    "duration": "Up to 10 minutes",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "cleric",
+      "paladin"
+    ]
+  },
+  {
+    "id": "6a51b9a6c777fe14b46d21f9",
+    "index": "silent-image",
+    "name": "Imagen Silenciosa",
+    "level": 1,
+    "school": "Ilusión",
+    "castingTime": "1 action",
+    "range": "60 feet",
+    "duration": "Up to 10 minutes",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b9a7c777fe14b46d21ff",
+    "index": "sleep",
+    "name": "Sueño",
+    "level": 1,
+    "school": "Encantamiento",
+    "castingTime": "1 action",
+    "range": "90 feet",
+    "duration": "1 minute",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of 2nd level or higher, roll an additional 2d8 for each slot level above 1st."
+    ],
+    "classes": [
+      "bard",
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b9a9c777fe14b46d220c",
+    "index": "speak-with-animals",
+    "name": "Hablar con los Animales",
+    "level": 1,
+    "school": "Adivinación",
+    "castingTime": "1 action",
+    "range": "Self",
+    "duration": "10 minutes",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": false,
+    "ritual": true,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "druid",
+      "ranger"
+    ]
+  },
+  {
+    "id": "6a51b9b5c777fe14b46d2251",
+    "index": "thunderwave",
+    "name": "Onda Atronadora",
+    "level": 1,
+    "school": "Evocación",
+    "castingTime": "1 action",
+    "range": "Self",
+    "duration": "Instantaneous",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d8 for each slot level above 1st."
+    ],
+    "classes": [
+      "bard",
+      "druid",
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b9bcc777fe14b46d2279",
+    "index": "unseen-servant",
+    "name": "Sirviente Invisible",
+    "level": 1,
+    "school": "Conjuración",
+    "castingTime": "1 action",
+    "range": "60 feet",
+    "duration": "1 hour",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": true,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "warlock",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b915c777fe14b46d1e64",
+    "index": "acid-arrow",
+    "name": "Flecha Ácida",
+    "level": 2,
+    "school": "Evocación",
+    "castingTime": "1 action",
+    "range": "90 feet",
+    "duration": "Instantaneous",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of 3rd level or higher, the damage (both initial and later) increases by 1d4 for each slot level above 2nd."
+    ],
+    "classes": [
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b916c777fe14b46d1e69",
+    "index": "aid",
+    "name": "Ayuda",
+    "level": 2,
+    "school": "Abjuración",
+    "castingTime": "1 action",
+    "range": "30 feet",
+    "duration": "8 hours",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of 3rd level or higher, a target's hit points increase by an additional 5 for each slot level above 2nd."
+    ],
+    "classes": [
+      "cleric",
+      "paladin"
+    ]
+  },
+  {
+    "id": "6a51b917c777fe14b46d1e6f",
+    "index": "alter-self",
+    "name": "Alterar Propio Aspecto",
+    "level": 2,
+    "school": "Transmutación",
+    "castingTime": "1 action",
+    "range": "Self",
+    "duration": "Up to 1 hour",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b918c777fe14b46d1e76",
+    "index": "animal-messenger",
+    "name": "Mensajero Animal",
+    "level": 2,
+    "school": "Encantamiento",
+    "castingTime": "1 action",
+    "range": "30 feet",
+    "duration": "24 hours",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": true,
+    "higherLevel": [
+      "If you cast this spell using a spell slot of 3nd level or higher, the duration of the spell increases by 48 hours for each slot level above 2nd."
+    ],
+    "classes": [
+      "bard",
+      "druid",
+      "ranger"
+    ]
+  },
+  {
+    "id": "6a51b91cc777fe14b46d1e90",
+    "index": "arcane-lock",
+    "name": "Cerradura Arcana",
+    "level": 2,
+    "school": "Abjuración",
+    "castingTime": "1 action",
+    "range": "Touch",
+    "duration": "Until dispelled",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b91dc777fe14b46d1e95",
+    "index": "arcanists-magic-aura",
+    "name": "Aura Mágica del Arcanista",
+    "level": 2,
+    "school": "Ilusión",
+    "castingTime": "1 action",
+    "range": "Touch",
+    "duration": "24 hours",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b91ec777fe14b46d1e9b",
+    "index": "augury",
+    "name": "Augurio",
+    "level": 2,
+    "school": "Adivinación",
+    "castingTime": "1 minute",
+    "range": "Self",
+    "duration": "Instantaneous",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": true,
+    "higherLevel": [],
+    "classes": [
+      "cleric"
+    ]
+  },
+  {
+    "id": "6a51b920c777fe14b46d1ea9",
+    "index": "barkskin",
+    "name": "Piel de Corteza",
+    "level": 2,
+    "school": "Transmutación",
+    "castingTime": "1 action",
+    "range": "Touch",
+    "duration": "Up to 1 hour",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "druid",
+      "ranger"
+    ]
+  },
+  {
+    "id": "6a51b923c777fe14b46d1ebe",
+    "index": "blindness-deafness",
+    "name": "Ceguera/Sordera",
+    "level": 2,
+    "school": "Nigromancia",
+    "castingTime": "1 action",
+    "range": "30 feet",
+    "duration": "1 minute",
+    "components": [
+      "V"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of 3rd level or higher, you can target one additional creature for each slot level above 2nd."
+    ],
+    "classes": [
+      "bard",
+      "cleric",
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b924c777fe14b46d1ec6",
+    "index": "blur",
+    "name": "Distorsión",
+    "level": 2,
+    "school": "Ilusión",
+    "castingTime": "1 action",
+    "range": "Self",
+    "duration": "Up to 1 minute",
+    "components": [
+      "V"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b925c777fe14b46d1ec9",
+    "index": "branding-smite",
+    "name": "Golpe Marcado",
+    "level": 2,
+    "school": "Evocación",
+    "castingTime": "1 bonus action",
+    "range": "Self",
+    "duration": "Up to 1 minute",
+    "components": [
+      "V"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of 3rd level or higher, the extra damage increases by 1d6 for each slot level above 2nd."
+    ],
+    "classes": [
+      "paladin"
+    ]
+  },
+  {
+    "id": "6a51b926c777fe14b46d1ed0",
+    "index": "calm-emotions",
+    "name": "Calmar Emociones",
+    "level": 2,
+    "school": "Encantamiento",
+    "castingTime": "1 action",
+    "range": "60 feet",
+    "duration": "Up to 1 minute",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "cleric"
+    ]
+  },
+  {
+    "id": "6a51b934c777fe14b46d1f21",
+    "index": "continual-flame",
+    "name": "Llama Perpetua",
+    "level": 2,
+    "school": "Evocación",
+    "castingTime": "1 action",
+    "range": "Touch",
+    "duration": "Until dispelled",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "cleric",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b93bc777fe14b46d1f48",
+    "index": "darkness",
+    "name": "Oscuridad",
+    "level": 2,
+    "school": "Evocación",
+    "castingTime": "1 action",
+    "range": "60 feet",
+    "duration": "Up to 10 minutes",
+    "components": [
+      "V",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b93cc777fe14b46d1f4c",
+    "index": "darkvision",
+    "name": "Visión en la Oscuridad",
+    "level": 2,
+    "school": "Transmutación",
+    "castingTime": "1 action",
+    "range": "Touch",
+    "duration": "8 hours",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "druid",
+      "ranger",
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b942c777fe14b46d1f71",
+    "index": "detect-thoughts",
+    "name": "Detectar Pensamientos",
+    "level": 2,
+    "school": "Adivinación",
+    "castingTime": "1 action",
+    "range": "Self",
+    "duration": "Up to 1 minute",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b94bc777fe14b46d1faa",
+    "index": "enhance-ability",
+    "name": "Potenciar Característica",
+    "level": 2,
+    "school": "Transmutación",
+    "castingTime": "1 action",
+    "range": "Touch",
+    "duration": "Up to 1 hour",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of 3rd level or higher, you can target one additional creature for each slot level above 2nd."
+    ],
+    "classes": [
+      "bard",
+      "cleric",
+      "druid",
+      "sorcerer"
+    ]
+  },
+  {
+    "id": "6a51b94cc777fe14b46d1faf",
+    "index": "enlarge-reduce",
+    "name": "Agrandar/Reducir",
+    "level": 2,
+    "school": "Transmutación",
+    "castingTime": "1 action",
+    "range": "30 feet",
+    "duration": "Up to 1 minute",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b94dc777fe14b46d1fb4",
+    "index": "enthrall",
+    "name": "Cautivar",
+    "level": 2,
+    "school": "Encantamiento",
+    "castingTime": "1 action",
+    "range": "60 feet",
+    "duration": "1 minute",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "warlock"
+    ]
+  },
+  {
+    "id": "6a51b954c777fe14b46d1fe0",
+    "index": "find-steed",
+    "name": "Encontrar Montura",
+    "level": 2,
+    "school": "Conjuración",
+    "castingTime": "10 minutes",
+    "range": "30 feet",
+    "duration": "Instantaneous",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "paladin"
+    ]
+  },
+  {
+    "id": "6a51b955c777fe14b46d1fe6",
+    "index": "find-traps",
+    "name": "Encontrar Trampas",
+    "level": 2,
+    "school": "Adivinación",
+    "castingTime": "1 action",
+    "range": "120 feet",
+    "duration": "Instantaneous",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "cleric",
+      "druid",
+      "ranger"
+    ]
+  },
+  {
+    "id": "6a51b958c777fe14b46d1ffa",
+    "index": "flame-blade",
+    "name": "Hoja Llameante",
+    "level": 2,
+    "school": "Evocación",
+    "castingTime": "1 bonus action",
+    "range": "Self",
+    "duration": "Up to 10 minutes",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of 4th level or higher, the damage increases by 1d6 for every two slot levels above 2nd."
+    ],
+    "classes": [
+      "druid"
+    ]
+  },
+  {
+    "id": "6a51b959c777fe14b46d1ffe",
+    "index": "flaming-sphere",
+    "name": "Esfera Llameante",
+    "level": 2,
+    "school": "Conjuración",
+    "castingTime": "1 action",
+    "range": "60 feet",
+    "duration": "Up to 1 minute",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d6 for each slot level above 2nd."
+    ],
+    "classes": [
+      "druid",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b960c777fe14b46d202f",
+    "index": "gentle-repose",
+    "name": "Reposo Sereno",
+    "level": 2,
+    "school": "Nigromancia",
+    "castingTime": "1 action",
+    "range": "Touch",
+    "duration": "10 days",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": true,
+    "higherLevel": [],
+    "classes": [
+      "cleric",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b966c777fe14b46d2055",
+    "index": "gust-of-wind",
+    "name": "Ráfaga de Viento",
+    "level": 2,
+    "school": "Evocación",
+    "castingTime": "1 action",
+    "range": "Self",
+    "duration": "Up to 1 minute",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "druid",
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b96ac777fe14b46d206c",
+    "index": "heat-metal",
+    "name": "Metal Ardiente",
+    "level": 2,
+    "school": "Transmutación",
+    "castingTime": "1 action",
+    "range": "60 feet",
+    "duration": "Up to 1 minute",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d8 for each slot level above 2nd."
+    ],
+    "classes": [
+      "bard",
+      "druid"
+    ]
+  },
+  {
+    "id": "6a51b96dc777fe14b46d207f",
+    "index": "hold-person",
+    "name": "Inmovilizar Persona",
+    "level": 2,
+    "school": "Encantamiento",
+    "castingTime": "1 action",
+    "range": "60 feet",
+    "duration": "Up to 1 minute",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of 3rd level or higher, you can target one additional humanoid for each slot level above 2nd. The humanoids must be within 30 feet of each other when you target them."
+    ],
+    "classes": [
+      "bard",
+      "cleric",
+      "druid",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b974c777fe14b46d20a8",
+    "index": "invisibility",
+    "name": "Invisibilidad",
+    "level": 2,
+    "school": "Ilusión",
+    "castingTime": "1 action",
+    "range": "Touch",
+    "duration": "Up to 1 hour",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of 3rd level or higher, you can target one additional creature for each slot level above 2nd."
+    ],
+    "classes": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b975c777fe14b46d20b5",
+    "index": "knock",
+    "name": "Abrir",
+    "level": 2,
+    "school": "Transmutación",
+    "castingTime": "1 action",
+    "range": "60 feet",
+    "duration": "Instantaneous",
+    "components": [
+      "V"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b977c777fe14b46d20bd",
+    "index": "lesser-restoration",
+    "name": "Restablecimiento Menor",
+    "level": 2,
+    "school": "Abjuración",
+    "castingTime": "1 action",
+    "range": "Touch",
+    "duration": "Instantaneous",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "cleric",
+      "druid",
+      "paladin",
+      "ranger"
+    ]
+  },
+  {
+    "id": "6a51b978c777fe14b46d20c3",
+    "index": "levitate",
+    "name": "Levitar",
+    "level": 2,
+    "school": "Transmutación",
+    "castingTime": "1 action",
+    "range": "60 feet",
+    "duration": "Up to 10 minutes",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b979c777fe14b46d20ce",
+    "index": "locate-animals-or-plants",
+    "name": "Localizar Animales o Plantas",
+    "level": 2,
+    "school": "Adivinación",
+    "castingTime": "1 action",
+    "range": "Self",
+    "duration": "Instantaneous",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": true,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "druid",
+      "ranger"
+    ]
+  },
+  {
+    "id": "6a51b97bc777fe14b46d20d9",
+    "index": "locate-object",
+    "name": "Localizar Objeto",
+    "level": 2,
+    "school": "Adivinación",
+    "castingTime": "1 action",
+    "range": "Self",
+    "duration": "Up to 10 minutes",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "cleric",
+      "druid",
+      "paladin",
+      "ranger",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b97fc777fe14b46d20f7",
+    "index": "magic-mouth",
+    "name": "Boca Mágica",
+    "level": 2,
+    "school": "Ilusión",
+    "castingTime": "1 minute",
+    "range": "30 feet",
+    "duration": "Until dispelled",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": true,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b97fc777fe14b46d20fa",
+    "index": "magic-weapon",
+    "name": "Arma Mágica",
+    "level": 2,
+    "school": "Transmutación",
+    "castingTime": "1 bonus action",
+    "range": "Touch",
+    "duration": "Up to 1 hour",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of 4th level or higher, the bonus increases to +2. When you use a spell slot of 6th level or higher, the bonus increases to +3."
+    ],
+    "classes": [
+      "paladin",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b987c777fe14b46d212f",
+    "index": "mirror-image",
+    "name": "Imagen Especular",
+    "level": 2,
+    "school": "Ilusión",
+    "castingTime": "1 action",
+    "range": "Self",
+    "duration": "1 minute",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b988c777fe14b46d2136",
+    "index": "misty-step",
+    "name": "Paso Brumoso",
+    "level": 2,
+    "school": "Conjuración",
+    "castingTime": "1 bonus action",
+    "range": "Self",
+    "duration": "Instantaneous",
+    "components": [
+      "V"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b989c777fe14b46d213d",
+    "index": "moonbeam",
+    "name": "Rayo Lunar",
+    "level": 2,
+    "school": "Evocación",
+    "castingTime": "1 action",
+    "range": "120 feet",
+    "duration": "Up to 1 minute",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1dl0 for each slot level above 2nd."
+    ],
+    "classes": [
+      "druid"
+    ]
+  },
+  {
+    "id": "6a51b98bc777fe14b46d2147",
+    "index": "pass-without-trace",
+    "name": "Pasar sin Dejar Rastro",
+    "level": 2,
+    "school": "Abjuración",
+    "castingTime": "1 action",
+    "range": "Self",
+    "duration": "Up to 1 hour",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "druid",
+      "ranger"
+    ]
+  },
+  {
+    "id": "6a51b992c777fe14b46d2175",
+    "index": "prayer-of-healing",
+    "name": "Plegaria de Curación",
+    "level": 2,
+    "school": "Evocación",
+    "castingTime": "10 minutes",
+    "range": "30 feet",
+    "duration": "Instantaneous",
+    "components": [
+      "V"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of 3rd level or higher, the healing increases by 1d8 for each slot level above 2nd."
+    ],
+    "classes": [
+      "cleric"
+    ]
+  },
+  {
+    "id": "6a51b997c777fe14b46d2196",
+    "index": "protection-from-poison",
+    "name": "Protección contra el Veneno",
+    "level": 2,
+    "school": "Abjuración",
+    "castingTime": "1 action",
+    "range": "Touch",
+    "duration": "1 hour",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "cleric",
+      "druid",
+      "paladin",
+      "ranger"
+    ]
+  },
+  {
+    "id": "6a51b999c777fe14b46d21a3",
+    "index": "ray-of-enfeeblement",
+    "name": "Rayo Debilitador",
+    "level": 2,
+    "school": "Nigromancia",
+    "castingTime": "1 action",
+    "range": "60 feet",
+    "duration": "Up to 1 minute",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "warlock",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b99ec777fe14b46d21c3",
+    "index": "rope-trick",
+    "name": "Truco de Cuerda",
+    "level": 2,
+    "school": "Transmutación",
+    "castingTime": "1 action",
+    "range": "Touch",
+    "duration": "1 hour",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b99fc777fe14b46d21c9",
+    "index": "scorching-ray",
+    "name": "Rayo Abrasador",
+    "level": 2,
+    "school": "Evocación",
+    "castingTime": "1 action",
+    "range": "120 feet",
+    "duration": "Instantaneous",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of 3rd level or higher, you create one additional ray for each slot level above 2nd."
+    ],
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b9a0c777fe14b46d21d4",
+    "index": "see-invisibility",
+    "name": "Ver lo Invisible",
+    "level": 2,
+    "school": "Adivinación",
+    "castingTime": "1 action",
+    "range": "Self",
+    "duration": "1 hour",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b9a3c777fe14b46d21e5",
+    "index": "shatter",
+    "name": "Destrozar",
+    "level": 2,
+    "school": "Evocación",
+    "castingTime": "1 action",
+    "range": "60 feet",
+    "duration": "Instantaneous",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a 3 or higher level spell slot, the damage of the spell increases by 1d8 for each level of higher spell slot 2."
+    ],
+    "classes": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b9a5c777fe14b46d21f5",
+    "index": "silence",
+    "name": "Silencio",
+    "level": 2,
+    "school": "Ilusión",
+    "castingTime": "1 action",
+    "range": "120 feet",
+    "duration": "Up to 10 minutes",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": true,
+    "ritual": true,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "cleric",
+      "ranger"
+    ]
+  },
+  {
+    "id": "6a51b9abc777fe14b46d2217",
+    "index": "spider-climb",
+    "name": "Trepar como Araña",
+    "level": 2,
+    "school": "Transmutación",
+    "castingTime": "1 action",
+    "range": "Touch",
+    "duration": "Up to 1 hour",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b9acc777fe14b46d221b",
+    "index": "spike-growth",
+    "name": "Crecimiento de Púas",
+    "level": 2,
+    "school": "Transmutación",
+    "castingTime": "1 action",
+    "range": "150 feet",
+    "duration": "Up to 10 minutes",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "druid",
+      "ranger"
+    ]
+  },
+  {
+    "id": "6a51b9adc777fe14b46d2220",
+    "index": "spiritual-weapon",
+    "name": "Arma Espiritual",
+    "level": 2,
+    "school": "Evocación",
+    "castingTime": "1 bonus action",
+    "range": "60 feet",
+    "duration": "1 minute",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d8 for every two slot levels above the 2nd."
+    ],
+    "classes": [
+      "cleric"
+    ]
+  },
+  {
+    "id": "6a51b9b0c777fe14b46d2231",
+    "index": "suggestion",
+    "name": "Sugestión",
+    "level": 2,
+    "school": "Encantamiento",
+    "castingTime": "1 action",
+    "range": "30 feet",
+    "duration": "Up to 8 hours",
+    "components": [
+      "V",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b9c0c777fe14b46d2290",
+    "index": "warding-bond",
+    "name": "Vínculo Protector",
+    "level": 2,
+    "school": "Abjuración",
+    "castingTime": "1 action",
+    "range": "Touch",
+    "duration": "1 hour",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "cleric"
+    ]
+  },
+  {
+    "id": "6a51b9c2c777fe14b46d229c",
+    "index": "web",
+    "name": "Telaraña",
+    "level": 2,
+    "school": "Conjuración",
+    "castingTime": "1 action",
+    "range": "60 feet",
+    "duration": "Up to 1 hour",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b9c5c777fe14b46d22ab",
+    "index": "zone-of-truth",
+    "name": "Zona de Verdad",
+    "level": 2,
+    "school": "Encantamiento",
+    "castingTime": "1 action",
+    "range": "60 feet",
+    "duration": "10 minutes",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "cleric",
+      "paladin"
+    ]
+  },
+  {
+    "id": "6a51b919c777fe14b46d1e7c",
+    "index": "animate-dead",
+    "name": "Animar Muertos",
+    "level": 3,
+    "school": "Nigromancia",
+    "castingTime": "1 minute",
+    "range": "10 feet",
+    "duration": "Instantaneous",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of 4th level or higher, you animate or reassert control over two additional undead creatures for each slot level above 3rd. Each of the creatures must come from a different corpse or pile of bones."
+    ],
+    "classes": [
+      "cleric",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b920c777fe14b46d1eac",
+    "index": "beacon-of-hope",
+    "name": "Faro de Esperanza",
+    "level": 3,
+    "school": "Abjuración",
+    "castingTime": "1 action",
+    "range": "30 feet",
+    "duration": "Up to 1 minute",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "cleric"
+    ]
+  },
+  {
+    "id": "6a51b921c777fe14b46d1eae",
+    "index": "bestow-curse",
+    "name": "Otorgar Maldición",
+    "level": 3,
+    "school": "Nigromancia",
+    "castingTime": "1 action",
+    "range": "Touch",
+    "duration": "Up to 1 minute",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [
+      "If you cast this spell using a spell slot of 4th level or higher, the duration is concentration, up to 10 minutes. If you use a spell slot of 5th level or higher, the duration is 8 hours. If you use a spell slot of 7th level or higher, the duration is 24 hours. If you use a 9th level spell slot, the spell lasts until it is dispelled. Using a spell slot of 5th level or higher grants a duration that doesn't require concentration."
+    ],
+    "classes": [
+      "bard",
+      "cleric",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b924c777fe14b46d1ec3",
+    "index": "blink",
+    "name": "Parpadeo",
+    "level": 3,
+    "school": "Transmutación",
+    "castingTime": "1 action",
+    "range": "Self",
+    "duration": "1 minute",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b926c777fe14b46d1ece",
+    "index": "call-lightning",
+    "name": "Convocar Relámpago",
+    "level": 3,
+    "school": "Conjuración",
+    "castingTime": "1 action",
+    "range": "120 feet",
+    "duration": "Up to 10 minutes",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of 4th or higher level, the damage increases by 1d10 for each slot level above 3rd."
+    ],
+    "classes": [
+      "druid"
+    ]
+  },
+  {
+    "id": "6a51b929c777fe14b46d1ee4",
+    "index": "clairvoyance",
+    "name": "Clarividencia",
+    "level": 3,
+    "school": "Adivinación",
+    "castingTime": "10 minutes",
+    "range": "1 mile",
+    "duration": "Up to 10 minutes",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "cleric",
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b930c777fe14b46d1f08",
+    "index": "conjure-animals",
+    "name": "Conjurar Animales",
+    "level": 3,
+    "school": "Conjuración",
+    "castingTime": "1 action",
+    "range": "60 feet",
+    "duration": "Up to 1 hour",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using certain higher-level spell slots, you choose one of the summoning options above, and more creatures appear: twice as many with a 5th-level slot, three times as many with a 7th-level."
+    ],
+    "classes": [
+      "druid",
+      "ranger"
+    ]
+  },
+  {
+    "id": "6a51b936c777fe14b46d1f2c",
+    "index": "counterspell",
+    "name": "Contrahechizo",
+    "level": 3,
+    "school": "Abjuración",
+    "castingTime": "1 reaction",
+    "range": "60 feet",
+    "duration": "Instantaneous",
+    "components": [
+      "S"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of 4th level or higher, the interrupted spell has no effect if its level is less than or equal to the level of the spell slot you used."
+    ],
+    "classes": [
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b937c777fe14b46d1f30",
+    "index": "create-food-and-water",
+    "name": "Crear Comida y Agua",
+    "level": 3,
+    "school": "Conjuración",
+    "castingTime": "1 action",
+    "range": "30 feet",
+    "duration": "Instantaneous",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "cleric",
+      "druid",
+      "paladin"
+    ]
+  },
+  {
+    "id": "6a51b93dc777fe14b46d1f51",
+    "index": "daylight",
+    "name": "Luz del Día",
+    "level": 3,
+    "school": "Evocación",
+    "castingTime": "1 action",
+    "range": "60 feet",
+    "duration": "1 hour",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "cleric",
+      "druid",
+      "paladin",
+      "ranger",
+      "sorcerer"
+    ]
+  },
+  {
+    "id": "6a51b945c777fe14b46d1f84",
+    "index": "dispel-magic",
+    "name": "Disipar Magia",
+    "level": 3,
+    "school": "Abjuración",
+    "castingTime": "1 action",
+    "range": "120 feet",
+    "duration": "Instantaneous",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of 4th level or higher, you automatically end the effects of a spell on the target if the spell's level is equal to or less than the level of the spell slot you used."
+    ],
+    "classes": [
+      "bard",
+      "cleric",
+      "druid",
+      "paladin",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b951c777fe14b46d1fd0",
+    "index": "fear",
+    "name": "Miedo",
+    "level": 3,
+    "school": "Ilusión",
+    "castingTime": "1 action",
+    "range": "Self",
+    "duration": "Up to 1 minute",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b957c777fe14b46d1ff7",
+    "index": "fireball",
+    "name": "Bola de Fuego",
+    "level": 3,
+    "school": "Evocación",
+    "castingTime": "1 action",
+    "range": "150 feet",
+    "duration": "Instantaneous",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of 4th level or higher, the damage increases by 1d6 for each slot level above 3rd."
+    ],
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b95ac777fe14b46d2006",
+    "index": "fly",
+    "name": "Volar",
+    "level": 3,
+    "school": "Transmutación",
+    "castingTime": "1 action",
+    "range": "Touch",
+    "duration": "Up to 10 minutes",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of 4th level or higher, you can target one additional creature for each slot level above 3rd."
+    ],
+    "classes": [
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b95ec777fe14b46d2021",
+    "index": "gaseous-form",
+    "name": "Forma Gaseosa",
+    "level": 3,
+    "school": "Transmutación",
+    "castingTime": "1 action",
+    "range": "Touch",
+    "duration": "Up to 1 hour",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b962c777fe14b46d203a",
+    "index": "glyph-of-warding",
+    "name": "Glifo de Advertencia",
+    "level": 3,
+    "school": "Abjuración",
+    "castingTime": "1 hour",
+    "range": "Touch",
+    "duration": "Until dispelled",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of 4th level or higher, the damage of an explosive runes glyph increases by 1d8 for each slot level above 3rd. If you create a spell glyph, you can store any spell of up to the same level as the slot you use for the glyph of warding."
+    ],
+    "classes": [
+      "bard",
+      "cleric",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b969c777fe14b46d2062",
+    "index": "haste",
+    "name": "Prisa",
+    "level": 3,
+    "school": "Transmutación",
+    "castingTime": "1 action",
+    "range": "30 feet",
+    "duration": "Up to 1 minute",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b96fc777fe14b46d208a",
+    "index": "hypnotic-pattern",
+    "name": "Patrón Hipnótico",
+    "level": 3,
+    "school": "Ilusión",
+    "castingTime": "1 action",
+    "range": "120 feet",
+    "duration": "Up to 1 minute",
+    "components": [
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b979c777fe14b46d20cb",
+    "index": "lightning-bolt",
+    "name": "Rayo Relámpago",
+    "level": 3,
+    "school": "Evocación",
+    "castingTime": "1 action",
+    "range": "Self",
+    "duration": "Instantaneous",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of 4th level or higher, the damage increases by 1d6 for each slot level above 3rd."
+    ],
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b97dc777fe14b46d20ed",
+    "index": "magic-circle",
+    "name": "Círculo Mágico",
+    "level": 3,
+    "school": "Abjuración",
+    "castingTime": "1 minute",
+    "range": "10 feet",
+    "duration": "1 hour",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of 4th level or higher, the duration increases by 1 hour for each slot level above 3rd."
+    ],
+    "classes": [
+      "cleric",
+      "paladin",
+      "warlock",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b980c777fe14b46d2100",
+    "index": "major-image",
+    "name": "Imagen Mayor",
+    "level": 3,
+    "school": "Ilusión",
+    "castingTime": "1 action",
+    "range": "120 feet",
+    "duration": "Up to 10 minutes",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of 6th level or higher, the spell lasts until dispelled, without requiring your concentration."
+    ],
+    "classes": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b982c777fe14b46d210b",
+    "index": "mass-healing-word",
+    "name": "Palabra Curativa en Masa",
+    "level": 3,
+    "school": "Evocación",
+    "castingTime": "1 bonus action",
+    "range": "60 feet",
+    "duration": "Instantaneous",
+    "components": [
+      "V"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of 4th level or higher, the healing increases by 1d4 for each slot level above 3rd."
+    ],
+    "classes": [
+      "cleric"
+    ]
+  },
+  {
+    "id": "6a51b983c777fe14b46d2114",
+    "index": "meld-into-stone",
+    "name": "Fundirse con la Piedra",
+    "level": 3,
+    "school": "Transmutación",
+    "castingTime": "1 action",
+    "range": "Touch",
+    "duration": "8 hours",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": false,
+    "ritual": true,
+    "higherLevel": [],
+    "classes": [
+      "cleric"
+    ]
+  },
+  {
+    "id": "6a51b98ac777fe14b46d2143",
+    "index": "nondetection",
+    "name": "No Detección",
+    "level": 3,
+    "school": "Abjuración",
+    "castingTime": "1 action",
+    "range": "Touch",
+    "duration": "8 hours",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "ranger",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b98cc777fe14b46d214e",
+    "index": "phantom-steed",
+    "name": "Corcel Fantasmal",
+    "level": 3,
+    "school": "Ilusión",
+    "castingTime": "1 minute",
+    "range": "30 feet",
+    "duration": "1 hour",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": false,
+    "ritual": true,
+    "higherLevel": [],
+    "classes": [
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b98ec777fe14b46d215d",
+    "index": "plant-growth",
+    "name": "Crecimiento de Plantas",
+    "level": 3,
+    "school": "Transmutación",
+    "castingTime": "1 action",
+    "range": "150 feet",
+    "duration": "Instantaneous",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "druid",
+      "ranger"
+    ]
+  },
+  {
+    "id": "6a51b995c777fe14b46d218b",
+    "index": "protection-from-energy",
+    "name": "Protección contra la Energía",
+    "level": 3,
+    "school": "Abjuración",
+    "castingTime": "1 action",
+    "range": "Touch",
+    "duration": "Up to 1 hour",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "cleric",
+      "druid",
+      "ranger",
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b99ac777fe14b46d21af",
+    "index": "remove-curse",
+    "name": "Eliminar Maldición",
+    "level": 3,
+    "school": "Abjuración",
+    "castingTime": "1 action",
+    "range": "Touch",
+    "duration": "Instantaneous",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "cleric",
+      "paladin",
+      "warlock",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b99dc777fe14b46d21c0",
+    "index": "revivify",
+    "name": "Revivificar",
+    "level": 3,
+    "school": "Conjuración",
+    "castingTime": "1 action",
+    "range": "Touch",
+    "duration": "Instantaneous",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "cleric",
+      "paladin"
+    ]
+  },
+  {
+    "id": "6a51b9a1c777fe14b46d21dc",
+    "index": "sending",
+    "name": "Enviar",
+    "level": 3,
+    "school": "Evocación",
+    "castingTime": "1 action",
+    "range": "Unlimited",
+    "duration": "1 round",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "cleric",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b9a8c777fe14b46d2203",
+    "index": "sleet-storm",
+    "name": "Tormenta de Aguanieve",
+    "level": 3,
+    "school": "Conjuración",
+    "castingTime": "1 action",
+    "range": "150 feet",
+    "duration": "Up to 1 minute",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "druid",
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b9a8c777fe14b46d2207",
+    "index": "slow",
+    "name": "Lentitud",
+    "level": 3,
+    "school": "Transmutación",
+    "castingTime": "1 action",
+    "range": "120 feet",
+    "duration": "Up to 1 minute",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b9aac777fe14b46d2210",
+    "index": "speak-with-dead",
+    "name": "Hablar con los Muertos",
+    "level": 3,
+    "school": "Nigromancia",
+    "castingTime": "1 action",
+    "range": "10 feet",
+    "duration": "10 minutes",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "cleric"
+    ]
+  },
+  {
+    "id": "6a51b9aac777fe14b46d2213",
+    "index": "speak-with-plants",
+    "name": "Hablar con las Plantas",
+    "level": 3,
+    "school": "Transmutación",
+    "castingTime": "1 action",
+    "range": "Self",
+    "duration": "10 minutes",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "druid",
+      "ranger"
+    ]
+  },
+  {
+    "id": "6a51b9adc777fe14b46d221e",
+    "index": "spirit-guardians",
+    "name": "Guardianes Espirituales",
+    "level": 3,
+    "school": "Conjuración",
+    "castingTime": "1 action",
+    "range": "Self",
+    "duration": "Up to 10 minutes",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of 4th level or higher, the damage increases by 1d8 for each slot level above 3rd."
+    ],
+    "classes": [
+      "cleric"
+    ]
+  },
+  {
+    "id": "6a51b9adc777fe14b46d2222",
+    "index": "stinking-cloud",
+    "name": "Nube Fétida",
+    "level": 3,
+    "school": "Conjuración",
+    "castingTime": "1 action",
+    "range": "90 feet",
+    "duration": "Up to 1 minute",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b9b6c777fe14b46d2259",
+    "index": "tiny-hut",
+    "name": "Cabaña Diminuta",
+    "level": 3,
+    "school": "Evocación",
+    "castingTime": "1 minute",
+    "range": "Self",
+    "duration": "8 hours",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": true,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b9b7c777fe14b46d225c",
+    "index": "tongues",
+    "name": "Lenguas",
+    "level": 3,
+    "school": "Adivinación",
+    "castingTime": "1 action",
+    "range": "Touch",
+    "duration": "1 hour",
+    "components": [
+      "V",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "cleric",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b9bdc777fe14b46d227d",
+    "index": "vampiric-touch",
+    "name": "Toque Vampírico",
+    "level": 3,
+    "school": "Nigromancia",
+    "castingTime": "1 action",
+    "range": "Self",
+    "duration": "Up to 1 minute",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of 4th level or higher, the damage increases by 1d6 for each slot level above 3rd."
+    ],
+    "classes": [
+      "warlock",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b9c0c777fe14b46d2292",
+    "index": "water-breathing",
+    "name": "Respirar Bajo el Agua",
+    "level": 3,
+    "school": "Transmutación",
+    "castingTime": "1 action",
+    "range": "30 feet",
+    "duration": "24 hours",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": true,
+    "higherLevel": [],
+    "classes": [
+      "druid",
+      "ranger",
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b9c1c777fe14b46d2297",
+    "index": "water-walk",
+    "name": "Caminar Sobre el Agua",
+    "level": 3,
+    "school": "Transmutación",
+    "castingTime": "1 action",
+    "range": "30 feet",
+    "duration": "1 hour",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": true,
+    "higherLevel": [],
+    "classes": [
+      "cleric",
+      "druid",
+      "ranger",
+      "sorcerer"
+    ]
+  },
+  {
+    "id": "6a51b9c3c777fe14b46d22a3",
+    "index": "wind-wall",
+    "name": "Muro de Viento",
+    "level": 3,
+    "school": "Evocación",
+    "castingTime": "1 action",
+    "range": "120 feet",
+    "duration": "Up to 1 minute",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "druid",
+      "ranger"
+    ]
+  },
+  {
+    "id": "6a51b91bc777fe14b46d1e8b",
+    "index": "arcane-eye",
+    "name": "Ojo Arcano",
+    "level": 4,
+    "school": "Adivinación",
+    "castingTime": "1 action",
+    "range": "30 feet",
+    "duration": "Up to 1 hour",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "cleric",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b91fc777fe14b46d1ea3",
+    "index": "banishment",
+    "name": "Destierro",
+    "level": 4,
+    "school": "Abjuración",
+    "castingTime": "1 action",
+    "range": "60 feet",
+    "duration": "Up to 1 minute",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of 5th level or higher, you can target one additional creature for each slot level above 4th."
+    ],
+    "classes": [
+      "cleric",
+      "paladin",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b921c777fe14b46d1eb2",
+    "index": "black-tentacles",
+    "name": "Tentáculos Negros",
+    "level": 4,
+    "school": "Conjuración",
+    "castingTime": "1 action",
+    "range": "90 feet",
+    "duration": "Up to 1 minute",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b922c777fe14b46d1eb9",
+    "index": "blight",
+    "name": "Marchitar",
+    "level": 4,
+    "school": "Nigromancia",
+    "castingTime": "1 action",
+    "range": "30 feet",
+    "duration": "Instantaneous",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of 5th level of higher, the damage increases by 1d8 for each slot level above 4th."
+    ],
+    "classes": [
+      "druid",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b92ec777fe14b46d1efe",
+    "index": "compulsion",
+    "name": "Compulsión",
+    "level": 4,
+    "school": "Encantamiento",
+    "castingTime": "1 action",
+    "range": "30 feet",
+    "duration": "Up to 1 minute",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "bard"
+    ]
+  },
+  {
+    "id": "6a51b92fc777fe14b46d1f03",
+    "index": "confusion",
+    "name": "Confusión",
+    "level": 4,
+    "school": "Encantamiento",
+    "castingTime": "1 action",
+    "range": "90 feet",
+    "duration": "Up to 1 minute",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of 5th level or higher, the radius of the sphere increases by 5 feet for each slot level above 4th."
+    ],
+    "classes": [
+      "bard",
+      "druid",
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b932c777fe14b46d1f13",
+    "index": "conjure-minor-elementals",
+    "name": "Conjurar Elementales Menores",
+    "level": 4,
+    "school": "Conjuración",
+    "castingTime": "1 minute",
+    "range": "90 feet",
+    "duration": "Up to 1 hour",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using certain higher-level spell slots, you choose one of the summoning options above, and more creatures appear: twice as many with a 6th-level slot and three times as many with an 8th-level slot."
+    ],
+    "classes": [
+      "druid",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b932c777fe14b46d1f16",
+    "index": "conjure-woodland-beings",
+    "name": "Conjurar Seres del Bosque",
+    "level": 4,
+    "school": "Conjuración",
+    "castingTime": "1 action",
+    "range": "60 feet",
+    "duration": "Up to 1 hour",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using certain higher-level spell slots, you choose one of the summoning options above, and more creatures appear: twice as many with a 6th-level slot and three times as many with an 8th-level slot."
+    ],
+    "classes": [
+      "druid",
+      "ranger"
+    ]
+  },
+  {
+    "id": "6a51b935c777fe14b46d1f24",
+    "index": "control-water",
+    "name": "Controlar Agua",
+    "level": 4,
+    "school": "Transmutación",
+    "castingTime": "1 action",
+    "range": "300 feet",
+    "duration": "Up to 10 minutes",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "cleric",
+      "druid",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b93ec777fe14b46d1f57",
+    "index": "death-ward",
+    "name": "Custodia contra la Muerte",
+    "level": 4,
+    "school": "Abjuración",
+    "castingTime": "1 action",
+    "range": "Touch",
+    "duration": "8 hours",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "cleric",
+      "paladin"
+    ]
+  },
+  {
+    "id": "6a51b943c777fe14b46d1f75",
+    "index": "dimension-door",
+    "name": "Puerta Dimensional",
+    "level": 4,
+    "school": "Conjuración",
+    "castingTime": "1 action",
+    "range": "500 feet",
+    "duration": "Instantaneous",
+    "components": [
+      "V"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b946c777fe14b46d1f8c",
+    "index": "divination",
+    "name": "Adivinación",
+    "level": 4,
+    "school": "Adivinación",
+    "castingTime": "1 action",
+    "range": "Self",
+    "duration": "Instantaneous",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": true,
+    "higherLevel": [],
+    "classes": [
+      "druid"
+    ]
+  },
+  {
+    "id": "6a51b947c777fe14b46d1f92",
+    "index": "dominate-beast",
+    "name": "Dominar Bestia",
+    "level": 4,
+    "school": "Encantamiento",
+    "castingTime": "1 action",
+    "range": "60 feet",
+    "duration": "Up to 1 minute",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell with a 9th level spell slot, the duration is concentration, up to 8 hours."
+    ],
+    "classes": [
+      "druid",
+      "sorcerer"
+    ]
+  },
+  {
+    "id": "6a51b950c777fe14b46d1fc7",
+    "index": "fabricate",
+    "name": "Fabricar",
+    "level": 4,
+    "school": "Transmutación",
+    "castingTime": "10 minutes",
+    "range": "120 feet",
+    "duration": "Instantaneous",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b950c777fe14b46d1fcb",
+    "index": "faithful-hound",
+    "name": "Sabueso Fiel",
+    "level": 4,
+    "school": "Conjuración",
+    "castingTime": "1 action",
+    "range": "30 feet",
+    "duration": "8 hours",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b957c777fe14b46d1ff1",
+    "index": "fire-shield",
+    "name": "Escudo de Fuego",
+    "level": 4,
+    "school": "Evocación",
+    "castingTime": "1 action",
+    "range": "Self",
+    "duration": "10 minutes",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b95dc777fe14b46d201a",
+    "index": "freedom-of-movement",
+    "name": "Libertad de Movimiento",
+    "level": 4,
+    "school": "Abjuración",
+    "castingTime": "1 action",
+    "range": "Touch",
+    "duration": "1 hour",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "cleric",
+      "druid",
+      "ranger"
+    ]
+  },
+  {
+    "id": "6a51b960c777fe14b46d2032",
+    "index": "giant-insect",
+    "name": "Insecto Gigante",
+    "level": 4,
+    "school": "Transmutación",
+    "castingTime": "1 action",
+    "range": "30 feet",
+    "duration": "Up to 10 minutes",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "druid"
+    ]
+  },
+  {
+    "id": "6a51b963c777fe14b46d2043",
+    "index": "greater-invisibility",
+    "name": "Invisibilidad Mayor",
+    "level": 4,
+    "school": "Ilusión",
+    "castingTime": "1 action",
+    "range": "Touch",
+    "duration": "Up to 1 minute",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b964c777fe14b46d204b",
+    "index": "guardian-of-faith",
+    "name": "Guardián de la Fe",
+    "level": 4,
+    "school": "Conjuración",
+    "castingTime": "1 action",
+    "range": "30 feet",
+    "duration": "8 hours",
+    "components": [
+      "V"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "cleric"
+    ]
+  },
+  {
+    "id": "6a51b968c777fe14b46d205b",
+    "index": "hallucinatory-terrain",
+    "name": "Terreno Alucinatorio",
+    "level": 4,
+    "school": "Ilusión",
+    "castingTime": "10 minutes",
+    "range": "300 feet",
+    "duration": "24 hours",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "druid",
+      "warlock",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b970c777fe14b46d208f",
+    "index": "ice-storm",
+    "name": "Tormenta de Hielo",
+    "level": 4,
+    "school": "Evocación",
+    "castingTime": "1 action",
+    "range": "300 feet",
+    "duration": "Instantaneous",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of 5th level or higher, the bludgeoning damage increases by 1d8 for each slot level above 4th."
+    ],
+    "classes": [
+      "druid",
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b97ac777fe14b46d20d2",
+    "index": "locate-creature",
+    "name": "Localizar Criatura",
+    "level": 4,
+    "school": "Adivinación",
+    "castingTime": "1 action",
+    "range": "Self",
+    "duration": "Up to 1 hour",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "cleric",
+      "druid",
+      "paladin",
+      "ranger",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b98bc777fe14b46d214c",
+    "index": "phantasmal-killer",
+    "name": "Asesino Fantasmal",
+    "level": 4,
+    "school": "Ilusión",
+    "castingTime": "1 action",
+    "range": "120 feet",
+    "duration": "Up to 1 minute",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of 5th level or higher, the damage increases by 1d10 for each slot level above 4th."
+    ],
+    "classes": [
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b98fc777fe14b46d2166",
+    "index": "polymorph",
+    "name": "Polimorfar",
+    "level": 4,
+    "school": "Transmutación",
+    "castingTime": "1 action",
+    "range": "60 feet",
+    "duration": "Up to 1 hour",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "druid",
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b994c777fe14b46d2181",
+    "index": "private-sanctum",
+    "name": "Santuario Privado",
+    "level": 4,
+    "school": "Abjuración",
+    "castingTime": "10 minutes",
+    "range": "120 feet",
+    "duration": "24 hours",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of 5th level or higher, you can increase the size of the cube by 100 feet for each slot level beyond 4th. Thus you could protect a cube that can be up to 200 feet on one side by using a spell slot of 5th level."
+    ],
+    "classes": [
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b99bc777fe14b46d21b4",
+    "index": "resilient-sphere",
+    "name": "Esfera Resiliente",
+    "level": 4,
+    "school": "Evocación",
+    "castingTime": "1 action",
+    "range": "30 feet",
+    "duration": "Up to 1 minute",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b9a0c777fe14b46d21d2",
+    "index": "secret-chest",
+    "name": "Cofre Secreto",
+    "level": 4,
+    "school": "Conjuración",
+    "castingTime": "1 action",
+    "range": "Touch",
+    "duration": "Instantaneous",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b9aec777fe14b46d2226",
+    "index": "stone-shape",
+    "name": "Modelar Piedra",
+    "level": 4,
+    "school": "Transmutación",
+    "castingTime": "1 action",
+    "range": "Touch",
+    "duration": "Instantaneous",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "cleric",
+      "druid",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b9aec777fe14b46d222a",
+    "index": "stoneskin",
+    "name": "Piel de Piedra",
+    "level": 4,
+    "school": "Abjuración",
+    "castingTime": "1 action",
+    "range": "Touch",
+    "duration": "Up to 1 hour",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "druid",
+      "ranger",
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b9bec777fe14b46d2282",
+    "index": "wall-of-fire",
+    "name": "Muro de Fuego",
+    "level": 4,
+    "school": "Evocación",
+    "castingTime": "1 action",
+    "range": "120 feet",
+    "duration": "Up to 1 minute",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of 5th level or higher, the damage increases by 1d8 for each slot level above 4th."
+    ],
+    "classes": [
+      "druid",
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b919c777fe14b46d1e7f",
+    "index": "animate-objects",
+    "name": "Animar Objetos",
+    "level": 5,
+    "school": "Transmutación",
+    "castingTime": "1 action",
+    "range": "120 feet",
+    "duration": "Up to 1 minute",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [
+      "If you cast this spell using a spell slot of 6th level or higher, you can animate two additional objects for each slot level above 5th."
+    ],
+    "classes": [
+      "bard",
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b91ac777fe14b46d1e83",
+    "index": "antilife-shell",
+    "name": "Cascarón Antivida",
+    "level": 5,
+    "school": "Abjuración",
+    "castingTime": "1 action",
+    "range": "Self",
+    "duration": "Up to 1 hour",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "druid"
+    ]
+  },
+  {
+    "id": "6a51b91cc777fe14b46d1e8e",
+    "index": "arcane-hand",
+    "name": "Mano Arcana",
+    "level": 5,
+    "school": "Evocación",
+    "castingTime": "1 action",
+    "range": "120 feet",
+    "duration": "Up to 1 minute",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of 6th level or higher, the damage from the clenched fist option increases by 2d8 and the damage from the grasping hand increases by 2d6 for each slot level above 5th."
+    ],
+    "classes": [
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b91ec777fe14b46d1e9d",
+    "index": "awaken",
+    "name": "Despertar",
+    "level": 5,
+    "school": "Transmutación",
+    "castingTime": "8 hours",
+    "range": "Touch",
+    "duration": "Instantaneous",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "druid"
+    ]
+  },
+  {
+    "id": "6a51b92bc777fe14b46d1eeb",
+    "index": "cloudkill",
+    "name": "Nube Mortífera",
+    "level": 5,
+    "school": "Conjuración",
+    "castingTime": "1 action",
+    "range": "120 feet",
+    "duration": "Up to 10 minutes",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of 6th level or higher, the damage increases by 1d8 for each slot level above 5th."
+    ],
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b92dc777fe14b46d1ef4",
+    "index": "commune",
+    "name": "Comunión",
+    "level": 5,
+    "school": "Adivinación",
+    "castingTime": "1 minute",
+    "range": "Self",
+    "duration": "1 minute",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": true,
+    "higherLevel": [],
+    "classes": [
+      "cleric"
+    ]
+  },
+  {
+    "id": "6a51b92dc777fe14b46d1ef6",
+    "index": "commune-with-nature",
+    "name": "Comunión con la Naturaleza",
+    "level": 5,
+    "school": "Adivinación",
+    "castingTime": "1 minute",
+    "range": "Self",
+    "duration": "Instantaneous",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": false,
+    "ritual": true,
+    "higherLevel": [],
+    "classes": [
+      "druid",
+      "ranger"
+    ]
+  },
+  {
+    "id": "6a51b92fc777fe14b46d1f00",
+    "index": "cone-of-cold",
+    "name": "Cono de Frío",
+    "level": 5,
+    "school": "Evocación",
+    "castingTime": "1 action",
+    "range": "Self",
+    "duration": "Instantaneous",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of 6th level or higher, the damage increases by 1d8 for each slot level above 5th."
+    ],
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b931c777fe14b46d1f0d",
+    "index": "conjure-elemental",
+    "name": "Conjurar Elemental",
+    "level": 5,
+    "school": "Conjuración",
+    "castingTime": "1 minute",
+    "range": "90 feet",
+    "duration": "Up to 1 hour",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of 6th level or higher, the challenge rating increases by 1 for each slot level above 5th."
+    ],
+    "classes": [
+      "druid",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b933c777fe14b46d1f19",
+    "index": "contact-other-plane",
+    "name": "Contactar con Otro Plano",
+    "level": 5,
+    "school": "Adivinación",
+    "castingTime": "1 minute",
+    "range": "Self",
+    "duration": "1 minute",
+    "components": [
+      "V"
+    ],
+    "concentration": false,
+    "ritual": true,
+    "higherLevel": [],
+    "classes": [
+      "warlock",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b933c777fe14b46d1f1c",
+    "index": "contagion",
+    "name": "Contagio",
+    "level": 5,
+    "school": "Nigromancia",
+    "castingTime": "1 action",
+    "range": "Touch",
+    "duration": "7 days",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "cleric",
+      "druid"
+    ]
+  },
+  {
+    "id": "6a51b938c777fe14b46d1f3b",
+    "index": "creation",
+    "name": "Creación",
+    "level": 5,
+    "school": "Ilusión",
+    "castingTime": "1 minute",
+    "range": "30 feet",
+    "duration": "Special",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of 6th level or higher, the cube increases by 5 feet for each slot level above 5th."
+    ],
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b945c777fe14b46d1f81",
+    "index": "dispel-evil-and-good",
+    "name": "Disipar el Bien y el Mal",
+    "level": 5,
+    "school": "Abjuración",
+    "castingTime": "1 action",
+    "range": "Self",
+    "duration": "Up to 1 minute",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "cleric",
+      "paladin"
+    ]
+  },
+  {
+    "id": "6a51b948c777fe14b46d1f9a",
+    "index": "dominate-person",
+    "name": "Dominar Persona",
+    "level": 5,
+    "school": "Encantamiento",
+    "castingTime": "1 action",
+    "range": "60 feet",
+    "duration": "Up to 1 minute",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a 6th-level spell slot, the duration is concentration, up to 10 minutes. When you use a 7th-level spell slot, the duration is concentration, up to 1 hour. When you use a spell slot of 8th level or higher, the duration is concentration, up to 8 hours."
+    ],
+    "classes": [
+      "bard",
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b949c777fe14b46d1f9e",
+    "index": "dream",
+    "name": "Ensoñación",
+    "level": 5,
+    "school": "Ilusión",
+    "castingTime": "1 minute",
+    "range": "Special",
+    "duration": "8 hours",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "warlock",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b958c777fe14b46d1ffc",
+    "index": "flame-strike",
+    "name": "Golpe de Llamas",
+    "level": 5,
+    "school": "Evocación",
+    "castingTime": "1 action",
+    "range": "60 feet",
+    "duration": "Instantaneous",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of 6th level or higher, the fire damage or the radiant damage (your choice) increases by 1d6 for each slot level above 5th."
+    ],
+    "classes": [
+      "cleric"
+    ]
+  },
+  {
+    "id": "6a51b95fc777fe14b46d2029",
+    "index": "geas",
+    "name": "Geas",
+    "level": 5,
+    "school": "Encantamiento",
+    "castingTime": "1 minute",
+    "range": "60 feet",
+    "duration": "30 days",
+    "components": [
+      "V"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of 7th or 8th level, the duration is 1 year. When you cast this spell using a spell slot of 9th level, the spell lasts until it is ended by one of the spells mentioned above."
+    ],
+    "classes": [
+      "bard",
+      "cleric",
+      "druid",
+      "paladin",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b964c777fe14b46d2047",
+    "index": "greater-restoration",
+    "name": "Restablecimiento Mayor",
+    "level": 5,
+    "school": "Abjuración",
+    "castingTime": "1 action",
+    "range": "Touch",
+    "duration": "Instantaneous",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "cleric",
+      "druid"
+    ]
+  },
+  {
+    "id": "6a51b967c777fe14b46d2059",
+    "index": "hallow",
+    "name": "Consagrar",
+    "level": 5,
+    "school": "Evocación",
+    "castingTime": "24 hours",
+    "range": "Touch",
+    "duration": "Until dispelled",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "cleric"
+    ]
+  },
+  {
+    "id": "6a51b96dc777fe14b46d207a",
+    "index": "hold-monster",
+    "name": "Inmovilizar Monstruo",
+    "level": 5,
+    "school": "Encantamiento",
+    "castingTime": "1 action",
+    "range": "90 feet",
+    "duration": "Up to 1 minute",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a level 6 or higher location, you can target an additional creature for each level of location beyond the fifth. The creatures must be within 30 feet o f each other when you target them."
+    ],
+    "classes": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b973c777fe14b46d20a2",
+    "index": "insect-plague",
+    "name": "Plaga de Insectos",
+    "level": 5,
+    "school": "Conjuración",
+    "castingTime": "1 action",
+    "range": "300 feet",
+    "duration": "Up to 10 minutes",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of 6th level or higher, the damage increases by 1d10 for each slot level above 5th."
+    ],
+    "classes": [
+      "cleric",
+      "druid",
+      "sorcerer"
+    ]
+  },
+  {
+    "id": "6a51b976c777fe14b46d20b9",
+    "index": "legend-lore",
+    "name": "Saber de Leyendas",
+    "level": 5,
+    "school": "Adivinación",
+    "castingTime": "10 minutes",
+    "range": "Self",
+    "duration": "Instantaneous",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "cleric",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b981c777fe14b46d2105",
+    "index": "mass-cure-wounds",
+    "name": "Curar Heridas en Masa",
+    "level": 5,
+    "school": "Conjuración",
+    "castingTime": "1 action",
+    "range": "60 feet",
+    "duration": "Instantaneous",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of 6th level or higher, the healing increases by 1d8 for each slot level above 5th."
+    ],
+    "classes": [
+      "bard",
+      "cleric",
+      "druid"
+    ]
+  },
+  {
+    "id": "6a51b988c777fe14b46d2133",
+    "index": "mislead",
+    "name": "Desorientar",
+    "level": 5,
+    "school": "Ilusión",
+    "castingTime": "1 action",
+    "range": "Self",
+    "duration": "Up to 1 hour",
+    "components": [
+      "S"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b989c777fe14b46d213a",
+    "index": "modify-memory",
+    "name": "Modificar Memoria",
+    "level": 5,
+    "school": "Encantamiento",
+    "castingTime": "1 action",
+    "range": "30 feet",
+    "duration": "Up to 1 minute",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [
+      "If you cast this spell using a spell slot of 6th level or higher, you can alter the target's memories of an event that took place up to 7 days ago (6th level), 30 days ago (7th level), 1 year ago (8th level), or any time in the creature's past (9th level)."
+    ],
+    "classes": [
+      "bard",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b98bc777fe14b46d214a",
+    "index": "passwall",
+    "name": "Paso a Través del Muro",
+    "level": 5,
+    "school": "Transmutación",
+    "castingTime": "1 action",
+    "range": "30 feet",
+    "duration": "1 hour",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b98dc777fe14b46d2152",
+    "index": "planar-binding",
+    "name": "Atadura Planar",
+    "level": 5,
+    "school": "Abjuración",
+    "castingTime": "1 hour",
+    "range": "60 feet",
+    "duration": "24 hours",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of a higher level, the duration increases to 10 days with a 6th-level slot, to 30 days with a 7th-level slot, to 180 days with an 8th-level slot, and to a year and a day with a 9th-level spell slot."
+    ],
+    "classes": [
+      "bard",
+      "cleric",
+      "druid",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b998c777fe14b46d219f",
+    "index": "raise-dead",
+    "name": "Resucitar Muertos",
+    "level": 5,
+    "school": "Nigromancia",
+    "castingTime": "1 hour",
+    "range": "Touch",
+    "duration": "Instantaneous",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "cleric",
+      "paladin"
+    ]
+  },
+  {
+    "id": "6a51b99ac777fe14b46d21ad",
+    "index": "reincarnate",
+    "name": "Reencarnar",
+    "level": 5,
+    "school": "Transmutación",
+    "castingTime": "1 hour",
+    "range": "Touch",
+    "duration": "Instantaneous",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "druid"
+    ]
+  },
+  {
+    "id": "6a51b99fc777fe14b46d21cc",
+    "index": "scrying",
+    "name": "Escrutar",
+    "level": 5,
+    "school": "Adivinación",
+    "castingTime": "10 minutes",
+    "range": "Self",
+    "duration": "Up to 10 minutes",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "cleric",
+      "druid",
+      "warlock",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b9a1c777fe14b46d21d8",
+    "index": "seeming",
+    "name": "Apariencia",
+    "level": 5,
+    "school": "Ilusión",
+    "castingTime": "1 action",
+    "range": "30 feet",
+    "duration": "8 hours",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b9b3c777fe14b46d2242",
+    "index": "telekinesis",
+    "name": "Telequinesia",
+    "level": 5,
+    "school": "Transmutación",
+    "castingTime": "1 action",
+    "range": "60 feet",
+    "duration": "Up to 10 minutes",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b9b3c777fe14b46d2245",
+    "index": "telepathic-bond",
+    "name": "Vínculo Telepático",
+    "level": 5,
+    "school": "Adivinación",
+    "castingTime": "1 action",
+    "range": "30 feet",
+    "duration": "1 hour",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": true,
+    "higherLevel": [],
+    "classes": [
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b9b4c777fe14b46d224b",
+    "index": "teleportation-circle",
+    "name": "Círculo de Teletransporte",
+    "level": 5,
+    "school": "Conjuración",
+    "castingTime": "1 minute",
+    "range": "10 feet",
+    "duration": "1 round",
+    "components": [
+      "V",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b9b9c777fe14b46d2264",
+    "index": "tree-stride",
+    "name": "Zancada del Árbol",
+    "level": 5,
+    "school": "Conjuración",
+    "castingTime": "1 action",
+    "range": "Self",
+    "duration": "Up to 1 minute",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "druid",
+      "ranger"
+    ]
+  },
+  {
+    "id": "6a51b9bec777fe14b46d2286",
+    "index": "wall-of-force",
+    "name": "Muro de Fuerza",
+    "level": 5,
+    "school": "Evocación",
+    "castingTime": "1 action",
+    "range": "120 feet",
+    "duration": "Up to 10 minutes",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b9bfc777fe14b46d228a",
+    "index": "wall-of-stone",
+    "name": "Muro de Piedra",
+    "level": 5,
+    "school": "Evocación",
+    "castingTime": "1 action",
+    "range": "120 feet",
+    "duration": "Up to 10 minutes",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "druid",
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b922c777fe14b46d1eb4",
+    "index": "blade-barrier",
+    "name": "Barrera de Hojas",
+    "level": 6,
+    "school": "Evocación",
+    "castingTime": "1 action",
+    "range": "90 feet",
+    "duration": "Up to 10 minutes",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "cleric"
+    ]
+  },
+  {
+    "id": "6a51b927c777fe14b46d1ed3",
+    "index": "chain-lightning",
+    "name": "Cadena de Relámpagos",
+    "level": 6,
+    "school": "Evocación",
+    "castingTime": "1 action",
+    "range": "150 feet",
+    "duration": "Instantaneous",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of 7th level or higher, one additional bolt leaps from the first target to another target for each slot level above 6th."
+    ],
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b929c777fe14b46d1ee0",
+    "index": "circle-of-death",
+    "name": "Círculo de Muerte",
+    "level": 6,
+    "school": "Nigromancia",
+    "castingTime": "1 action",
+    "range": "150 feet",
+    "duration": "Instantaneous",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of 7th level or higher, the damage increases by 2d6 for each slot level above 6th."
+    ],
+    "classes": [
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b931c777fe14b46d1f10",
+    "index": "conjure-fey",
+    "name": "Conjurar Feérico",
+    "level": 6,
+    "school": "Conjuración",
+    "castingTime": "1 minute",
+    "range": "90 feet",
+    "duration": "Up to 1 hour",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of 7th level or higher, the challenge rating increases by 1 for each slot level above 6th."
+    ],
+    "classes": [
+      "druid",
+      "warlock"
+    ]
+  },
+  {
+    "id": "6a51b934c777fe14b46d1f1f",
+    "index": "contingency",
+    "name": "Contingencia",
+    "level": 6,
+    "school": "Evocación",
+    "castingTime": "10 minutes",
+    "range": "Self",
+    "duration": "10 days",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b938c777fe14b46d1f37",
+    "index": "create-undead",
+    "name": "Crear No Muertos",
+    "level": 6,
+    "school": "Nigromancia",
+    "castingTime": "1 minute",
+    "range": "10 feet",
+    "duration": "Instantaneous",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a 7th-level spell slot, you can animate or reassert control over four ghouls. When you cast this spell using an 8th-level spell slot, you can animate or reassert control over five ghouls or two ghasts or wights. When you cast this spell using a 9th-level spell slot, you can animate or reassert control over six ghouls, three ghasts or wights, or two mummies."
+    ],
+    "classes": [
+      "cleric",
+      "warlock",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b944c777fe14b46d1f7e",
+    "index": "disintegrate",
+    "name": "Desintegrar",
+    "level": 6,
+    "school": "Transmutación",
+    "castingTime": "1 action",
+    "range": "60 feet",
+    "duration": "Instantaneous",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of 7th level or higher, the damage increases by 3d6 for each slot level above 6th."
+    ],
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b94fc777fe14b46d1fc2",
+    "index": "eyebite",
+    "name": "Mirada Maligna",
+    "level": 6,
+    "school": "Nigromancia",
+    "castingTime": "1 action",
+    "range": "Self",
+    "duration": "Up to 1 minute",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b954c777fe14b46d1fe2",
+    "index": "find-the-path",
+    "name": "Encontrar el Camino",
+    "level": 6,
+    "school": "Adivinación",
+    "castingTime": "1 minute",
+    "range": "Self",
+    "duration": "Up to 24 hours",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "cleric",
+      "druid"
+    ]
+  },
+  {
+    "id": "6a51b959c777fe14b46d2001",
+    "index": "flesh-to-stone",
+    "name": "Carne a Piedra",
+    "level": 6,
+    "school": "Transmutación",
+    "castingTime": "1 action",
+    "range": "60 feet",
+    "duration": "Up to 1 minute",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "warlock",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b95bc777fe14b46d200f",
+    "index": "forbiddance",
+    "name": "Prohibición",
+    "level": 6,
+    "school": "Abjuración",
+    "castingTime": "10 minutes",
+    "range": "Touch",
+    "duration": "24 hours",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": true,
+    "higherLevel": [],
+    "classes": [
+      "cleric"
+    ]
+  },
+  {
+    "id": "6a51b95ec777fe14b46d201f",
+    "index": "freezing-sphere",
+    "name": "Esfera Congelante",
+    "level": 6,
+    "school": "Evocación",
+    "castingTime": "1 action",
+    "range": "300 feet",
+    "duration": "Instantaneous",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of 7th level or higher, the damage increases by 1d6 for each slot level above 6th."
+    ],
+    "classes": [
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b961c777fe14b46d2037",
+    "index": "globe-of-invulnerability",
+    "name": "Globo de Invulnerabilidad",
+    "level": 6,
+    "school": "Abjuración",
+    "castingTime": "1 action",
+    "range": "Self",
+    "duration": "Up to 1 minute",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of 7th level or higher, the barrier blocks spells of one level higher for each slot level above 6th."
+    ],
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b965c777fe14b46d204d",
+    "index": "guards-and-wards",
+    "name": "Guardias y Protecciones",
+    "level": 6,
+    "school": "Abjuración",
+    "castingTime": "10 minutes",
+    "range": "Touch",
+    "duration": "24 hours",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b968c777fe14b46d2060",
+    "index": "harm",
+    "name": "Dañar",
+    "level": 6,
+    "school": "Nigromancia",
+    "castingTime": "1 action",
+    "range": "60 feet",
+    "duration": "Instantaneous",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "cleric"
+    ]
+  },
+  {
+    "id": "6a51b969c777fe14b46d2065",
+    "index": "heal",
+    "name": "Sanar",
+    "level": 6,
+    "school": "Evocación",
+    "castingTime": "1 action",
+    "range": "60 feet",
+    "duration": "Instantaneous",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of 7th level or higher, the amount of healing increases by 10 for each slot level above 6th."
+    ],
+    "classes": [
+      "cleric",
+      "druid"
+    ]
+  },
+  {
+    "id": "6a51b96bc777fe14b46d2071",
+    "index": "heroes-feast",
+    "name": "Banquete de Héroes",
+    "level": 6,
+    "school": "Conjuración",
+    "castingTime": "10 minutes",
+    "range": "30 feet",
+    "duration": "Instantaneous",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "cleric",
+      "druid"
+    ]
+  },
+  {
+    "id": "6a51b973c777fe14b46d20a6",
+    "index": "instant-summons",
+    "name": "Convocatoria Instantánea",
+    "level": 6,
+    "school": "Conjuración",
+    "castingTime": "1 minute",
+    "range": "Touch",
+    "duration": "Until dispelled",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": true,
+    "higherLevel": [],
+    "classes": [
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b974c777fe14b46d20ad",
+    "index": "irresistible-dance",
+    "name": "Danza Irresistible",
+    "level": 6,
+    "school": "Encantamiento",
+    "castingTime": "1 action",
+    "range": "30 feet",
+    "duration": "Up to 1 minute",
+    "components": [
+      "V"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b97ec777fe14b46d20f2",
+    "index": "magic-jar",
+    "name": "Tarro Mágico",
+    "level": 6,
+    "school": "Nigromancia",
+    "castingTime": "1 minute",
+    "range": "Self",
+    "duration": "Until dispelled",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b982c777fe14b46d210d",
+    "index": "mass-suggestion",
+    "name": "Sugestión en Masa",
+    "level": 6,
+    "school": "Encantamiento",
+    "castingTime": "1 action",
+    "range": "60 feet",
+    "duration": "24 hours",
+    "components": [
+      "V",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a 7th-level spell slot, the duration is 10 days. When you use an 8th-level spell slot, the duration is 30 days. When you use a 9th-level spell slot, the duration is a year and a day."
+    ],
+    "classes": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b98ac777fe14b46d213f",
+    "index": "move-earth",
+    "name": "Mover Tierra",
+    "level": 6,
+    "school": "Transmutación",
+    "castingTime": "1 action",
+    "range": "120 feet",
+    "duration": "Up to 2 hours",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "druid",
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b98cc777fe14b46d2150",
+    "index": "planar-ally",
+    "name": "Aliado Planar",
+    "level": 6,
+    "school": "Conjuración",
+    "castingTime": "10 minutes",
+    "range": "60 feet",
+    "duration": "Instantaneous",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "cleric"
+    ]
+  },
+  {
+    "id": "6a51b994c777fe14b46d2185",
+    "index": "programmed-illusion",
+    "name": "Ilusión Programada",
+    "level": 6,
+    "school": "Ilusión",
+    "castingTime": "1 action",
+    "range": "120 feet",
+    "duration": "Until dispelled",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b9b0c777fe14b46d2236",
+    "index": "sunbeam",
+    "name": "Rayo de Sol",
+    "level": 6,
+    "school": "Evocación",
+    "castingTime": "1 action",
+    "range": "Self",
+    "duration": "Up to 1 minute",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "druid",
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b9b8c777fe14b46d2262",
+    "index": "transport-via-plants",
+    "name": "Transporte por Plantas",
+    "level": 6,
+    "school": "Conjuración",
+    "castingTime": "1 action",
+    "range": "10 feet",
+    "duration": "1 round",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "druid"
+    ]
+  },
+  {
+    "id": "6a51b9bac777fe14b46d226e",
+    "index": "true-seeing",
+    "name": "Visión Verdadera",
+    "level": 6,
+    "school": "Adivinación",
+    "castingTime": "1 action",
+    "range": "Touch",
+    "duration": "1 hour",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "cleric",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b9bfc777fe14b46d2288",
+    "index": "wall-of-ice",
+    "name": "Muro de Hielo",
+    "level": 6,
+    "school": "Evocación",
+    "castingTime": "1 action",
+    "range": "120 feet",
+    "duration": "Up to 10 minutes",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of 7th level or higher, the damage the wall deals when it appears increases by 2d6, and the damage from passing through the sheet of frigid air increases by 1d6, for each slot level above 6th."
+    ],
+    "classes": [
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b9c0c777fe14b46d228e",
+    "index": "wall-of-thorns",
+    "name": "Muro de Espinas",
+    "level": 6,
+    "school": "Conjuración",
+    "castingTime": "1 action",
+    "range": "120 feet",
+    "duration": "Up to 10 minutes",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of 7th level or higher, both types of damage increase by 1d8 for each slot level above 6th."
+    ],
+    "classes": [
+      "druid"
+    ]
+  },
+  {
+    "id": "6a51b9c3c777fe14b46d22a1",
+    "index": "wind-walk",
+    "name": "Caminar en el Viento",
+    "level": 6,
+    "school": "Transmutación",
+    "castingTime": "1 minute",
+    "range": "30 feet",
+    "duration": "8 hours",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "druid"
+    ]
+  },
+  {
+    "id": "6a51b9c4c777fe14b46d22a9",
+    "index": "word-of-recall",
+    "name": "Palabra de Regreso",
+    "level": 6,
+    "school": "Conjuración",
+    "castingTime": "1 action",
+    "range": "5 feet",
+    "duration": "Instantaneous",
+    "components": [
+      "V"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "cleric"
+    ]
+  },
+  {
+    "id": "6a51b91cc777fe14b46d1e92",
+    "index": "arcane-sword",
+    "name": "Espada Arcana",
+    "level": 7,
+    "school": "Evocación",
+    "castingTime": "1 action",
+    "range": "60 feet",
+    "duration": "Up to 1 minute",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b930c777fe14b46d1f0b",
+    "index": "conjure-celestial",
+    "name": "Conjurar Celestial",
+    "level": 7,
+    "school": "Conjuración",
+    "castingTime": "1 minute",
+    "range": "90 feet",
+    "duration": "Up to 1 hour",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a 9th-level spell slot, you summon a celestial of challenge rating 5 or lower."
+    ],
+    "classes": [
+      "cleric"
+    ]
+  },
+  {
+    "id": "6a51b93fc777fe14b46d1f5a",
+    "index": "delayed-blast-fireball",
+    "name": "Bola de Fuego de Explosión Retardada",
+    "level": 7,
+    "school": "Evocación",
+    "castingTime": "1 action",
+    "range": "150 feet",
+    "duration": "Up to 1 minute",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of 8th level or higher, the base damage increases by 1d6 for each slot level above 7th."
+    ],
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b947c777fe14b46d1f90",
+    "index": "divine-word",
+    "name": "Palabra Divina",
+    "level": 7,
+    "school": "Evocación",
+    "castingTime": "1 bonus action",
+    "range": "30 feet",
+    "duration": "Instantaneous",
+    "components": [
+      "V"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "cleric"
+    ]
+  },
+  {
+    "id": "6a51b94ec777fe14b46d1fb7",
+    "index": "etherealness",
+    "name": "Estado Etéreo",
+    "level": 7,
+    "school": "Transmutación",
+    "castingTime": "1 action",
+    "range": "Self",
+    "duration": "8 hours",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell using a spell slot of 8th level or higher, you can target up to three willing creatures (including you) for each slot level above 7th. The creatures must be within 10 feet of you when you cast the spell."
+    ],
+    "classes": [
+      "bard",
+      "cleric",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b955c777fe14b46d1fea",
+    "index": "finger-of-death",
+    "name": "Dedo de la Muerte",
+    "level": 7,
+    "school": "Nigromancia",
+    "castingTime": "1 action",
+    "range": "60 feet",
+    "duration": "Instantaneous",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b957c777fe14b46d1ff3",
+    "index": "fire-storm",
+    "name": "Tormenta de Fuego",
+    "level": 7,
+    "school": "Evocación",
+    "castingTime": "1 action",
+    "range": "150 feet",
+    "duration": "Instantaneous",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "cleric",
+      "druid",
+      "sorcerer"
+    ]
+  },
+  {
+    "id": "6a51b95cc777fe14b46d2011",
+    "index": "forcecage",
+    "name": "Jaula de Fuerza",
+    "level": 7,
+    "school": "Evocación",
+    "castingTime": "1 action",
+    "range": "100 feet",
+    "duration": "1 hour",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "warlock",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b980c777fe14b46d20fd",
+    "index": "magnificent-mansion",
+    "name": "Mansión Magnífica",
+    "level": 7,
+    "school": "Conjuración",
+    "castingTime": "1 minute",
+    "range": "300 feet",
+    "duration": "24 hours",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b987c777fe14b46d212b",
+    "index": "mirage-arcane",
+    "name": "Espejismo Arcano",
+    "level": 7,
+    "school": "Ilusión",
+    "castingTime": "10 minutes",
+    "range": "Sight",
+    "duration": "10 days",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "druid",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b98dc777fe14b46d2157",
+    "index": "plane-shift",
+    "name": "Cambio de Plano",
+    "level": 7,
+    "school": "Conjuración",
+    "castingTime": "1 action",
+    "range": "Touch",
+    "duration": "Instantaneous",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "cleric",
+      "druid",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b993c777fe14b46d217c",
+    "index": "prismatic-spray",
+    "name": "Ráfaga Prismática",
+    "level": 7,
+    "school": "Evocación",
+    "castingTime": "1 action",
+    "range": "Self",
+    "duration": "Instantaneous",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b995c777fe14b46d2188",
+    "index": "project-image",
+    "name": "Proyectar Imagen",
+    "level": 7,
+    "school": "Ilusión",
+    "castingTime": "1 action",
+    "range": "500 miles",
+    "duration": "Up to 24 hours",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b99ac777fe14b46d21a9",
+    "index": "regenerate",
+    "name": "Regenerar",
+    "level": 7,
+    "school": "Transmutación",
+    "castingTime": "1 minute",
+    "range": "Touch",
+    "duration": "1 hour",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "cleric",
+      "druid"
+    ]
+  },
+  {
+    "id": "6a51b99cc777fe14b46d21b9",
+    "index": "resurrection",
+    "name": "Resurrección",
+    "level": 7,
+    "school": "Nigromancia",
+    "castingTime": "1 hour",
+    "range": "Touch",
+    "duration": "Instantaneous",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "cleric"
+    ]
+  },
+  {
+    "id": "6a51b99cc777fe14b46d21bc",
+    "index": "reverse-gravity",
+    "name": "Invertir Gravedad",
+    "level": 7,
+    "school": "Transmutación",
+    "castingTime": "1 action",
+    "range": "100 feet",
+    "duration": "Up to 1 minute",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "druid",
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b9a2c777fe14b46d21e0",
+    "index": "sequester",
+    "name": "Aislar",
+    "level": 7,
+    "school": "Transmutación",
+    "castingTime": "1 action",
+    "range": "Touch",
+    "duration": "Until dispelled",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b9a7c777fe14b46d21fd",
+    "index": "simulacrum",
+    "name": "Simulacro",
+    "level": 7,
+    "school": "Ilusión",
+    "castingTime": "12 hours",
+    "range": "Touch",
+    "duration": "Until dispelled",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b9b2c777fe14b46d223e",
+    "index": "symbol",
+    "name": "Símbolo",
+    "level": 7,
+    "school": "Abjuración",
+    "castingTime": "1 minute",
+    "range": "Touch",
+    "duration": "Until dispelled",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "cleric",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b9b3c777fe14b46d2247",
+    "index": "teleport",
+    "name": "Teletransportarse",
+    "level": 7,
+    "school": "Conjuración",
+    "castingTime": "1 action",
+    "range": "10 feet",
+    "duration": "Instantaneous",
+    "components": [
+      "V"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b918c777fe14b46d1e7a",
+    "index": "animal-shapes",
+    "name": "Formas Animales",
+    "level": 8,
+    "school": "Transmutación",
+    "castingTime": "1 action",
+    "range": "30 feet",
+    "duration": "Up to 24 hours",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "druid"
+    ]
+  },
+  {
+    "id": "6a51b91ac777fe14b46d1e85",
+    "index": "antimagic-field",
+    "name": "Campo Antimagia",
+    "level": 8,
+    "school": "Abjuración",
+    "castingTime": "1 action",
+    "range": "Self",
+    "duration": "Up to 1 hour",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "cleric",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b91bc777fe14b46d1e88",
+    "index": "antipathy-sympathy",
+    "name": "Antipatía/Simpatía",
+    "level": 8,
+    "school": "Encantamiento",
+    "castingTime": "1 hour",
+    "range": "60 feet",
+    "duration": "10 days",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "druid",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b92ac777fe14b46d1ee9",
+    "index": "clone",
+    "name": "Clonar",
+    "level": 8,
+    "school": "Nigromancia",
+    "castingTime": "1 hour",
+    "range": "Touch",
+    "duration": "Instantaneous",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b936c777fe14b46d1f28",
+    "index": "control-weather",
+    "name": "Controlar el Clima",
+    "level": 8,
+    "school": "Transmutación",
+    "castingTime": "10 minutes",
+    "range": "Self",
+    "duration": "Up to 8 hours",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "cleric",
+      "druid",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b93fc777fe14b46d1f5d",
+    "index": "demiplane",
+    "name": "Semiplano",
+    "level": 8,
+    "school": "Conjuración",
+    "castingTime": "1 action",
+    "range": "60 feet",
+    "duration": "1 hour",
+    "components": [
+      "S"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "warlock",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b948c777fe14b46d1f95",
+    "index": "dominate-monster",
+    "name": "Dominar Monstruo",
+    "level": 8,
+    "school": "Encantamiento",
+    "castingTime": "1 action",
+    "range": "60 feet",
+    "duration": "Up to 1 hour",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [
+      "When you cast this spell with a 9th-level spell slot, the duration is concentration, up to 8 hours."
+    ],
+    "classes": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b94ac777fe14b46d1fa4",
+    "index": "earthquake",
+    "name": "Terremoto",
+    "level": 8,
+    "school": "Evocación",
+    "castingTime": "1 action",
+    "range": "500 feet",
+    "duration": "Up to 1 minute",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "cleric",
+      "druid",
+      "sorcerer"
+    ]
+  },
+  {
+    "id": "6a51b953c777fe14b46d1fd9",
+    "index": "feeblemind",
+    "name": "Debilitar Mente",
+    "level": 8,
+    "school": "Encantamiento",
+    "castingTime": "1 action",
+    "range": "150 feet",
+    "duration": "Instantaneous",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "druid",
+      "warlock",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b961c777fe14b46d2034",
+    "index": "glibness",
+    "name": "Labia",
+    "level": 8,
+    "school": "Transmutación",
+    "castingTime": "1 action",
+    "range": "Self",
+    "duration": "1 hour",
+    "components": [
+      "V"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "warlock"
+    ]
+  },
+  {
+    "id": "6a51b96ec777fe14b46d2086",
+    "index": "holy-aura",
+    "name": "Aura Sagrada",
+    "level": 8,
+    "school": "Abjuración",
+    "castingTime": "1 action",
+    "range": "Self",
+    "duration": "Up to 1 minute",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "cleric"
+    ]
+  },
+  {
+    "id": "6a51b972c777fe14b46d209d",
+    "index": "incendiary-cloud",
+    "name": "Nube Incendiaria",
+    "level": 8,
+    "school": "Conjuración",
+    "castingTime": "1 action",
+    "range": "150 feet",
+    "duration": "Up to 1 minute",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b983c777fe14b46d2112",
+    "index": "maze",
+    "name": "Laberinto",
+    "level": 8,
+    "school": "Conjuración",
+    "castingTime": "1 action",
+    "range": "60 feet",
+    "duration": "Up to 10 minutes",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b985c777fe14b46d2123",
+    "index": "mind-blank",
+    "name": "Bloqueo Mental",
+    "level": 8,
+    "school": "Abjuración",
+    "castingTime": "1 action",
+    "range": "Touch",
+    "duration": "24 hours",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b991c777fe14b46d2170",
+    "index": "power-word-stun",
+    "name": "Palabra de Poder: Aturdir",
+    "level": 8,
+    "school": "Encantamiento",
+    "castingTime": "1 action",
+    "range": "60 feet",
+    "duration": "Instantaneous",
+    "components": [
+      "V"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b9b1c777fe14b46d223a",
+    "index": "sunburst",
+    "name": "Estallido Solar",
+    "level": 8,
+    "school": "Evocación",
+    "castingTime": "1 action",
+    "range": "150 feet",
+    "duration": "Instantaneous",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "druid",
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b91dc777fe14b46d1e97",
+    "index": "astral-projection",
+    "name": "Proyección Astral",
+    "level": 9,
+    "school": "Nigromancia",
+    "castingTime": "1 hour",
+    "range": "10 feet",
+    "duration": "Special",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "cleric",
+      "warlock",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b95cc777fe14b46d2015",
+    "index": "foresight",
+    "name": "Presciencia",
+    "level": 9,
+    "school": "Adivinación",
+    "castingTime": "1 minute",
+    "range": "Touch",
+    "duration": "8 hours",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "druid",
+      "warlock",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b95fc777fe14b46d2025",
+    "index": "gate",
+    "name": "Puerta",
+    "level": 9,
+    "school": "Conjuración",
+    "castingTime": "1 action",
+    "range": "60 feet",
+    "duration": "Up to 1 minute",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "cleric",
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b971c777fe14b46d209a",
+    "index": "imprisonment",
+    "name": "Encarcelamiento",
+    "level": 9,
+    "school": "Abjuración",
+    "castingTime": "1 minute",
+    "range": "30 feet",
+    "duration": "Until dispelled",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "warlock",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b981c777fe14b46d2109",
+    "index": "mass-heal",
+    "name": "Sanar en Masa",
+    "level": 9,
+    "school": "Conjuración",
+    "castingTime": "1 action",
+    "range": "60 feet",
+    "duration": "Instantaneous",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "cleric"
+    ]
+  },
+  {
+    "id": "6a51b985c777fe14b46d2120",
+    "index": "meteor-swarm",
+    "name": "Enjambre de Meteoros",
+    "level": 9,
+    "school": "Evocación",
+    "castingTime": "1 action",
+    "range": "1 mile",
+    "duration": "Instantaneous",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b990c777fe14b46d216b",
+    "index": "power-word-kill",
+    "name": "Palabra de Poder: Matar",
+    "level": 9,
+    "school": "Encantamiento",
+    "castingTime": "1 action",
+    "range": "60 feet",
+    "duration": "Instantaneous",
+    "components": [
+      "V"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b993c777fe14b46d217f",
+    "index": "prismatic-wall",
+    "name": "Muro Prismático",
+    "level": 9,
+    "school": "Abjuración",
+    "castingTime": "1 action",
+    "range": "60 feet",
+    "duration": "10 minutes",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b9a2c777fe14b46d21e2",
+    "index": "shapechange",
+    "name": "Cambiar de Forma",
+    "level": 9,
+    "school": "Transmutación",
+    "castingTime": "1 action",
+    "range": "Self",
+    "duration": "Up to 1 hour",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "druid",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b9afc777fe14b46d222f",
+    "index": "storm-of-vengeance",
+    "name": "Tormenta de Venganza",
+    "level": 9,
+    "school": "Conjuración",
+    "castingTime": "1 action",
+    "range": "Sight",
+    "duration": "Up to 1 minute",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "druid"
+    ]
+  },
+  {
+    "id": "6a51b9b6c777fe14b46d2256",
+    "index": "time-stop",
+    "name": "Detener el Tiempo",
+    "level": 9,
+    "school": "Transmutación",
+    "castingTime": "1 action",
+    "range": "Self",
+    "duration": "Instantaneous",
+    "components": [
+      "V"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b9b9c777fe14b46d2267",
+    "index": "true-polymorph",
+    "name": "Polimorfar Verdadero",
+    "level": 9,
+    "school": "Transmutación",
+    "castingTime": "1 action",
+    "range": "30 feet",
+    "duration": "Up to 1 hour",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "bard",
+      "warlock",
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b9bac777fe14b46d226b",
+    "index": "true-resurrection",
+    "name": "Resurrección Verdadera",
+    "level": 9,
+    "school": "Nigromancia",
+    "castingTime": "1 hour",
+    "range": "Touch",
+    "duration": "Instantaneous",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "cleric",
+      "druid"
+    ]
+  },
+  {
+    "id": "6a51b9c2c777fe14b46d229f",
+    "index": "weird",
+    "name": "Espanto",
+    "level": 9,
+    "school": "Ilusión",
+    "castingTime": "1 action",
+    "range": "120 feet",
+    "duration": "Up to 1 minute",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "wizard"
+    ]
+  },
+  {
+    "id": "6a51b9c4c777fe14b46d22a6",
+    "index": "wish",
+    "name": "Deseo",
+    "level": 9,
+    "school": "Conjuración",
+    "castingTime": "1 action",
+    "range": "Self",
+    "duration": "Instantaneous",
+    "components": [
+      "V"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "higherLevel": [],
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ]
+  }
+]

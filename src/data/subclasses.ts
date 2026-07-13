@@ -212,6 +212,284 @@ const BASE_SUBCLASSES: CustomSubclass[] = [
       { level: 9, spellIndexes: ["flame-strike", "hallow"] },
     ],
   },
+  {
+    index: "alchemist",
+    classIndex: "artificer",
+    name: "Alquimista",
+    description:
+      "El artificiero sanador y venenoso: prepara elixires con efectos variados y potencia la curación y el daño de ácido, fuego, necrótico o veneno. Ideal para quien quiere apoyar al grupo sin dejar de sorprender.",
+    subclassLevel: 3,
+    source: "TCoE",
+    progression: [
+      {
+        level: 3,
+        features: [
+          {
+            name: "Herramientas de Alquimista",
+            description: "Ganás competencia con herramientas de alquimista (o, si ya la tenías, con otra herramienta de artesano).",
+            active: false,
+          },
+          {
+            name: "Elixir Experimental",
+            description:
+              "Al terminar un descanso largo, creás gratis un elixir mágico en una botella vacía. Podés crear elixires extra gastando espacios de conjuro (uno por espacio). Al beberlo, tira 1d6 para saber el efecto: 1) Curación (2d4 + tu modificador de Inteligencia de puntos de golpe), 2) Rapidez (+3 m de velocidad por 1 hora), 3) Resiliencia (+1 a la CA por 10 minutos), 4) Audacia (sumás 1d4 a ataques y salvaciones por 1 minuto), 5) Vuelo (velocidad de vuelo de 3 m por 10 minutos), 6) Transformación (como el hechizo Alterarse a Uno Mismo, por 10 minutos). Los elixires no usados pierden su magia 24 horas después de creados.",
+            active: true,
+          },
+        ],
+      },
+      {
+        level: 5,
+        features: [
+          {
+            name: "Sabio Alquímico",
+            description:
+              "Con herramientas de alquimista como foco, cuando lanzás un hechizo de artificiero que cura puntos de golpe o hace daño ácido, de fuego, necrótico o de veneno, sumás tu modificador de Inteligencia (mínimo +1) a una tirada de esa curación o daño.",
+            active: false,
+          },
+        ],
+      },
+      {
+        level: 9,
+        features: [
+          {
+            name: "Reactivos Restaurativos",
+            description:
+              "Quien beba uno de tus elixires también gana puntos de golpe temporales iguales a 2d6 + tu modificador de Inteligencia (mínimo 1). Además, podés lanzar Restauración Menor sin gastar un espacio de conjuro, una cantidad de veces igual a tu modificador de Inteligencia (mínimo 1) por descanso largo.",
+            active: true,
+          },
+        ],
+      },
+      {
+        level: 15,
+        features: [
+          {
+            name: "Maestría Química",
+            description:
+              "Ganás resistencia a daño ácido y de veneno, y sos inmune a la condición envenenado. Además, una vez cada uno (hasta tu próximo descanso largo), podés lanzar Restauración Mayor y Curar sin gastar espacio de conjuro, preparación ni componentes materiales.",
+            active: false,
+          },
+        ],
+      },
+    ],
+    bonusSpells: [
+      { level: 3, spellIndexes: ["healing-word", "ray-of-sickness"] },
+      { level: 5, spellIndexes: ["flaming-sphere", "melfs-acid-arrow"] },
+      { level: 9, spellIndexes: ["gaseous-form", "mass-healing-word"] },
+      { level: 13, spellIndexes: ["blight", "death-ward"] },
+      { level: 17, spellIndexes: ["cloudkill", "raise-dead"] },
+    ],
+  },
+  {
+    index: "armorer",
+    classIndex: "artificer",
+    name: "Armador",
+    description:
+      "El artificiero que convierte su propia armadura en un arma mágica viva. Elegís un modelo defensivo (Guardián) o sigiloso y a distancia (Infiltrador). Ideal para quien quiere ser tanque o francotirador sin soltar sus hechizos.",
+    subclassLevel: 3,
+    source: "TCoE",
+    progression: [
+      {
+        level: 3,
+        features: [
+          {
+            name: "Competencia con Armadura Pesada y Herramientas de Herrero",
+            description: "Ganás competencia con armadura pesada y con herramientas de herrero (o, si ya la tenías, con otra herramienta de artesano).",
+            active: false,
+          },
+          {
+            name: "Armadura Arcana",
+            description:
+              "Con herramientas de herrero en mano, convertís una armadura que llevás puesta en tu Armadura Arcana: no tiene requisito de Fuerza, funciona como foco de lanzamiento, se ajusta a tu cuerpo (podés reemplazar un miembro perdido) y podés ponértela o quitártela como una acción.",
+            active: true,
+          },
+          {
+            name: "Modelo de Armadura",
+            description:
+              "Elegís un modelo, intercambiable en cada descanso corto o largo. Guardián: Guanteletes de Trueno (arma simple cuerpo a cuerpo, 1d8 de daño trueno; quien reciba el golpe tiene desventaja en ataques contra otro que no seas vos) y Campo Defensivo (acción adicional para ganar puntos de golpe temporales iguales a tu nivel de artificiero, usos = tu bono de competencia por descanso largo). Infiltrador: Lanzarrayos (arma a distancia, 27/90 m, 1d6 de daño relámpago, con 1d6 extra una vez por turno) y Pasos Motorizados (+1,5 m de velocidad) más Campo Amortiguador (ventaja en pruebas de Sigilo).",
+            active: false,
+          },
+        ],
+      },
+      {
+        level: 5,
+        features: [
+          {
+            name: "Ataque Adicional",
+            description: "Atacás dos veces, en vez de una, cuando tomás la acción de Atacar en tu turno.",
+            active: false,
+          },
+        ],
+      },
+      {
+        level: 9,
+        features: [
+          {
+            name: "Modificaciones de Armadura",
+            description:
+              "Tu Armadura Arcana ahora cuenta como cuatro objetos separados para tus infusiones (pechera, botas, casco y arma especial), cada uno con su propia infusión. Además, el máximo de objetos que podés tener imbuidos a la vez aumenta en 2.",
+            active: false,
+          },
+        ],
+      },
+      {
+        level: 15,
+        features: [
+          {
+            name: "Armadura Perfeccionada",
+            description:
+              "Guardián: como reacción, podés forzar a criaturas Enormes o menores a 9 m a tirar salvación de Fuerza o ser arrastradas hasta 7,5 m hacia vos; si quedan a 1,5 m, podés atacarlas como parte de la misma reacción. Infiltrador: quien reciba daño de tu Lanzarrayos queda marcado hasta tu próximo turno (emite luz tenue, tiene desventaja para atacarte, y el próximo ataque contra esa criatura tiene ventaja y suma 1d6 de daño extra si acierta).",
+            active: false,
+          },
+        ],
+      },
+    ],
+    bonusSpells: [
+      { level: 3, spellIndexes: ["magic-missile", "thunderwave"] },
+      { level: 5, spellIndexes: ["mirror-image", "shatter"] },
+      { level: 9, spellIndexes: ["hypnotic-pattern", "lightning-bolt"] },
+      { level: 13, spellIndexes: ["fire-shield", "greater-invisibility"] },
+      { level: 17, spellIndexes: ["passwall", "wall-of-force"] },
+    ],
+  },
+  {
+    index: "artillerist",
+    classIndex: "artificer",
+    name: "Artillero",
+    description:
+      "El artificiero que arma y dispara un cañón místico propio: lanzallamas, ballesta de fuerza o protector de aliados. Ideal para quien quiere pelear a distancia con su propia torreta portátil.",
+    subclassLevel: 3,
+    source: "TCoE",
+    progression: [
+      {
+        level: 3,
+        features: [
+          {
+            name: "Herramientas de Tallador",
+            description: "Ganás competencia con herramientas de tallador de madera (o, si ya la tenías, con otra herramienta de artesano).",
+            active: false,
+          },
+          {
+            name: "Cañón Místico",
+            description:
+              "Con herramientas de tallador o de herrero en mano, creás mágicamente un cañón Diminuto o Pequeño en un espacio libre cercano: CA 18, puntos de golpe = 5 × tu nivel de artificiero, inmune a daño de veneno y psíquico. Dura 1 hora o hasta 0 puntos de golpe, y solo podés tener uno activo a la vez. Elegís su tipo al crearlo: Lanzallamas (cono de 4,5 m, salvación de Destreza, 2d8 de daño fuego), Ballesta Mística (ataque de hechizo a 36 m, 2d8 de daño de fuerza y empuja 1,5 m) o Protector (da puntos de golpe temporales 1d8 + tu modificador de Inteligencia a un aliado cercano).",
+            active: true,
+          },
+        ],
+      },
+      {
+        level: 5,
+        features: [
+          {
+            name: "Arma de Fuego Arcana",
+            description:
+              "Con herramientas de tallador, grabás símbolos arcanos en una vara, bastón o vara mágica: funciona como foco de lanzamiento, y una vez por descanso corto o largo podés tirar un d8 y sumarlo a una tirada de daño de un hechizo de artificiero que lances con ella.",
+            active: true,
+          },
+        ],
+      },
+      {
+        level: 9,
+        features: [
+          {
+            name: "Cañón Explosivo",
+            description:
+              "El daño de tu Cañón Místico aumenta 1d8. Además, como acción, podés hacer detonar un cañón a 18 m: cada criatura a 6 m tira salvación de Destreza o sufre 3d8 de daño de fuerza (mitad si acierta), y el cañón se destruye.",
+            active: true,
+          },
+        ],
+      },
+      {
+        level: 15,
+        features: [
+          {
+            name: "Posición Fortificada",
+            description:
+              "Vos y tus aliados tenéis medio cobertura mientras estén a 3 m de tu Cañón Místico. Además, ya podés mantener dos cañones activos a la vez, y activás ambos con la misma acción adicional.",
+            active: false,
+          },
+        ],
+      },
+    ],
+    bonusSpells: [
+      { level: 3, spellIndexes: ["shield", "thunderwave"] },
+      { level: 5, spellIndexes: ["scorching-ray", "shatter"] },
+      { level: 9, spellIndexes: ["fireball", "wind-wall"] },
+      { level: 13, spellIndexes: ["ice-storm", "wall-of-fire"] },
+      { level: 17, spellIndexes: ["cone-of-cold", "wall-of-force"] },
+    ],
+  },
+  {
+    index: "battle-smith",
+    classIndex: "artificer",
+    name: "Herrero de Batalla",
+    description:
+      "El artificiero acompañado por un defensor de acero fiel, que pelea a su lado y absorbe golpes. Bueno con el arma y con la magia de apoyo. Ideal para quien quiere tanque, sanador y compañero animal, todo junto.",
+    subclassLevel: 3,
+    source: "TCoE",
+    progression: [
+      {
+        level: 3,
+        features: [
+          {
+            name: "Herramientas de Herrero",
+            description: "Ganás competencia con herramientas de herrero (o, si ya la tenías, con otra herramienta de artesano).",
+            active: false,
+          },
+          {
+            name: "Preparado para la Batalla",
+            description:
+              "Ganás competencia con armas marciales. Además, cuando atacás con un arma mágica, podés usar tu modificador de Inteligencia en vez de Fuerza o Destreza para las tiradas de ataque y de daño.",
+            active: false,
+          },
+          {
+            name: "Defensor de Acero",
+            description:
+              "Con herramientas de herrero, creás un compañero constructo mediano: CA 15, puntos de golpe = 5 × tu nivel de artificiero + 2 + tu modificador de Inteligencia, velocidad 12 m, inmune a veneno (daño y condición), visión en la oscuridad 18 m. Golpe Potenciado (1d8 + tu bono de competencia de daño de fuerza cuerpo a cuerpo), Reparar (3 veces por día, 2d8 + tu bono de competencia de puntos de golpe a sí mismo o a otra construcción/objeto cercano) y, como reacción, Desviar Ataque (impone desventaja al ataque de una criatura contra alguien que no sea el Defensor).",
+            active: true,
+          },
+        ],
+      },
+      {
+        level: 5,
+        features: [
+          {
+            name: "Ataque Adicional",
+            description: "Atacás dos veces, en vez de una, cuando tomás la acción de Atacar en tu turno.",
+            active: false,
+          },
+        ],
+      },
+      {
+        level: 9,
+        features: [
+          {
+            name: "Golpe Arcano",
+            description:
+              "Cuando vos o tu Defensor de Acero golpean con un ataque de arma mágica, podés canalizar energía arcana para infligir 2d6 de daño de fuerza extra, o para restaurar 2d6 puntos de golpe a una criatura u objeto a 9 m. Usos = tu modificador de Inteligencia (mínimo 1) por descanso largo, máximo una vez por turno.",
+            active: true,
+          },
+        ],
+      },
+      {
+        level: 15,
+        features: [
+          {
+            name: "Defensor Mejorado",
+            description:
+              "El daño o curación de tu Golpe Arcano aumenta a 4d6, y tu Defensor de Acero gana +2 a la CA. Además, cuando el Defensor usa Desviar Ataque, el atacante recibe 1d4 + tu modificador de Inteligencia de daño de fuerza.",
+            active: false,
+          },
+        ],
+      },
+    ],
+    bonusSpells: [
+      { level: 3, spellIndexes: ["heroism", "shield"] },
+      { level: 5, spellIndexes: ["branding-smite", "warding-bond"] },
+      { level: 9, spellIndexes: ["aura-of-vitality", "conjure-barrage"] },
+      { level: 13, spellIndexes: ["aura-of-purity", "fire-shield"] },
+      { level: 17, spellIndexes: ["banishing-smite", "mass-cure-wounds"] },
+    ],
+  },
 ];
 
 const levelsByClass: Record<string, number[]> = {

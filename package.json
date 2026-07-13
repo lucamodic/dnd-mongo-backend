@@ -18,6 +18,12 @@
     "apply:monster-names": "ts-node-dev --transpile-only src/scripts/applyMonsterNames.ts",
     "apply:recommended": "ts-node-dev --transpile-only src/scripts/applyRecommendedSpells.ts",
     "apply:subclasses": "ts-node-dev --transpile-only src/scripts/applySubclasses.ts",
+    "apply:custom-classes": "ts-node-dev --transpile-only src/scripts/applyCustomClasses.ts",
+    "wikidot:build-spell-migration": "ts-node-dev --transpile-only src/scripts/buildWikidotSpellMigration.ts",
+    "wikidot:curate-custom-draft": "ts-node-dev --transpile-only src/scripts/curateWikidotCustomSpellsDraft.ts",
+    "wikidot:curate-higher-level-audit": "ts-node-dev --transpile-only src/scripts/curateHigherLevelAudit.ts",
+    "wikidot:import-custom-spells": "ts-node-dev --transpile-only src/scripts/importCustomSpellsFromJson.ts",
+    "wikidot:apply-higher-level": "ts-node-dev --transpile-only src/scripts/applyHigherLevelFromJson.ts",
     "smoke": "ts-node-dev --transpile-only test/smoke.ts"
   },
   "keywords": [

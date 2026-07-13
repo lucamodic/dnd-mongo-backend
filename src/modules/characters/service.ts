@@ -50,7 +50,7 @@ const spellsKnownLimit = (cls: IClass, scores: IAbilityScores, level: number): n
   if (known > 0) return known;
   if (!cls.spellcastingAbility) return 0;
   const ability = cls.spellcastingAbility as keyof IAbilityScores;
-  const effectiveLevel = cls.index === "paladin" ? Math.floor(level / 2) : level;
+  const effectiveLevel = ["paladin", "artificer"].includes(cls.index) ? Math.floor(level / 2) : level;
   return Math.max(1, abilityMod(scores[ability]) + effectiveLevel);
 };
 

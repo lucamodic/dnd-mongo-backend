@@ -1,0 +1,998 @@
+[
+  {
+    "index": "booming-blade",
+    "name": "Espada Atronadora",
+    "level": 0,
+    "school": "Evocación",
+    "castingTime": "1 acción",
+    "range": "Personal (1,5 m)",
+    "duration": "1 ronda",
+    "components": [
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "description": [
+      "Golpeás con tu arma cuerpo a cuerpo. Si además el objetivo se mueve antes de tu próximo turno, salta un trueno y sufre 1d8 de daño trueno extra."
+    ],
+    "higherLevel": [
+      "El daño extra por moverse aumenta 1d8 en nivel 5 (2d8), nivel 11 (3d8) y nivel 17 (4d8)."
+    ],
+    "damageType": "Trueno",
+    "savingThrow": "",
+    "simpleDescription": "Golpeás con tu arma cuerpo a cuerpo. Si además el objetivo se mueve antes de tu próximo turno, salta un trueno y sufre 1d8 de daño trueno extra.",
+    "dice": "1d8",
+    "classes": [
+      "artificer",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ]
+  },
+  {
+    "index": "create-bonfire",
+    "name": "Crear Fogata",
+    "level": 0,
+    "school": "Conjuración",
+    "castingTime": "1 acción",
+    "range": "18 m",
+    "duration": "Concentración, hasta 1 minuto",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "description": [
+      "Creás una fogata mágica de 1,5 m de lado en un punto a tu alcance. Quema a quien entre en su espacio o empiece ahí su turno (salvación de Destreza, 1d8 de daño fuego)."
+    ],
+    "higherLevel": [
+      "El daño aumenta 1d8 en nivel 5 (2d8), nivel 11 (3d8) y nivel 17 (4d8)."
+    ],
+    "damageType": "Fuego",
+    "savingThrow": "Destreza",
+    "simpleDescription": "Creás una fogata mágica de 1,5 m de lado en un punto a tu alcance. Quema a quien entre en su espacio o empiece ahí su turno (salvación de Destreza, 1d8 de daño fuego).",
+    "dice": "1d8",
+    "classes": [
+      "artificer",
+      "druid",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ]
+  },
+  {
+    "index": "frostbite",
+    "name": "Mordisco Helado",
+    "level": 0,
+    "school": "Evocación",
+    "castingTime": "1 acción",
+    "range": "18 m",
+    "duration": "Instantáneo",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "description": [
+      "Una criatura a tu alcance tira salvación de Constitución. Si falla, sufre 1d6 de daño frío y tiene desventaja en el próximo ataque con arma que haga antes de tu siguiente turno."
+    ],
+    "higherLevel": [
+      "El daño aumenta 1d6 en nivel 5 (2d6), nivel 11 (3d6) y nivel 17 (4d6)."
+    ],
+    "damageType": "Frío",
+    "savingThrow": "Constitución",
+    "simpleDescription": "Una criatura a tu alcance tira salvación de Constitución. Si falla, sufre 1d6 de daño frío y tiene desventaja en el próximo ataque con arma que haga antes de tu siguiente turno.",
+    "dice": "1d6",
+    "classes": [
+      "druid",
+      "sorcerer",
+      "warlock",
+      "wizard",
+      "artificer"
+    ]
+  },
+  {
+    "index": "green-flame-blade",
+    "name": "Espada de Fuego Verde",
+    "level": 0,
+    "school": "Evocación",
+    "castingTime": "1 acción",
+    "range": "Personal (1,5 m)",
+    "duration": "Instantáneo",
+    "components": [
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "description": [
+      "Golpeás con tu arma cuerpo a cuerpo. Si acertás, además otra criatura a tu elección a 1,5 m del objetivo sufre 1d8 de daño fuego."
+    ],
+    "higherLevel": [
+      "El daño extra a la segunda criatura aumenta 1d8 en nivel 5 (2d8), nivel 11 (3d8) y nivel 17 (4d8)."
+    ],
+    "damageType": "Fuego",
+    "savingThrow": "",
+    "simpleDescription": "Golpeás con tu arma cuerpo a cuerpo. Si acertás, además otra criatura a tu elección a 1,5 m del objetivo sufre 1d8 de daño fuego.",
+    "dice": "1d8",
+    "classes": [
+      "artificer",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ]
+  },
+  {
+    "index": "lightning-lure",
+    "name": "Señuelo del Relámpago",
+    "level": 0,
+    "school": "Evocación",
+    "castingTime": "1 acción",
+    "range": "Personal (4,5 m)",
+    "duration": "Instantáneo",
+    "components": [
+      "V"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "description": [
+      "Un látigo de electricidad golpea a una criatura a tu alcance. Tira salvación de Fuerza: si falla, sufre 1d8 de daño relámpago y es arrastrada 3 m hacia vos."
+    ],
+    "higherLevel": [
+      "El daño aumenta 1d8 en nivel 5 (2d8), nivel 11 (3d8) y nivel 17 (4d8)."
+    ],
+    "damageType": "Relámpago",
+    "savingThrow": "Fuerza",
+    "simpleDescription": "Un látigo de electricidad golpea a una criatura a tu alcance. Tira salvación de Fuerza: si falla, sufre 1d8 de daño relámpago y es arrastrada 3 m hacia vos.",
+    "dice": "1d8",
+    "classes": [
+      "artificer",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ]
+  },
+  {
+    "index": "magic-stone",
+    "name": "Piedra Mágica",
+    "level": 0,
+    "school": "Transmutación",
+    "castingTime": "1 acción adicional",
+    "range": "Toque",
+    "duration": "1 minuto",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "description": [
+      "Tocás hasta 3 piedritas y las volvés armas mágicas por 1 minuto. Se pueden arrojar o disparar con honda: al impactar hacen 1d6 + tu modificador de lanzamiento de daño contundente."
+    ],
+    "higherLevel": [],
+    "damageType": "Contundente",
+    "savingThrow": "",
+    "simpleDescription": "Tocás hasta 3 piedritas y las volvés armas mágicas por 1 minuto. Se pueden arrojar o disparar con honda: al impactar hacen 1d6 + tu modificador de lanzamiento de daño contundente.",
+    "dice": "1d6",
+    "classes": [
+      "druid",
+      "warlock",
+      "artificer"
+    ]
+  },
+  {
+    "index": "sword-burst",
+    "name": "Estallido de Espadas",
+    "level": 0,
+    "school": "Conjuración",
+    "castingTime": "1 acción",
+    "range": "Personal (1,5 m)",
+    "duration": "Instantáneo",
+    "components": [
+      "V"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "description": [
+      "Espadas espectrales giran a tu alrededor por un instante. Cada criatura a 1,5 m tira salvación de Destreza o sufre 1d6 de daño de fuerza."
+    ],
+    "higherLevel": [
+      "El daño aumenta 1d6 en nivel 5 (2d6), nivel 11 (3d6) y nivel 17 (4d6)."
+    ],
+    "damageType": "Fuerza",
+    "savingThrow": "Destreza",
+    "simpleDescription": "Espadas espectrales giran a tu alrededor por un instante. Cada criatura a 1,5 m tira salvación de Destreza o sufre 1d6 de daño de fuerza.",
+    "dice": "1d6",
+    "classes": [
+      "artificer",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ]
+  },
+  {
+    "index": "thorn-whip",
+    "name": "Látigo de Espinas",
+    "level": 0,
+    "school": "Transmutación",
+    "castingTime": "1 acción",
+    "range": "9 m",
+    "duration": "Instantáneo",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "description": [
+      "Un látigo de zarzas y espinas golpea a una criatura a tu alcance: 1d6 de daño perforante, y si es Grande o menor, la arrastrás 3 m hacia vos."
+    ],
+    "higherLevel": [
+      "El daño aumenta 1d6 en nivel 5 (2d6), nivel 11 (3d6) y nivel 17 (4d6)."
+    ],
+    "damageType": "Perforante",
+    "savingThrow": "",
+    "simpleDescription": "Un látigo de zarzas y espinas golpea a una criatura a tu alcance: 1d6 de daño perforante, y si es Grande o menor, la arrastrás 3 m hacia vos.",
+    "dice": "1d6",
+    "classes": [
+      "artificer",
+      "druid"
+    ]
+  },
+  {
+    "index": "thunderclap",
+    "name": "Trueno de Palmas",
+    "level": 0,
+    "school": "Evocación",
+    "castingTime": "1 acción",
+    "range": "Personal (1,5 m)",
+    "duration": "Instantáneo",
+    "components": [
+      "S"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "description": [
+      "Un estampido sordo sacude el aire cerca tuyo. Cada criatura a 1,5 m tira salvación de Constitución o sufre 1d6 de daño trueno."
+    ],
+    "higherLevel": [
+      "El daño aumenta 1d6 en nivel 5 (2d6), nivel 11 (3d6) y nivel 17 (4d6)."
+    ],
+    "damageType": "Trueno",
+    "savingThrow": "Constitución",
+    "simpleDescription": "Un estampido sordo sacude el aire cerca tuyo. Cada criatura a 1,5 m tira salvación de Constitución o sufre 1d6 de daño trueno.",
+    "dice": "1d6",
+    "classes": [
+      "bard",
+      "druid",
+      "sorcerer",
+      "warlock",
+      "wizard",
+      "artificer"
+    ]
+  },
+  {
+    "index": "absorb-elements",
+    "name": "Absorber Elementos",
+    "level": 1,
+    "school": "Abjuración",
+    "castingTime": "1 reacción",
+    "range": "Personal",
+    "duration": "1 ronda",
+    "components": [
+      "S"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "description": [
+      "Reaccionás cuando te golpea daño ácido, frío, fuego, relámpago o trueno: te volvés resistente a ese daño hasta el inicio de tu próximo turno, y tu próximo golpe con arma cuerpo a cuerpo antes de que termine el hechizo suma 1d6 de ese mismo tipo de daño."
+    ],
+    "higherLevel": [
+      "El daño extra del golpe aumenta 1d6 por cada nivel de espacio por encima del 1º."
+    ],
+    "damageType": "",
+    "savingThrow": "",
+    "simpleDescription": "Reaccionás cuando te golpea daño ácido, frío, fuego, relámpago o trueno: te volvés resistente a ese daño hasta el inicio de tu próximo turno, y tu próximo golpe con arma cuerpo a cuerpo antes de que termine el hechizo suma 1d6 de ese mismo tipo de daño.",
+    "dice": "1d6",
+    "classes": [
+      "artificer",
+      "druid",
+      "ranger",
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "index": "catapult",
+    "name": "Catapulta",
+    "level": 1,
+    "school": "Transmutación",
+    "castingTime": "1 acción",
+    "range": "18 m",
+    "duration": "Instantáneo",
+    "components": [
+      "S"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "description": [
+      "Un objeto no sostenido de hasta 2 kg a tu alcance sale disparado hasta 27 m en la dirección que elijas. Si golpea a una criatura, esta tira salvación de Destreza o sufre 3d8 de daño contundente."
+    ],
+    "higherLevel": [],
+    "damageType": "Contundente",
+    "savingThrow": "Destreza",
+    "simpleDescription": "Un objeto no sostenido de hasta 2 kg a tu alcance sale disparado hasta 27 m en la dirección que elijas. Si golpea a una criatura, esta tira salvación de Destreza o sufre 3d8 de daño contundente.",
+    "dice": "3d8",
+    "classes": [
+      "sorcerer",
+      "wizard",
+      "artificer"
+    ]
+  },
+  {
+    "index": "snare",
+    "name": "Trampa Oculta",
+    "level": 1,
+    "school": "Abjuración",
+    "castingTime": "1 minuto",
+    "range": "Toque",
+    "duration": "8 horas",
+    "components": [
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": true,
+    "description": [
+      "Tardás 1 minuto en armar una trampa mágica escondida en el suelo o el follaje. La primera criatura que la pise (menos vos) tira salvación de Destreza o queda apresada por una soga mágica hasta que se libere."
+    ],
+    "higherLevel": [],
+    "damageType": "",
+    "savingThrow": "Destreza",
+    "simpleDescription": "Tardás 1 minuto en armar una trampa mágica escondida en el suelo o el follaje. La primera criatura que la pise (menos vos) tira salvación de Destreza o queda apresada por una soga mágica hasta que se libere.",
+    "dice": "",
+    "classes": [
+      "artificer",
+      "druid",
+      "ranger",
+      "wizard"
+    ]
+  },
+  {
+    "index": "tashas-caustic-brew",
+    "name": "Brebaje Cáustico de Tasha",
+    "level": 1,
+    "school": "Evocación",
+    "castingTime": "1 acción",
+    "range": "Personal (línea de 9 m)",
+    "duration": "Concentración, hasta 1 minuto",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "description": [
+      "Rocías ácido corrosivo en una línea de 9 m frente a vos. Cada criatura en la línea tira salvación de Destreza al empezar el hechizo y en cada uno de tus turnos siguientes: 2d4 de daño ácido si falla, mitad si acierta."
+    ],
+    "higherLevel": [],
+    "damageType": "Ácido",
+    "savingThrow": "Destreza",
+    "simpleDescription": "Rocías ácido corrosivo en una línea de 9 m frente a vos. Cada criatura en la línea tira salvación de Destreza al empezar el hechizo y en cada uno de tus turnos siguientes: 2d4 de daño ácido si falla, mitad si acierta.",
+    "dice": "2d4",
+    "classes": [
+      "artificer",
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "index": "air-bubble",
+    "name": "Burbuja de Aire",
+    "level": 2,
+    "school": "Conjuración",
+    "castingTime": "1 acción",
+    "range": "18 m",
+    "duration": "24 horas",
+    "components": [
+      "S"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "description": [
+      "Creás una burbuja de aire fresco alrededor de la cabeza de una criatura a tu alcance, que le permite respirar normalmente (incluso bajo el agua) durante 24 horas o hasta que la disipes."
+    ],
+    "higherLevel": [],
+    "damageType": "",
+    "savingThrow": "",
+    "simpleDescription": "Creás una burbuja de aire fresco alrededor de la cabeza de una criatura a tu alcance, que le permite respirar normalmente (incluso bajo el agua) durante 24 horas o hasta que la disipes.",
+    "dice": "",
+    "classes": [
+      "artificer",
+      "druid",
+      "ranger",
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "index": "kinetic-jaunt",
+    "name": "Salto Cinético",
+    "level": 2,
+    "school": "Transmutación",
+    "castingTime": "1 acción adicional",
+    "range": "Personal",
+    "duration": "Concentración, hasta 1 minuto",
+    "components": [
+      "S"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "description": [
+      "Tu cuerpo se vuelve una corriente de energía cinética durante la duración: podés moverte a través de huecos y espacios diminutos como si fueras líquido. Si terminás tu turno dentro de un objeto sólido, salís empujado a un espacio libre y sufrís 1d8 de daño de fuerza."
+    ],
+    "higherLevel": [],
+    "damageType": "Fuerza",
+    "savingThrow": "",
+    "simpleDescription": "Tu cuerpo se vuelve una corriente de energía cinética durante la duración: podés moverte a través de huecos y espacios diminutos como si fueras líquido. Si terminás tu turno dentro de un objeto sólido, salís empujado a un espacio libre y sufrís 1d8 de daño de fuerza.",
+    "dice": "1d8",
+    "classes": [
+      "artificer",
+      "bard",
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "index": "pyrotechnics",
+    "name": "Pirotecnia",
+    "level": 2,
+    "school": "Transmutación",
+    "castingTime": "1 acción",
+    "range": "18 m",
+    "duration": "Instantáneo",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "description": [
+      "Apuntás a una fuente de fuego no mágica a tu alcance y elegís: Fuegos Artificiales (la fuente estalla en chispas de colores; cada criatura a 3 m tira salvación de Constitución o queda cegada hasta el final de tu próximo turno) o Humo (crea una nube de humo espeso muy oscurecido en un cubo de 6 m). En cualquier caso, la fuente de fuego se apaga."
+    ],
+    "higherLevel": [],
+    "damageType": "",
+    "savingThrow": "Constitución",
+    "simpleDescription": "Apuntás a una fuente de fuego no mágica a tu alcance y elegís: Fuegos Artificiales (la fuente estalla en chispas de colores; cada criatura a 3 m tira salvación de Constitución o queda cegada hasta el final de tu próximo turno) o Humo (crea una nube de humo espeso muy oscurecido en un cubo de 6 m). En cualquier caso, la fuente de fuego se apaga.",
+    "dice": "",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "wizard",
+      "artificer"
+    ]
+  },
+  {
+    "index": "skywrite",
+    "name": "Escribir en el Cielo",
+    "level": 2,
+    "school": "Transmutación",
+    "castingTime": "1 acción",
+    "range": "Vista",
+    "duration": "Concentración, hasta 1 días",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": true,
+    "ritual": true,
+    "description": [
+      "Las nubes a la vista se acomodan formando palabras o una imagen simple de hasta 3 m de alto, legible desde varios kilómetros, mientras mantengas la concentración (hasta 1 día)."
+    ],
+    "higherLevel": [],
+    "damageType": "",
+    "savingThrow": "",
+    "simpleDescription": "Las nubes a la vista se acomodan formando palabras o una imagen simple de hasta 3 m de alto, legible desde varios kilómetros, mientras mantengas la concentración (hasta 1 día).",
+    "dice": "",
+    "classes": [
+      "bard",
+      "druid",
+      "wizard",
+      "artificer"
+    ]
+  },
+  {
+    "index": "vortex-warp",
+    "name": "Distorsión de Vórtice",
+    "level": 2,
+    "school": "Conjuración",
+    "castingTime": "1 acción",
+    "range": "27 m",
+    "duration": "Instantáneo",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "description": [
+      "Un vórtice de energía intenta arrastrar a una criatura a tu alcance. Tira salvación de Constitución: si falla, la teletransportás hasta 6 m en la dirección que elijas (arriba, abajo o a los lados), siempre a un espacio desocupado."
+    ],
+    "higherLevel": [
+      "El alcance del teletransporte aumenta 3 m por cada nivel de espacio por encima del 2º."
+    ],
+    "damageType": "",
+    "savingThrow": "Constitución",
+    "simpleDescription": "Un vórtice de energía intenta arrastrar a una criatura a tu alcance. Tira salvación de Constitución: si falla, la teletransportás hasta 6 m en la dirección que elijas (arriba, abajo o a los lados), siempre a un espacio desocupado.",
+    "dice": "",
+    "classes": [
+      "artificer",
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "index": "ashardalons-stride",
+    "name": "Paso de Ashardalon",
+    "level": 3,
+    "school": "Transmutación",
+    "castingTime": "1 acción adicional",
+    "range": "Personal",
+    "duration": "Concentración, hasta 1 minuto",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "description": [
+      "Tu velocidad aumenta 3 m durante la duración, y dejás detrás tuyo un rastro de fuego. Cualquier criatura que termine su turno a 1,5 m del rastro sufre 1d6 de daño fuego."
+    ],
+    "higherLevel": [],
+    "damageType": "Fuego",
+    "savingThrow": "",
+    "simpleDescription": "Tu velocidad aumenta 3 m durante la duración, y dejás detrás tuyo un rastro de fuego. Cualquier criatura que termine su turno a 1,5 m del rastro sufre 1d6 de daño fuego.",
+    "dice": "1d6",
+    "classes": [
+      "artificer",
+      "ranger",
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "index": "catnap",
+    "name": "Siesta Mágica",
+    "level": 3,
+    "school": "Encantamiento",
+    "castingTime": "1 acción",
+    "range": "9 m",
+    "duration": "10 minutos",
+    "components": [
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "description": [
+      "Hasta 3 criaturas voluntarias a tu alcance caen en un sueño mágico durante 10 minutos. Al despertar, cada una obtiene los beneficios de un descanso corto y queda inmune a quedarse dormida por magia durante el resto de la duración."
+    ],
+    "higherLevel": [],
+    "damageType": "",
+    "savingThrow": "",
+    "simpleDescription": "Hasta 3 criaturas voluntarias a tu alcance caen en un sueño mágico durante 10 minutos. Al despertar, cada una obtiene los beneficios de un descanso corto y queda inmune a quedarse dormida por magia durante el resto de la duración.",
+    "dice": "",
+    "classes": [
+      "artificer",
+      "bard",
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "index": "elemental-weapon",
+    "name": "Arma Elemental",
+    "level": 3,
+    "school": "Transmutación",
+    "castingTime": "1 acción",
+    "range": "Toque",
+    "duration": "Concentración, hasta 1 hora",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "description": [
+      "Un arma no mágica que tocás se vuelve mágica: +1 a las tiradas de ataque y daño, y elegís ácido, frío, fuego, relámpago o trueno — cada golpe suma 1d4 de daño de ese tipo mientras dure el hechizo."
+    ],
+    "higherLevel": [
+      "Con un espacio de nivel 5 o 6 el bono sube a +2; con nivel 7 o más, a +3."
+    ],
+    "damageType": "",
+    "savingThrow": "",
+    "simpleDescription": "Un arma no mágica que tocás se vuelve mágica: +1 a las tiradas de ataque y daño, y elegís ácido, frío, fuego, relámpago o trueno — cada golpe suma 1d4 de daño de ese tipo mientras dure el hechizo.",
+    "dice": "1d4",
+    "classes": [
+      "artificer",
+      "druid",
+      "paladin",
+      "ranger"
+    ]
+  },
+  {
+    "index": "flame-arrows",
+    "name": "Flechas de Fuego",
+    "level": 3,
+    "school": "Transmutación",
+    "castingTime": "1 acción",
+    "range": "Toque",
+    "duration": "Concentración, hasta 1 hora",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "description": [
+      "Encantás hasta 12 proyectiles (flechas, virotes, balas de honda) que tocás. Cada uno, al impactar durante la duración, suma 1d6 de daño fuego. El proyectil deja de estar encantado luego de usarlo."
+    ],
+    "higherLevel": [],
+    "damageType": "Fuego",
+    "savingThrow": "",
+    "simpleDescription": "Encantás hasta 12 proyectiles (flechas, virotes, balas de honda) que tocás. Cada uno, al impactar durante la duración, suma 1d6 de daño fuego. El proyectil deja de estar encantado luego de usarlo.",
+    "dice": "1d6",
+    "classes": [
+      "druid",
+      "ranger",
+      "sorcerer",
+      "wizard",
+      "artificer"
+    ]
+  },
+  {
+    "index": "intellect-fortress",
+    "name": "Fortaleza Intelectual",
+    "level": 3,
+    "school": "Abjuración",
+    "castingTime": "1 acción",
+    "range": "9 m",
+    "duration": "Concentración, hasta 1 hora",
+    "components": [
+      "V"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "description": [
+      "Vos u otra criatura voluntaria a tu alcance ganan resistencia a daño psíquico y ventaja en salvaciones de Inteligencia, Sabiduría y Carisma mientras dure el hechizo."
+    ],
+    "higherLevel": [],
+    "damageType": "",
+    "savingThrow": "",
+    "simpleDescription": "Vos u otra criatura voluntaria a tu alcance ganan resistencia a daño psíquico y ventaja en salvaciones de Inteligencia, Sabiduría y Carisma mientras dure el hechizo.",
+    "dice": "",
+    "classes": [
+      "artificer",
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ]
+  },
+  {
+    "index": "tiny-servant",
+    "name": "Sirviente Diminuto",
+    "level": 3,
+    "school": "Transmutación",
+    "castingTime": "1 minuto",
+    "range": "Toque",
+    "duration": "8 horas",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "description": [
+      "Hasta dos objetos Diminutos no mágicos que tocás cobran vida como sirvientes fieles (estatuillas, escobas, tazas) que entienden tus órdenes simples y obedecen durante 8 horas."
+    ],
+    "higherLevel": [],
+    "damageType": "",
+    "savingThrow": "",
+    "simpleDescription": "Hasta dos objetos Diminutos no mágicos que tocás cobran vida como sirvientes fieles (estatuillas, escobas, tazas) que entienden tus órdenes simples y obedecen durante 8 horas.",
+    "dice": "",
+    "classes": [
+      "wizard",
+      "artificer"
+    ]
+  },
+  {
+    "index": "elemental-bane",
+    "name": "Perdición Elemental",
+    "level": 4,
+    "school": "Transmutación",
+    "castingTime": "1 acción",
+    "range": "27 m",
+    "duration": "Concentración, hasta 1 minuto",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "description": [
+      "Una criatura a tu alcance tira salvación de Constitución. Si falla, pierde su resistencia a un tipo de daño elegido (ácido, frío, fuego, relámpago o trueno) mientras dure el hechizo, y la próxima vez que vos o un aliado le causen daño de ese tipo, suma 2d6 extra."
+    ],
+    "higherLevel": [],
+    "damageType": "",
+    "savingThrow": "Constitución",
+    "simpleDescription": "Una criatura a tu alcance tira salvación de Constitución. Si falla, pierde su resistencia a un tipo de daño elegido (ácido, frío, fuego, relámpago o trueno) mientras dure el hechizo, y la próxima vez que vos o un aliado le causen daño de ese tipo, suma 2d6 extra.",
+    "dice": "2d6",
+    "classes": [
+      "druid",
+      "warlock",
+      "wizard",
+      "artificer"
+    ]
+  },
+  {
+    "index": "leomunds-secret-chest",
+    "name": "Cofre Secreto de Leomund",
+    "level": 4,
+    "school": "Conjuración",
+    "castingTime": "1 acción",
+    "range": "Toque",
+    "duration": "Instantáneo",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "description": [
+      "Un cofre que tocás (hasta 3,5 m³ y 130 kg) desaparece hacia el Plano Etéreo. Como acción, podés hacerlo reaparecer en un espacio a 9 m tuyo. Si no lo recuperás en 60 días, se pierde para siempre."
+    ],
+    "higherLevel": [],
+    "damageType": "",
+    "savingThrow": "",
+    "simpleDescription": "Un cofre que tocás (hasta 3,5 m³ y 130 kg) desaparece hacia el Plano Etéreo. Como acción, podés hacerlo reaparecer en un espacio a 9 m tuyo. Si no lo recuperás en 60 días, se pierde para siempre.",
+    "dice": "",
+    "classes": [
+      "artificer",
+      "wizard"
+    ]
+  },
+  {
+    "index": "mordenkainens-faithful-hound",
+    "name": "Sabueso Fiel de Mordenkainen",
+    "level": 4,
+    "school": "Conjuración",
+    "castingTime": "1 acción",
+    "range": "9 m",
+    "duration": "8 horas",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "description": [
+      "Un sabueso invisible aparece y vigila un punto a tu alcance durante 8 horas. Ladra si se acerca alguien que no conocés, y ataca a los intrusos que se pongan a su alcance (menos a vos) con un mordisco de 4d8 de daño perforante."
+    ],
+    "higherLevel": [],
+    "damageType": "Perforante",
+    "savingThrow": "",
+    "simpleDescription": "Un sabueso invisible aparece y vigila un punto a tu alcance durante 8 horas. Ladra si se acerca alguien que no conocés, y ataca a los intrusos que se pongan a su alcance (menos a vos) con un mordisco de 4d8 de daño perforante.",
+    "dice": "4d8",
+    "classes": [
+      "artificer",
+      "wizard"
+    ]
+  },
+  {
+    "index": "mordenkainens-private-sanctum",
+    "name": "Santuario Privado de Mordenkainen",
+    "level": 4,
+    "school": "Abjuración",
+    "castingTime": "10 minutos",
+    "range": "36 m",
+    "duration": "24 horas",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "description": [
+      "Proteges un área de hasta 30 m de perímetro por 24 horas: el sonido no puede atravesar sus límites, las ventanas se oscurecen, y podés bloquear teletransporte, escrutinio mágico y hasta el paso físico, según lo que elijas al lanzarlo."
+    ],
+    "higherLevel": [],
+    "damageType": "",
+    "savingThrow": "",
+    "simpleDescription": "Proteges un área de hasta 30 m de perímetro por 24 horas: el sonido no puede atravesar sus límites, las ventanas se oscurecen, y podés bloquear teletransporte, escrutinio mágico y hasta el paso físico, según lo que elijas al lanzarlo.",
+    "dice": "",
+    "classes": [
+      "artificer",
+      "wizard"
+    ]
+  },
+  {
+    "index": "otilukes-resilient-sphere",
+    "name": "Esfera Resiliente de Otiluke",
+    "level": 4,
+    "school": "Evocación",
+    "castingTime": "1 acción",
+    "range": "9 m",
+    "duration": "Concentración, hasta 1 minuto",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "description": [
+      "Una criatura u objeto a tu alcance tira salvación de Destreza. Si falla, queda envuelto en una esfera translúcida e indestructible mientras dure el hechizo: nada puede pasar a través, ni ataques ni magia, en ningún sentido."
+    ],
+    "higherLevel": [],
+    "damageType": "",
+    "savingThrow": "Destreza",
+    "simpleDescription": "Una criatura u objeto a tu alcance tira salvación de Destreza. Si falla, queda envuelto en una esfera translúcida e indestructible mientras dure el hechizo: nada puede pasar a través, ni ataques ni magia, en ningún sentido.",
+    "dice": "",
+    "classes": [
+      "artificer",
+      "wizard"
+    ]
+  },
+  {
+    "index": "summon-construct",
+    "name": "Convocar Constructo",
+    "level": 4,
+    "school": "Conjuración",
+    "castingTime": "1 acción",
+    "range": "27 m",
+    "duration": "Concentración, hasta 1 hora",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "description": [
+      "Invocás un espíritu que toma forma de constructo (barro, metal o piedra, a elección) en un espacio libre a tu alcance. Pelea a tu lado y obedece tus órdenes mientras dure el hechizo."
+    ],
+    "higherLevel": [],
+    "damageType": "",
+    "savingThrow": "",
+    "simpleDescription": "Invocás un espíritu que toma forma de constructo (barro, metal o piedra, a elección) en un espacio libre a tu alcance. Pelea a tu lado y obedece tus órdenes mientras dure el hechizo.",
+    "dice": "",
+    "classes": [
+      "artificer",
+      "wizard"
+    ]
+  },
+  {
+    "index": "bigbys-hand",
+    "name": "Mano de Bigby",
+    "level": 5,
+    "school": "Evocación",
+    "castingTime": "1 acción",
+    "range": "36 m",
+    "duration": "Concentración, hasta 1 minuto",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "description": [
+      "Una mano espectral gigante aparece en un punto a tu alcance. Según la forma que elijas, puede golpear (4d8 de daño contundente), agarrar, empujar o interponerse como escudo, y la movés como acción adicional en tus turnos siguientes."
+    ],
+    "higherLevel": [],
+    "damageType": "Contundente",
+    "savingThrow": "",
+    "simpleDescription": "Una mano espectral gigante aparece en un punto a tu alcance. Según la forma que elijas, puede golpear (4d8 de daño contundente), agarrar, empujar o interponerse como escudo, y la movés como acción adicional en tus turnos siguientes.",
+    "dice": "4d8",
+    "classes": [
+      "artificer",
+      "sorcerer",
+      "wizard"
+    ]
+  },
+  {
+    "index": "create-spelljamming-helm",
+    "name": "Crear Timón Astronave",
+    "level": 5,
+    "school": "Transmutación",
+    "castingTime": "1 acción",
+    "range": "Toque",
+    "duration": "Instantáneo",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "description": [
+      "Convertís un objeto que tocás en un timón de astronave: instalado en un vehículo apropiado, permite surcar el Mar Astral y viajar entre mundos mientras alguien lo pilotea concentrándose en él."
+    ],
+    "higherLevel": [],
+    "damageType": "",
+    "savingThrow": "",
+    "simpleDescription": "Convertís un objeto que tocás en un timón de astronave: instalado en un vehículo apropiado, permite surcar el Mar Astral y viajar entre mundos mientras alguien lo pilotea concentrándose en él.",
+    "dice": "",
+    "classes": [
+      "artificer",
+      "wizard"
+    ]
+  },
+  {
+    "index": "skill-empowerment",
+    "name": "Empoderamiento de Habilidad",
+    "level": 5,
+    "school": "Transmutación",
+    "castingTime": "1 acción",
+    "range": "Toque",
+    "duration": "Concentración, hasta 1 hora",
+    "components": [
+      "V",
+      "S"
+    ],
+    "concentration": true,
+    "ritual": false,
+    "description": [
+      "Tocás a una criatura y elegís una competencia que ya tenga: mientras dure el hechizo, duplica su bono de competencia en pruebas con esa habilidad."
+    ],
+    "higherLevel": [],
+    "damageType": "",
+    "savingThrow": "",
+    "simpleDescription": "Tocás a una criatura y elegís una competencia que ya tenga: mientras dure el hechizo, duplica su bono de competencia en pruebas con esa habilidad.",
+    "dice": "",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "wizard",
+      "artificer"
+    ]
+  },
+  {
+    "index": "transmute-rock",
+    "name": "Transmutar Roca",
+    "level": 5,
+    "school": "Transmutación",
+    "castingTime": "1 acción",
+    "range": "36 m",
+    "duration": "Instantáneo",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "concentration": false,
+    "ritual": false,
+    "description": [
+      "Elegís un cubo de roca de hasta 12 m de lado a tu alcance y lo transformás en barro espeso, o revertís barro a roca sólida. El terreno afectado puede atrapar criaturas o derrumbar estructuras, según cómo lo uses; no causa daño directo por sí mismo."
+    ],
+    "higherLevel": [],
+    "damageType": "",
+    "savingThrow": "",
+    "simpleDescription": "Elegís un cubo de roca de hasta 12 m de lado a tu alcance y lo transformás en barro espeso, o revertís barro a roca sólida. El terreno afectado puede atrapar criaturas o derrumbar estructuras, según cómo lo uses; no causa daño directo por sí mismo.",
+    "dice": "",
+    "classes": [
+      "druid",
+      "wizard",
+      "artificer"
+    ]
+  }
+]

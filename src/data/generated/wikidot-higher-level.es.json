@@ -1,0 +1,596 @@
+[
+  {
+    "index": "acid-splash",
+    "higherLevel": [
+      "El daño del hechizo aumenta 1d6 cuando llegás a nivel 5 (2d6), nivel 11 (3d6) y nivel 17 (4d6)."
+    ]
+  },
+  {
+    "index": "chill-touch",
+    "higherLevel": [
+      "El daño del hechizo aumenta 1d8 cuando llegás a nivel 5 (2d8), nivel 11 (3d8) y nivel 17 (4d8)."
+    ]
+  },
+  {
+    "index": "eldritch-blast",
+    "higherLevel": [
+      "El hechizo crea más de un rayo a niveles altos: dos rayos a nivel 5, tres a nivel 11 y cuatro a nivel 17. Podés dirigirlos al mismo objetivo o a objetivos distintos; hacé una tirada de ataque separada por cada rayo."
+    ]
+  },
+  {
+    "index": "fire-bolt",
+    "higherLevel": [
+      "El daño del hechizo aumenta 1d10 cuando llegás a nivel 5 (2d10), nivel 11 (3d10) y nivel 17 (4d10)."
+    ]
+  },
+  {
+    "index": "poison-spray",
+    "higherLevel": [
+      "El daño del hechizo aumenta 1d12 cuando llegás a nivel 5 (2d12), nivel 11 (3d12) y nivel 17 (4d12)."
+    ]
+  },
+  {
+    "index": "produce-flame",
+    "higherLevel": [
+      "El daño del hechizo aumenta 1d8 cuando llegás a nivel 5 (2d8), nivel 11 (3d8) y nivel 17 (4d8)."
+    ]
+  },
+  {
+    "index": "ray-of-frost",
+    "higherLevel": [
+      "El daño del hechizo aumenta 1d8 cuando llegás a nivel 5 (2d8), nivel 11 (3d8) y nivel 17 (4d8)."
+    ]
+  },
+  {
+    "index": "sacred-flame",
+    "higherLevel": [
+      "El daño del hechizo aumenta 1d8 cuando llegás a nivel 5 (2d8), nivel 11 (3d8) y nivel 17 (4d8)."
+    ]
+  },
+  {
+    "index": "shocking-grasp",
+    "higherLevel": [
+      "El daño del hechizo aumenta 1d8 cuando llegás a nivel 5 (2d8), nivel 11 (3d8) y nivel 17 (4d8)."
+    ]
+  },
+  {
+    "index": "vicious-mockery",
+    "higherLevel": [
+      "El daño del hechizo aumenta 1d4 cuando llegás a nivel 5 (2d4), nivel 11 (3d4) y nivel 17 (4d4)."
+    ]
+  },
+  {
+    "index": "animal-friendship",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel 2 o superior, podés afectar una bestia adicional por cada nivel de espacio por encima del 1º."
+    ]
+  },
+  {
+    "index": "bane",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel 2 o superior, podés afectar una criatura adicional por cada nivel de espacio por encima del 1º."
+    ]
+  },
+  {
+    "index": "bless",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel 2 o superior, podés afectar una criatura adicional por cada nivel de espacio por encima del 1º."
+    ]
+  },
+  {
+    "index": "burning-hands",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel 2 o superior, el daño aumenta 1d6 por cada nivel de espacio por encima del 1º."
+    ]
+  },
+  {
+    "index": "charm-person",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel 2 o superior, podés elegir una criatura adicional por cada nivel de espacio por encima del 1º. Las criaturas deben estar a 30 pies o menos entre sí cuando las elegís."
+    ]
+  },
+  {
+    "index": "color-spray",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel 2 o superior, roll an additional 2d10 por cada nivel de espacio por encima del 1º."
+    ]
+  },
+  {
+    "index": "command",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel 2 o superior, podés afectar una criatura adicional por cada nivel de espacio por encima del 1º. Las criaturas deben estar a 30 pies o menos entre sí cuando las elegís."
+    ]
+  },
+  {
+    "index": "create-or-destroy-water",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel 2 o superior, you create or destroy 10 additional gallons of water, or the size of the cube increases by 5 feet, por cada nivel de espacio por encima del 1º."
+    ]
+  },
+  {
+    "index": "cure-wounds",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel 2 o superior, la curación aumenta 1d8 por cada nivel de espacio por encima del 1º."
+    ]
+  },
+  {
+    "index": "false-life",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel 2 o superior, you gain 5 additional temporary hit points por cada nivel de espacio por encima del 1º."
+    ]
+  },
+  {
+    "index": "fog-cloud",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel 2 o superior, the radius of the fog increases by 20 feet por cada nivel de espacio por encima del 1º."
+    ]
+  },
+  {
+    "index": "guiding-bolt",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel 2 o superior, el daño aumenta 1d6 por cada nivel de espacio por encima del 1º."
+    ]
+  },
+  {
+    "index": "healing-word",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel 2 o superior, la curación aumenta 1d4 por cada nivel de espacio por encima del 1º."
+    ]
+  },
+  {
+    "index": "hellish-rebuke",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel 2 o superior, el daño aumenta 1d10 por cada nivel de espacio por encima del 1º."
+    ]
+  },
+  {
+    "index": "heroism",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel 2 o superior, podés afectar una criatura adicional por cada nivel de espacio por encima del 1º."
+    ]
+  },
+  {
+    "index": "hunters-mark",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel 3 o 4, podés mantener la concentración hasta 8 horas. Si usás un espacio de nivel 5 o superior, podés mantener la concentración hasta 24 horas."
+    ]
+  },
+  {
+    "index": "ice-knife",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel 2 o superior, el daño de frío aumenta 1d6 por cada nivel de espacio por encima del 1º."
+    ]
+  },
+  {
+    "index": "inflict-wounds",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel 2 o superior, el daño aumenta 1d10 por cada nivel de espacio por encima del 1º."
+    ]
+  },
+  {
+    "index": "longstrider",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel 2 o superior, podés afectar una criatura adicional por cada nivel de espacio por encima del 1º."
+    ]
+  },
+  {
+    "index": "magic-missile",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel 2 o superior, crea un dardo adicional por cada nivel de espacio por encima del 1º."
+    ]
+  },
+  {
+    "index": "sleep",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel 2 o superior, roll an additional 2d8 por cada nivel de espacio por encima del 1º."
+    ]
+  },
+  {
+    "index": "thunderwave",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel 2 o superior, el daño aumenta 1d8 por cada nivel de espacio por encima del 1º."
+    ]
+  },
+  {
+    "index": "aid",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel 3 o superior, los puntos de vida de cada objetivo aumentan 5 adicionales por cada nivel de espacio por encima del 2º."
+    ]
+  },
+  {
+    "index": "animal-messenger",
+    "higherLevel": [
+      "Si lanzás este hechizo con un espacio de conjuro de nivel 3 o superior, la duración aumenta 48 horas por cada nivel de espacio por encima del 2º."
+    ]
+  },
+  {
+    "index": "blindness-deafness",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel 3 o superior, podés afectar una criatura adicional por cada nivel de espacio por encima del 2º."
+    ]
+  },
+  {
+    "index": "branding-smite",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel 3 o superior, el daño adicional aumenta 1d6 por cada nivel de espacio por encima del 2º."
+    ]
+  },
+  {
+    "index": "enhance-ability",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel 3 o superior, podés afectar una criatura adicional por cada nivel de espacio por encima del 2º."
+    ]
+  },
+  {
+    "index": "flame-blade",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel 4 o superior, el daño aumenta 1d6 for every two slot levels above 2nd."
+    ]
+  },
+  {
+    "index": "flaming-sphere",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel 3 o superior, el daño aumenta 1d6 por cada nivel de espacio por encima del 2º."
+    ]
+  },
+  {
+    "index": "heat-metal",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel 3 o superior, el daño aumenta 1d8 por cada nivel de espacio por encima del 2º."
+    ]
+  },
+  {
+    "index": "hold-person",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel 3 o superior, podés elegir un humanoide adicional por cada nivel de espacio por encima del 2º. Los humanoides deben estar a 30 pies o menos entre sí cuando los elegís."
+    ]
+  },
+  {
+    "index": "invisibility",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel 3 o superior, podés afectar una criatura adicional por cada nivel de espacio por encima del 2º."
+    ]
+  },
+  {
+    "index": "magic-weapon",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel 4 o superior, el bono sube a +2. Cuando usás un espacio de nivel 6 o superior, el bono sube a +3."
+    ]
+  },
+  {
+    "index": "moonbeam",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel 3 o superior, el daño aumenta 1d10 por cada nivel de espacio por encima del 2º."
+    ]
+  },
+  {
+    "index": "prayer-of-healing",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel 3 o superior, la curación aumenta 1d8 por cada nivel de espacio por encima del 2º."
+    ]
+  },
+  {
+    "index": "scorching-ray",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel 3 o superior, you create one additional ray por cada nivel de espacio por encima del 2º."
+    ]
+  },
+  {
+    "index": "shatter",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel 3 o superior, el daño aumenta 1d8 por cada nivel de espacio por encima del 2º."
+    ]
+  },
+  {
+    "index": "spiritual-weapon",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel 3 o superior, el daño aumenta 1d8 for every two slot levels above the 2nd."
+    ]
+  },
+  {
+    "index": "animate-dead",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel 4 o superior, you animate or reassert control over two additional undead creatures por cada nivel de espacio por encima del 3º. Each of the creatures must come from a different corpse or pile of bones."
+    ]
+  },
+  {
+    "index": "bestow-curse",
+    "higherLevel": [
+      "Si lanzás este hechizo con un espacio de conjuro de nivel 4 o superior, la duración es concentración, hasta 10 minutos. Si usás un espacio de nivel 5 o superior, la duración es 8 horas. Si usás un espacio de nivel 7 o superior, la duración es 24 horas. Si usás un espacio de nivel 9, dura hasta que sea disipado. Usar un espacio de nivel 5 o superior hace que la duración no requiera concentración."
+    ]
+  },
+  {
+    "index": "call-lightning",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel 4 o superior, el daño aumenta 1d10 por cada nivel de espacio por encima del 3º."
+    ]
+  },
+  {
+    "index": "conjure-animals",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con ciertos espacios de nivel superior, elegís una de las opciones de invocación y aparecen más criaturas: el doble con un espacio de nivel 5, el triple con uno de nivel 7 y el cuádruple con uno de nivel 9."
+    ]
+  },
+  {
+    "index": "counterspell",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel 4 o superior, el hechizo interrumpido no tiene efecto si su nivel es igual o menor al nivel del espacio que usaste."
+    ]
+  },
+  {
+    "index": "dispel-magic",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel 4 o superior, terminás automáticamente los efectos de un hechizo sobre el objetivo si el nivel de ese hechizo es igual o menor al nivel del espacio que usaste."
+    ]
+  },
+  {
+    "index": "fireball",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel 4 o superior, el daño aumenta 1d6 por cada nivel de espacio por encima del 3º."
+    ]
+  },
+  {
+    "index": "fly",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel 4 o superior, podés afectar una criatura adicional por cada nivel de espacio por encima del 3º."
+    ]
+  },
+  {
+    "index": "glyph-of-warding",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel 4 o superior, el daño de un glifo de runas explosivas aumenta 1d8 por cada nivel de espacio por encima del 3º. Si creás un glifo de conjuro, podés almacenar cualquier hechizo de nivel igual o menor al espacio usado para Glifo de Advertencia."
+    ]
+  },
+  {
+    "index": "lightning-bolt",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel 4 o superior, el daño aumenta 1d6 por cada nivel de espacio por encima del 3º."
+    ]
+  },
+  {
+    "index": "magic-circle",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel 4 o superior, the duration increases by 1 hour por cada nivel de espacio por encima del 3º."
+    ]
+  },
+  {
+    "index": "major-image",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel 6 o superior, the spell lasts until dispelled, without requiring your concentration. In this form it is sometimes considered a different spell, known as Permanent Image."
+    ]
+  },
+  {
+    "index": "mass-healing-word",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel 4 o superior, la curación aumenta 1d4 por cada nivel de espacio por encima del 3º."
+    ]
+  },
+  {
+    "index": "spirit-guardians",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel 4 o superior, el daño aumenta 1d8 por cada nivel de espacio por encima del 3º."
+    ]
+  },
+  {
+    "index": "vampiric-touch",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel 4 o superior, el daño aumenta 1d6 por cada nivel de espacio por encima del 3º."
+    ]
+  },
+  {
+    "index": "banishment",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel 5 o superior, podés afectar una criatura adicional por cada nivel de espacio por encima del 4º."
+    ]
+  },
+  {
+    "index": "blight",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel 5 o superior, el daño aumenta 1d8 por cada nivel de espacio por encima del 4º."
+    ]
+  },
+  {
+    "index": "confusion",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel 5 o superior, the radius of the sphere increases by 5 feet por cada nivel de espacio por encima del 4º."
+    ]
+  },
+  {
+    "index": "conjure-minor-elementals",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con ciertos espacios de nivel superior, elegís una de las opciones de invocación y aparecen más criaturas: el doble con un espacio de nivel 6 y el triple con uno de nivel 8."
+    ]
+  },
+  {
+    "index": "conjure-woodland-beings",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con ciertos espacios de nivel superior, elegís una de las opciones de invocación y aparecen más criaturas: el doble con un espacio de nivel 6 y el triple con uno de nivel 8."
+    ]
+  },
+  {
+    "index": "dominate-beast",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de nivel 5, la duración es concentración, hasta 10 minutos. Con un espacio de nivel 6, la duración es concentración, hasta 1 hora. Con un espacio de nivel 7 o superior, la duración es concentración, hasta 8 horas."
+    ]
+  },
+  {
+    "index": "ice-storm",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel 5 o superior, el daño contundente aumenta 1d8 por cada nivel de espacio por encima del 4º."
+    ]
+  },
+  {
+    "index": "phantasmal-killer",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel 5 o superior, el daño aumenta 1d10 por cada nivel de espacio por encima del 4º."
+    ]
+  },
+  {
+    "index": "wall-of-fire",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel 5 o superior, el daño aumenta 1d8 por cada nivel de espacio por encima del 4º."
+    ]
+  },
+  {
+    "index": "animate-objects",
+    "higherLevel": [
+      "Si lanzás este hechizo con un espacio de conjuro de nivel 6 o superior, podés animar dos objetos adicionales por cada nivel de espacio por encima del 5º."
+    ]
+  },
+  {
+    "index": "cloudkill",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel 6 o superior, el daño aumenta 1d8 por cada nivel de espacio por encima del 5º."
+    ]
+  },
+  {
+    "index": "cone-of-cold",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel 6 o superior, el daño aumenta 1d8 por cada nivel de espacio por encima del 5º."
+    ]
+  },
+  {
+    "index": "conjure-elemental",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel 6 o superior, the challenge rating increases by 1 por cada nivel de espacio por encima del 5º."
+    ]
+  },
+  {
+    "index": "creation",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel 6 o superior, the cube increases by 5 feet por cada nivel de espacio por encima del 5º."
+    ]
+  },
+  {
+    "index": "dominate-person",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de nivel 6, la duración es concentración, hasta 10 minutos. Con un espacio de nivel 7, la duración es concentración, hasta 1 hora. Con un espacio de nivel 8 o superior, la duración es concentración, hasta 8 horas."
+    ]
+  },
+  {
+    "index": "flame-strike",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel 6 o superior, el daño de fuego o el daño radiante (a tu elección) aumenta 1d6 por cada nivel de espacio por encima del 5º."
+    ]
+  },
+  {
+    "index": "geas",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de nivel 7 u 8, la duración es 1 año. Cuando lo lanzás con un espacio de nivel 9, dura hasta que termine por uno de los hechizos mencionados en su descripción."
+    ]
+  },
+  {
+    "index": "hold-monster",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel 6 o superior, podés elegir una criatura adicional por cada nivel de espacio por encima del 5º. Las criaturas deben estar a 30 pies o menos entre sí cuando las elegís."
+    ]
+  },
+  {
+    "index": "insect-plague",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel 6 o superior, el daño aumenta 1d10 por cada nivel de espacio por encima del 5º."
+    ]
+  },
+  {
+    "index": "mass-cure-wounds",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel 6 o superior, la curación aumenta 1d8 por cada nivel de espacio por encima del 5º."
+    ]
+  },
+  {
+    "index": "modify-memory",
+    "higherLevel": [
+      "Si lanzás este hechizo con un espacio de conjuro de nivel 6 o superior, podés alterar recuerdos de un evento ocurrido hasta hace 7 días (nivel 6), 30 días (nivel 7), 1 año (nivel 8) o cualquier momento del pasado de la criatura (nivel 9)."
+    ]
+  },
+  {
+    "index": "planar-binding",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel superior, la duración aumenta a 10 días con un espacio de nivel 6, 30 días con nivel 7, 180 días con nivel 8, o 1 año y 1 día con nivel 9."
+    ]
+  },
+  {
+    "index": "chain-lightning",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel 7 o superior, salta un rayo adicional desde el primer objetivo hacia otro objetivo por cada nivel de espacio por encima del 6º."
+    ]
+  },
+  {
+    "index": "circle-of-death",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel 7 o superior, el daño aumenta 2d6 por cada nivel de espacio por encima del 6º."
+    ]
+  },
+  {
+    "index": "conjure-fey",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel 7 o superior, the challenge rating increases by 1 por cada nivel de espacio por encima del 6º."
+    ]
+  },
+  {
+    "index": "create-undead",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de nivel 7, podés animar o reafirmar control sobre cuatro ghouls. Con un espacio de nivel 8, podés animar o reafirmar control sobre cinco ghouls o dos ghasts o wights. Con un espacio de nivel 9, podés animar o reafirmar control sobre seis ghouls, tres ghasts o wights, o dos momias."
+    ]
+  },
+  {
+    "index": "disintegrate",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel 7 o superior, el daño aumenta 3d6 por cada nivel de espacio por encima del 6º."
+    ]
+  },
+  {
+    "index": "globe-of-invulnerability",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel 7 o superior, la barrera bloquea hechizos de un nivel más alto por cada nivel de espacio por encima del 6º."
+    ]
+  },
+  {
+    "index": "heal",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel 7 o superior, the amount of healing increases by 10 por cada nivel de espacio por encima del 6º."
+    ]
+  },
+  {
+    "index": "mass-suggestion",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de nivel 7, la duración es 10 días. Con un espacio de nivel 8, la duración es 30 días. Con un espacio de nivel 9, la duración es 1 año y 1 día."
+    ]
+  },
+  {
+    "index": "wall-of-ice",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel 7 o superior, el daño que hace el muro al aparecer aumenta 2d6 y el daño por atravesar el aire helado aumenta 1d6 por cada nivel de espacio por encima del 6º."
+    ]
+  },
+  {
+    "index": "wall-of-thorns",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel 7 o superior, ambos tipos de daño aumentan 1d8 por cada nivel de espacio por encima del 6º."
+    ]
+  },
+  {
+    "index": "conjure-celestial",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de nivel 9, invocás un celestial con valor de desafío 5 o menor."
+    ]
+  },
+  {
+    "index": "delayed-blast-fireball",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel 8 o superior, el daño base aumenta 1d6 por cada nivel de espacio por encima del 7º."
+    ]
+  },
+  {
+    "index": "etherealness",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de conjuro de nivel 8 o superior, podés elegir hasta tres criaturas voluntarias (incluyéndote) por cada nivel de espacio por encima del 7º. Las criaturas deben estar a 10 pies o menos de vos cuando lanzás el hechizo."
+    ]
+  },
+  {
+    "index": "dominate-monster",
+    "higherLevel": [
+      "Cuando lanzás este hechizo con un espacio de nivel 9, la duración es concentración, hasta 8 horas."
+    ]
+  }
+]

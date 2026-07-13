@@ -43,4 +43,9 @@ export const RECOMMENDED_SPELLS: Record<string, string[]> = {
     "hunters-mark", "cure-wounds", "goodberry", "longstrider", "jump",
     "spike-growth", "pass-without-trace", "lesser-restoration", "silence",
   ],
+  artificer: [
+    "fire-bolt", "mage-hand", "guidance", "mending",
+    "cure-wounds", "detect-magic", "faerie-fire", "absorb-elements", "catapult", "identify",
+    "magic-weapon", "heat-metal",
+  ],
 };

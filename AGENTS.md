@@ -122,6 +122,27 @@ src/server.ts         -> entrypoint (local: listen; Vercel: export default app)
   `POST /weapons/assign/:characterId`
 - Imports (admin): `POST /races|classes|spells|monsters/import-all`
 - Hechizos simples: `GET /spells/export-summary`, `POST /spells/import-summaries`
+- Hechizos no SRD desde Wikidot: usar `npm run wikidot:build-spell-migration` para generar
+  `src/data/generated/current-spells.json`, `wikidot-missing-spells.raw.json`,
+  `wikidot-custom-spells.draft.json` y `wikidot-higher-level-audit.json`. Curar/traducir el draft a
+  `wikidot-custom-spells.es.json` y correr `npm run wikidot:import-custom-spells -- src/data/generated/wikidot-custom-spells.es.json`.
+  El importador rechaza entries sin `description` en español para no meter texto crudo no revisado.
+  Existe `npm run wikidot:curate-custom-draft`, que genera un `.es.json` importable con descripciones breves en
+  español y extracción heurística de `dice`/`damageType`/`savingThrow`; no es una traducción literal larga del texto
+  fuente y debe revisarse si se quiere precisión fina de reglas.
+  Existe `npm run wikidot:curate-higher-level-audit`, que toma `wikidot-higher-level-audit.json`, usa las sugerencias
+  automáticas donde alcanzan, traduce manualmente los casos marcados y genera `wikidot-higher-level.es.json`.
+  Para pruebas rápidas usar `--limit=N --skip-higher-level-audit`; para auditar parcialmente higherLevel usar
+  `--higher-level-limit=N`. Para auditar solo `higherLevel` sin regenerar faltantes usar `--only-higher-level-audit`.
+  Para aplicar correcciones de `higherLevel`, curar el audit a `wikidot-higher-level.es.json` y correr
+  `npm run wikidot:apply-higher-level -- src/data/generated/wikidot-higher-level.es.json`; el script rechaza
+  filas con `needsManualTranslation` o texto que parezca inglés. Para validar sin tocar Mongo usar `--dry-run`.
+  Estado comprobado el 2026-07-13: `wikidot-higher-level.es.json` tiene 99 parches; Mongo Atlas tenía 99/99
+  documentos encontrados y 99/99 `higherLevel` coincidentes exactos contra ese JSON, sin faltantes ni diferencias.
+  Para repetir esa verificación, comparar los índices del JSON contra `spells` proyectando `index`, `name` y
+  `higherLevel`; en sandbox puede requerir red aprobada porque Atlas usa DNS SRV. El curador tiene overrides para
+  limpiar restos heurísticos como `cold`→`frío`, `extra`→`adicional`, `bludgeoning`→`contundente` y `base`→`base`;
+  esos overrides ya fueron regenerados, aplicados y verificados contra Mongo.
 
 ## Cómo correr
 ```bash
