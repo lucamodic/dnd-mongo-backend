@@ -17,6 +17,8 @@ export interface ISpell extends Document {
   damageType: string;
   /** Característica de la salvación (ej "Destreza"); "" si no pide salvación. */
   savingThrow: string;
+  /** "melee" | "ranged" si el hechizo pide tirada de ataque de conjuro; "" si no (impacta solo o pide salvación). */
+  attackType: string;
   /** Resumen simple en español, cargado por /spells/import-summaries. */
   simpleDescription: string;
   /** Tirada asociada (ej "2d8") si el hechizo tira dados; "" si no. */
@@ -38,6 +40,7 @@ const spellSchema = new Schema<ISpell>({
   higherLevel: [{ type: String }],
   damageType: { type: String, default: "" },
   savingThrow: { type: String, default: "" },
+  attackType: { type: String, default: "" },
   simpleDescription: { type: String, default: "" },
   dice: { type: String, default: "" },
 });

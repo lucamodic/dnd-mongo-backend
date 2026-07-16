@@ -50,6 +50,9 @@ export class WeaponService {
     if (!name) throw new HttpError(400, "El arma necesita nombre");
     if (!CATEGORIES.includes(category)) throw new HttpError(400, "Categoría inválida");
 
+    // Bono mágico (+0 a +3); solo el DM llega hasta acá (create() es requireAdmin en la ruta).
+    const bonus = Math.max(0, Math.min(3, Math.round(Number(body.bonus) || 0)));
+
     const base = slugify(name) || "arma";
     let index = `custom-${base}`;
     let i = 2;
@@ -64,6 +67,7 @@ export class WeaponService {
       properties,
       description,
       custom: true,
+      bonus,
       createdBy: new Types.ObjectId(user.id),
     });
   }

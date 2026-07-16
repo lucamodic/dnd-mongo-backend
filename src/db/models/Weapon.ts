@@ -11,6 +11,8 @@ export interface IWeapon extends Document {
   properties: string[];
   description: string;
   custom: boolean;
+  /** Bono mágico (+0 a +3, típicamente); suma a ataque y a daño. Solo el DM la puede cargar. */
+  bonus: number;
   createdBy?: Types.ObjectId;
 }
 
@@ -24,6 +26,7 @@ const weaponSchema = new Schema<IWeapon>(
     properties: { type: [String], default: [] },
     description: { type: String, default: "" },
     custom: { type: Boolean, default: false },
+    bonus: { type: Number, default: 0 },
     createdBy: { type: Schema.Types.ObjectId, ref: "User" },
   },
   { timestamps: true }

@@ -21,6 +21,11 @@ import { mergeSubclassIntoClass } from "../../utils/subclassMerge";
 
 const isDM = (user: Pick<TokenPayload, "role">) => user.role === "dm" || user.role === "admin";
 
+/** Si la vida actual volvió a subir por encima de 0, se corta el estado moribundo. */
+const resetDeathSavesIfStable = (character: { currentHp: number; deathSaves?: { successes: number; failures: number } }) => {
+  if (character.currentHp > 0) character.deathSaves = { successes: 0, failures: 0 };
+};
+
 const priorityFor = (cls: IClass): string[] =>
   (cls.abilityPriority && cls.abilityPriority.length ? cls.abilityPriority : CLASS_ABILITY_PRIORITY[cls.index]) ||
   DEFAULT_ABILITY_PRIORITY;
@@ -265,6 +270,7 @@ export class CharacterService {
     character.spellSlotsUsed = [];
     character.resourcesUsed = [];
     character.hitDiceUsed = 0;
+    resetDeathSavesIfStable(character);
     await character.save();
     await syncTrackerParticipant(character);
     return this.show(user, id);
@@ -291,6 +297,7 @@ export class CharacterService {
 
     character.currentHp = Math.min(character.maxHp, character.currentHp + healed);
     character.hitDiceUsed = (character.hitDiceUsed || 0) + rolls.length;
+    resetDeathSavesIfStable(character);
     await character.save();
     await syncTrackerParticipant(character);
     return { character: await this.show(user, id), healed };
@@ -301,6 +308,7 @@ export class CharacterService {
     const character = await Character.findOne({ _id: id, userId });
     if (!character) throw new HttpError(404, "Personaje no encontrado");
     character.currentHp = Math.max(0, Math.min(character.maxHp, currentHp));
+    resetDeathSavesIfStable(character);
     await character.save();
     await syncTrackerParticipant(character);
     return character;
@@ -311,7 +319,7 @@ export class CharacterService {
     const ALLOWED = [
       "name", "imageBase64", "notes", "noteSections", "inventoryItems", "ac", "currentHp", "tempHp", "maxHp", "abilityScores", "currency", "skillProficiencies",
       "spellSlotsUsed", "resourcesUsed", "knownSpells", "armor", "shield", "acBonus", "initiativeBonus", "weapon", "weapons",
-      "subclassIndex",
+      "subclassIndex", "deathSaves",
     ];
     const character = await Character.findOne(isDM(user) ? { _id: id } : { _id: id, userId: user.id });
     if (!character) throw new HttpError(404, "Personaje no encontrado");
@@ -338,6 +346,7 @@ export class CharacterService {
     // La vida actual queda siempre dentro de 0..maxHp, y la temporal nunca baja de 0.
     character.currentHp = Math.max(0, Math.min(character.maxHp, character.currentHp));
     character.tempHp = Math.max(0, character.tempHp || 0);
+    if (patch.currentHp !== undefined) resetDeathSavesIfStable(character);
 
     // Si cambió algo que afecta la CA, la recalculamos (salvo que hayan mandado un `ac` explícito).
     const acAffecting = ["armor", "shield", "acBonus", "abilityScores"].some((k) => patch[k] !== undefined);

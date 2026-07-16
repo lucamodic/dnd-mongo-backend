@@ -35,6 +35,11 @@ export interface ICharacterNotes {
   other: string;
 }
 
+export interface IDeathSaves {
+  successes: number;
+  failures: number;
+}
+
 export interface ICharacter extends Document {
   userId: Types.ObjectId;
   name: string;
@@ -66,6 +71,7 @@ export interface ICharacter extends Document {
   inventoryItems: IInventoryItem[];
   notes: string;
   noteSections: ICharacterNotes;
+  deathSaves: IDeathSaves; // éxitos/fallos de salvación de muerte mientras currentHp === 0
   createdAt: Date;
 }
 
@@ -107,6 +113,11 @@ const notesSchema = new Schema<ICharacterNotes>(
   { _id: false }
 );
 
+const deathSavesSchema = new Schema<IDeathSaves>(
+  { successes: { type: Number, default: 0 }, failures: { type: Number, default: 0 } },
+  { _id: false }
+);
+
 const characterSchema = new Schema<ICharacter>({
   userId: { type: Schema.Types.ObjectId, ref: "User", required: true },
   name: { type: String, required: true },
@@ -138,6 +149,7 @@ const characterSchema = new Schema<ICharacter>({
   inventoryItems: { type: [inventoryItemSchema], default: () => [] },
   notes: { type: String, default: "" },
   noteSections: { type: notesSchema, default: () => ({}) },
+  deathSaves: { type: deathSavesSchema, default: () => ({}) },
   createdAt: { type: Date, default: Date.now },
 });
 

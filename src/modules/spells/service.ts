@@ -60,6 +60,7 @@ export class SpellService {
           higherLevel: sp.higher_level || [],
           damageType: (damageTypeKey && DAMAGE_TYPE_ES[damageTypeKey]) || "",
           savingThrow: (savingThrowKey && ABILITY_ES[savingThrowKey]) || "",
+          attackType: sp.attack_type || "",
         };
 
         const spell = await Spell.findOneAndUpdate(
