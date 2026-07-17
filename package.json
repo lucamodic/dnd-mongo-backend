@@ -24,6 +24,7 @@
     "wikidot:curate-higher-level-audit": "ts-node-dev --transpile-only src/scripts/curateHigherLevelAudit.ts",
     "wikidot:import-custom-spells": "ts-node-dev --transpile-only src/scripts/importCustomSpellsFromJson.ts",
     "wikidot:apply-higher-level": "ts-node-dev --transpile-only src/scripts/applyHigherLevelFromJson.ts",
+    "wikidot:apply-attack-type": "ts-node-dev --transpile-only src/scripts/applyWikidotAttackType.ts",
     "smoke": "ts-node-dev --transpile-only test/smoke.ts"
   },
   "keywords": [
