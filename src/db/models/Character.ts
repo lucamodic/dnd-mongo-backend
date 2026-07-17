@@ -72,6 +72,8 @@ export interface ICharacter extends Document {
   notes: string;
   noteSections: ICharacterNotes;
   deathSaves: IDeathSaves; // éxitos/fallos de salvación de muerte mientras currentHp === 0
+  raging: boolean; // bárbaro en furia: suma el bono de daño de furia a ataques cuerpo a cuerpo con Fuerza
+  concentratingSpell: string; // índice del hechizo de concentración activo ("" si no se concentra en ninguno)
   createdAt: Date;
 }
 
@@ -150,6 +152,8 @@ const characterSchema = new Schema<ICharacter>({
   notes: { type: String, default: "" },
   noteSections: { type: notesSchema, default: () => ({}) },
   deathSaves: { type: deathSavesSchema, default: () => ({}) },
+  raging: { type: Boolean, default: false },
+  concentratingSpell: { type: String, default: "" },
   createdAt: { type: Date, default: Date.now },
 });
 

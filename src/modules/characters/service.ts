@@ -270,6 +270,8 @@ export class CharacterService {
     character.spellSlotsUsed = [];
     character.resourcesUsed = [];
     character.hitDiceUsed = 0;
+    character.raging = false; // la furia no sobrevive a un descanso largo
+    character.concentratingSpell = ""; // se corta la concentración al descansar
     resetDeathSavesIfStable(character);
     await character.save();
     await syncTrackerParticipant(character);
@@ -319,7 +321,7 @@ export class CharacterService {
     const ALLOWED = [
       "name", "imageBase64", "notes", "noteSections", "inventoryItems", "ac", "currentHp", "tempHp", "maxHp", "abilityScores", "currency", "skillProficiencies",
       "spellSlotsUsed", "resourcesUsed", "knownSpells", "armor", "shield", "acBonus", "initiativeBonus", "weapon", "weapons",
-      "subclassIndex", "deathSaves",
+      "subclassIndex", "deathSaves", "raging", "concentratingSpell",
     ];
     const character = await Character.findOne(isDM(user) ? { _id: id } : { _id: id, userId: user.id });
     if (!character) throw new HttpError(404, "Personaje no encontrado");
