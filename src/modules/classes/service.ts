@@ -5,6 +5,7 @@ import { resolveFeatureES } from "../../data/classFeatures";
 import { CLASS_RESOURCE_META } from "../../data/classResources";
 import { CLASS_ABILITY_PRIORITY, DEFAULT_ABILITY_PRIORITY } from "../../data/classAbilityPriority";
 import { CLASS_NAME_ES } from "../../data/classNamesES";
+import { SUBCLASS_LEVEL_BY_CLASS } from "../../data/subclasses";
 import { HttpError } from "../../utils/response";
 
 /** Extrae de proficiency_choices la elección de competencias (skills) de la clase. */
@@ -96,7 +97,10 @@ export class ClassService {
           spellcasting: !!cls.spellcasting,
           spellcastingAbility: cls.spellcasting?.spellcasting_ability?.index || "",
           description: meta.description,
-          subclassLevel: 3,
+          // Nivel en el que la clase elige subclase (brujo/clérigo/hechicero=1, druida/mago=2, resto=3).
+          // No hardcodear 3: reimportar clases pisaría el valor correcto y el wizard dejaría de
+          // pedir la subclase al crear brujo/clérigo/etc.
+          subclassLevel: SUBCLASS_LEVEL_BY_CLASS[cls.index] ?? 3,
           skillChoiceCount: skills.count,
           skillOptions: skills.options,
           abilityPriority: CLASS_ABILITY_PRIORITY[cls.index] || DEFAULT_ABILITY_PRIORITY,
