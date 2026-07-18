@@ -319,7 +319,7 @@ export class CharacterService {
   /** Actualiza campos editables del personaje (whitelist: nunca toca nivel, dueño, etc.). */
   static async update(user: TokenPayload, id: string, patch: Record<string, unknown>) {
     const ALLOWED = [
-      "name", "imageBase64", "notes", "noteSections", "inventoryItems", "ac", "currentHp", "tempHp", "maxHp", "abilityScores", "currency", "skillProficiencies",
+      "name", "speed", "imageBase64", "notes", "noteSections", "inventoryItems", "ac", "currentHp", "tempHp", "maxHp", "abilityScores", "currency", "skillProficiencies",
       "spellSlotsUsed", "resourcesUsed", "knownSpells", "armor", "shield", "acBonus", "initiativeBonus", "weapon", "weapons",
       "subclassIndex", "deathSaves", "raging", "concentratingSpell",
     ];

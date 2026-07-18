@@ -196,7 +196,37 @@ Correcciones recientes de dados:
 - Variables de entorno en el dashboard de Vercel: `MONGO_URI`, `JWT_SECRET`, `SECRET`.
 - La conexión Mongo se cachea en `global` para no reventar el pool de Atlas.
 
+## Estado reciente (jul 2026) — campos y datos nuevos
+Estos cambios **requieren redeploy a Vercel** cuando se pushean (el server los usa apenas se deploya):
+
+- **`Spell.attackType`** (`""` | `"melee"` | `"ranged"`): marca si el hechizo pide **tirada de ataque de
+  conjuro** (tirás d20 vs CA). El importador SRD (`spells/service.ts`) ahora lo lee de `sp.attack_type`.
+  Para los ~220 hechizos custom de Wikidot (fuera del SRD, que `import:all` no toca) hay un script aparte:
+  `npm run wikidot:apply-attack-type` — scrapea la página de Wikidot de cada uno e infiere melee/ranged de
+  la prosa (ignora "ataques forzados sobre terceros" tipo Crown of Madness). Ya corrido contra Atlas.
+- **`Weapon.bonus`** (número, +0 a +3): arma mágica; suma a ataque y daño. `WeaponService.create()` (DM-only)
+  acepta `bonus`. La app lo suma en el cálculo de ataque/daño.
+- **`Character.deathSaves`** (`{ successes, failures }`): salvaciones de muerte a 0 PV. Se resetea solo al
+  curar por encima de 0 (`resetDeathSavesIfStable`).
+- **`Character.raging`** (bool): bárbaro en furia. La app suma el `rage_damage_bonus` al daño cuerpo a cuerpo
+  con Fuerza. `fullRest` la apaga.
+- **`Character.concentratingSpell`** (string, índice del hechizo): concentración activa. `fullRest` la limpia.
+- **`speed`** y **`name`** ahora están en el whitelist del `PATCH /characters/:id` (la app los edita desde la ficha).
+- **Fix `subclassLevel`**: el importador de clases YA NO hardcodea `3`; usa `SUBCLASS_LEVEL_BY_CLASS`
+  (`src/data/subclasses.ts`) → brujo/clérigo/hechicero=1, druida/mago=2, resto=3. Correr `import:all`
+  (clases) antes pisaba el valor y el wizard dejaba de pedir subclase al crear brujo/clérigo. Si se vuelve
+  a correr `import:all`, ya no hace falta re-aplicar, pero `npm run apply:subclasses` sigue siendo el que
+  siembra las subclases y setea el nivel correcto.
+- **Nombres de hechizos en español**: los ~180 hechizos de Wikidot que habían quedado con nombre en inglés
+  (Hex, Witch Bolt, etc.) se tradujeron en `src/data/wikidotSpellNamesES.ts` y se aplican con
+  `npm run apply:wikidot-names`. Ya corrido contra Atlas.
+
+**Orden de pipeline de datos recomendado tras un `import:all` limpio:** `import:all` → `apply:summaries` →
+`apply:recommended` → `apply:subclasses` → `wikidot:import-custom-spells` (custom) → `wikidot:apply-attack-type`
+→ `apply:wikidot-names`.
+
 ## Reglas para cambios
 - Mantené el patrón route→controller→service. Un endpoint nuevo = los tres archivos.
 - Si agregás un modelo, seguí el guard `models.X || model(...)`.
 - Corré `npm run build` (tsc) antes de dar por terminado un cambio.
+- Al agregar un campo editable desde la app, sumarlo al whitelist `ALLOWED` de `characters/service.ts`.
